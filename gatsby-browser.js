@@ -1,6 +1,8 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "fontsource-noto-sans-jp"
+import "fontsource-roboto"
+import "fontsource-noto-serif-jp"
+import "fontsource-vollkorn"
 // normalize CSS across browsers
 import "./src/normalize.css"
 // custom CSS styles
