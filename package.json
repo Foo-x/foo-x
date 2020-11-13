@@ -33,7 +33,7 @@
   "devDependencies": {
     "prettier": "2.1.2"
   },
-  "license": "unlicensed",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
