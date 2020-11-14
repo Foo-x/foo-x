@@ -1,0 +1,13 @@
+<svg width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <rect width="100%" height="100%" fill="white">
+    </g>
+    <g transform="rotate(-22, 256, 256) scale(1.422, 1.422)" stroke="rgb(34, 41, 51)" stroke-width="30">
+        <path d="M 60 270 C 100 270, 150 210, 180 180" fill="transparent"/>
+        <path d="M 300 90 C 260 90, 210 150, 180 180" fill="transparent"/>
+        <path d="M 140 140 L 220 220" fill="transparent"/>
+
+        <circle cx="60" cy="230" r="40" fill="transparent" />
+        <circle cx="300" cy="130" r="40" fill="transparent" />
+    </g>
+</svg>
