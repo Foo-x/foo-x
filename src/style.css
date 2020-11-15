@@ -278,10 +278,17 @@ a:focus {
 }
 
 .global-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   padding: 12px;
+  width: 100vw;
   pointer-events: none;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .brand-icon {
