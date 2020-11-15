@@ -277,6 +277,17 @@ a:focus {
   vertical-align: middle;
 }
 
+.global-nav {
+  position: sticky;
+  top: 0;
+  padding: 12px;
+  pointer-events: none;
+}
+
+.brand-icon {
+  pointer-events: auto;
+}
+
 .global-main {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
