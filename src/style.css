@@ -263,15 +263,11 @@ a:focus {
 
 /* Custom classes */
 
-.global-header {
+.header-top {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-10) var(--spacing-5);
-}
-
-.header-heading {
   display: flex;
-  margin: 0;
   justify-content: center;
   font-size: var(--fontSize-7);
 }

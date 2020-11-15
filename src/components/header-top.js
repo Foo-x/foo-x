@@ -13,13 +13,11 @@ const HeaderTop = () => {
   )
 
   return (
-    <header className="global-header">
-      <h1 className="header-heading">
-        <Link to="/">
-          <img className="header-brand" src={brand.publicURL} alt="foo-x.com" />
-        </Link>
-      </h1>
-    </header>
+    <h1 className="header-top">
+      <Link to="/">
+        <img className="header-brand" src={brand.publicURL} alt="foo-x.com" />
+      </Link>
+    </h1>
   )
 }
 
