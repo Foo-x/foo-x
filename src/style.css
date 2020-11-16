@@ -222,11 +222,6 @@ blockquote > :last-child {
   margin-bottom: var(--spacing-0);
 }
 
-blockquote > ul,
-blockquote > ol {
-  list-style-position: inside;
-}
-
 table {
   width: 100%;
   margin-bottom: var(--spacing-8);
@@ -334,9 +329,5 @@ a:focus {
 @media (max-width: 42rem) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
-  }
-  ul,
-  ol {
-    list-style-position: inside;
   }
 }
