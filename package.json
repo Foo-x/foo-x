@@ -1,7 +1,7 @@
 {
   "name": "foo-x",
   "private": true,
-  "description": "Foo-x.com",
+  "description": "foo-x",
   "version": "0.1.0",
   "dependencies": {
     "fontsource-noto-sans-jp": "^3.0.9",
