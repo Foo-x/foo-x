@@ -330,12 +330,15 @@ a:focus {
 
 /* Media queries */
 
-@media (max-width: 42rem) {
+@media (max-width: 64em) {
+}
+
+@media (max-width: 37.5em) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
   }
 
   .header-brand {
-    width: 16rem;
+    width: 14rem;
   }
 }
