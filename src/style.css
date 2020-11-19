@@ -272,7 +272,7 @@ a:focus {
 .global-nav {
   position: fixed;
   top: 0;
-  padding: 12px;
+  padding: 0.4rem;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
   transition: opacity 0.3s, visibility 0.3s;
