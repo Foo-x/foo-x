@@ -293,6 +293,20 @@ a:focus {
   padding: var(--spacing-0) var(--spacing-5);
 }
 
+.global-main-top {
+  padding: 1rem 10vw;
+  background-color: #f8fafc;
+  min-height: 50vh;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10vw;
+  row-gap: 5vw;
+  margin: 0;
+}
+
 .post-list-item {
   margin-bottom: var(--spacing-8);
 }
@@ -309,7 +323,7 @@ a:focus {
 }
 
 .post-list-item header {
-  margin-bottom: var(--spacing-4);
+  text-align: right;
 }
 
 .blog-post header h1 {
@@ -331,6 +345,9 @@ a:focus {
 /* Media queries */
 
 @media (max-width: 64em) {
+  .post-list {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 37.5em) {
@@ -340,5 +357,13 @@ a:focus {
 
   .header-brand {
     width: 14rem;
+  }
+
+  .global-main-top {
+    padding: 1rem 15vw;
+  }
+
+  .post-list {
+    grid-template-columns: 1fr;
   }
 }

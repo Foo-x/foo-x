@@ -5,6 +5,7 @@ import Nav from "./nav"
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+  const mainClassName = isRootPath ? "global-main-top" : "global-main"
 
   const target = useRef(null)
   const [isHidden, setIsHidden] = useState(true)
@@ -33,7 +34,7 @@ const Layout = ({ location, children }) => {
         <HeaderTop />
       </header>
       <Nav isHidden={isHidden} />
-      <main className="global-main">{children}</main>
+      <main className={mainClassName}>{children}</main>
     </div>
   )
 }
