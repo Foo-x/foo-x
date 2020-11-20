@@ -1,3 +1,3 @@
-# Foo-x.com
+# foo-x
 
-Foo-x.com
+foo-x

@@ -15,7 +15,7 @@ const HeaderTop = () => {
   return (
     <h1 className="header-top">
       <Link to="/">
-        <img className="header-brand" src={brand.publicURL} alt="foo-x.com" />
+        <img className="header-brand" src={brand.publicURL} alt="foo-x" />
       </Link>
     </h1>
   )
