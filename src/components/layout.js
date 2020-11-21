@@ -22,19 +22,21 @@ const Layout = ({ location, children }) => {
     }
     const options = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0,
+      rootMargin: "0px 0px 100%",
+      threshold: 1,
     }
     const observer = new IntersectionObserver(callback, options)
     observer.observe(target.current)
   }, [])
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header ref={target} className="global-header">
+      <header className="global-header">
         <HeaderTop />
       </header>
       <Nav isHidden={isHidden} />
-      <main className={mainClassName}>{children}</main>
+      <main ref={target} className={mainClassName}>
+        {children}
+      </main>
     </div>
   )
 }
