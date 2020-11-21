@@ -23,19 +23,18 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
-                  <time dateTime={post.frontmatter.date.replace(/\./g, "-")}>
-                    {post.frontmatter.date}
-                  </time>
-                </header>
-                <Img fluid={defaultImg} alt="default image" itemProp="image" />
-                <section>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
+                <Link to={post.fields.slug} itemProp="url">
+                  <Img
+                    fluid={defaultImg}
+                    alt="default image"
+                    itemProp="image"
+                  />
+                  <section>
+                    <h2>
                       <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                </section>
+                    </h2>
+                  </section>
+                </Link>
               </article>
             </li>
           )
