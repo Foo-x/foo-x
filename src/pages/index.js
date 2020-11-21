@@ -62,7 +62,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    defaultImg: file(absolutePath: { regex: "//content/assets/favicon.png/" }) {
+    defaultImg: file(
+      absolutePath: { regex: "//content/assets/default-img.png/" }
+    ) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_noBase64
