@@ -82,6 +82,7 @@
   --color-text-light: #4f5969;
   --color-heading: #222933;
   --color-accent: #d1dce5;
+  --color-brand: #222933;
   --scrollBarWidth: calc(100vw - 100%);
 }
 
