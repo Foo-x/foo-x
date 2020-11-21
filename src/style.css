@@ -334,7 +334,7 @@ a:focus {
 .blog-post {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-0) var(--spacing-5);
+  padding: var(--spacing-5);
   word-wrap: break-word;
 }
 
@@ -344,11 +344,6 @@ a:focus {
 
 .blog-post header p {
   font-size: var(--fontSize-2);
-}
-
-.blog-post-nav ul {
-  margin: var(--spacing-0);
-  word-break: break-word;
 }
 
 .gatsby-highlight {
