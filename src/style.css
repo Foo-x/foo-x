@@ -252,6 +252,10 @@ a:focus {
 /* Custom classes */
 
 .global-header {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: calc(100vw - var(--scrollBarWidth));
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -295,6 +299,7 @@ a:focus {
 }
 
 .global-main-top {
+  margin-top: 50vh;
   padding: 5vw 10vw;
   background-color: #f8fafc;
   min-height: 50vh;
