@@ -335,6 +335,7 @@ a:focus {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
   padding: var(--spacing-0) var(--spacing-5);
+  word-wrap: break-word;
 }
 
 .blog-post header h1 {
