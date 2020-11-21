@@ -292,6 +292,10 @@ a:focus {
   pointer-events: auto;
 }
 
+.global-main-wrapper {
+  background-color: #f8fafc;
+}
+
 .global-main {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);
@@ -300,7 +304,6 @@ a:focus {
 
 .global-main-top {
   padding: 5vw 10vw;
-  background-color: #f8fafc;
   min-height: 50vh;
 }
 
