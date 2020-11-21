@@ -83,6 +83,7 @@
   --color-heading: #222933;
   --color-accent: #d1dce5;
   --color-brand: #222933;
+  --color-top-background: #f8fafc;
   --scrollBarWidth: calc(100vw - 100%);
 }
 
@@ -251,6 +252,14 @@ a:focus {
 
 /* Custom classes */
 
+.body-top {
+  background-color: var(--color-top-background);
+}
+
+.body-blog-post {
+  background-color: #fff;
+}
+
 .global-header {
   position: sticky;
   z-index: -1;
@@ -260,6 +269,7 @@ a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
 }
 
 .header-top {
@@ -299,7 +309,7 @@ a:focus {
 .global-main-top {
   padding: 5vw 10vw;
   min-height: 50vh;
-  background-color: #f8fafc;
+  background-color: var(--color-top-background);
 }
 
 .post-list {
