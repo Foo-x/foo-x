@@ -38,8 +38,8 @@ const Layout = ({ location, children }) => {
         <HeaderTop />
       </header>
       <Nav isHidden={isHidden} />
-      <main ref={target} className="global-main-wrapper">
-        <div className={mainClassName}>{children}</div>
+      <main ref={target} className={mainClassName}>
+        {children}
       </main>
     </div>
   )

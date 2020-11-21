@@ -292,19 +292,14 @@ a:focus {
   pointer-events: auto;
 }
 
-.global-main-wrapper {
-  background-color: #f8fafc;
-}
-
 .global-main {
-  margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-0) var(--spacing-5);
+  background-color: #fff;
 }
 
 .global-main-top {
   padding: 5vw 10vw;
   min-height: 50vh;
+  background-color: #f8fafc;
 }
 
 .post-list {
@@ -334,6 +329,12 @@ a:focus {
   line-height: var(--lineHeight-normal);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
+}
+
+.blog-post {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-0) var(--spacing-5);
 }
 
 .blog-post header h1 {
