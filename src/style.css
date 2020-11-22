@@ -316,7 +316,7 @@ a:focus {
 
 .post-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 10vw;
   row-gap: 10vw;
   margin: 0;
@@ -364,6 +364,12 @@ a:focus {
 
 /* Media queries */
 
+@media (max-width: 100em) {
+  .post-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 @media (max-width: 64em) {
   .post-list {
     grid-template-columns: 1fr 1fr;
@@ -371,15 +377,10 @@ a:focus {
 }
 
 @media (max-width: 46em) {
-  .post-list {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .global-nav {
     pointer-events: initial;
     background-color: #fff;
   }
-
 }
 
 @media (max-width: 37.5em) {
