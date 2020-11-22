@@ -37,7 +37,7 @@ const Layout = ({ location, children }) => {
       <header className="global-header">
         <HeaderTop />
       </header>
-      <Nav isHidden={isHidden} />
+      <Nav isHidden={isHidden} location={location} />
       <main ref={target} className={mainClassName}>
         {children}
       </main>

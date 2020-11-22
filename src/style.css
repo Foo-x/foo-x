@@ -284,10 +284,12 @@ a:focus {
   width: 18rem;
 }
 
+.global-nav-top,
 .global-nav {
   position: fixed;
   top: 0;
   padding: 0.4rem;
+  z-index: 1;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
   transition: opacity 0.3s, visibility 0.3s;
@@ -375,6 +377,15 @@ a:focus {
 
   .header-brand {
     width: 14rem;
+  }
+
+  .global-nav-top,
+  .global-nav {
+    pointer-events: initial;
+  }
+
+  .global-nav {
+    background-color: #fff;
   }
 
   .global-main-top {
