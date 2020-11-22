@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const HeaderTop = () => {
   const { brand } = useStaticQuery(
@@ -14,9 +14,7 @@ const HeaderTop = () => {
 
   return (
     <h1 className="header-top">
-      <Link to="/">
-        <img className="header-brand" src={brand.publicURL} alt="foo-x" />
-      </Link>
+      <img className="header-brand" src={brand.publicURL} alt="foo-x" />
     </h1>
   )
 }
