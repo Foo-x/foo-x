@@ -15,6 +15,8 @@ const BlogIndex = ({ data, location }) => {
       <ul className="post-list" style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
+          const img =
+            post.frontmatter.thumbnail?.childImageSharp?.fluid || defaultImg
 
           return (
             <li key={post.fields.slug}>
@@ -25,8 +27,8 @@ const BlogIndex = ({ data, location }) => {
               >
                 <Link to={post.fields.slug} itemProp="url">
                   <Img
-                    fluid={defaultImg}
-                    alt="default image"
+                    fluid={{ ...img, aspectRatio: 1 }}
+                    alt="thumbnail"
                     itemProp="image"
                   />
                   <section>
@@ -58,6 +60,13 @@ export const pageQuery = graphql`
           date(formatString: "YYYY.MM.DD")
           title
           description
+          thumbnail {
+            childImageSharp {
+              fluid(maxWidth: 500, grayscale: true) {
+                ...GatsbyImageSharpFluid_noBase64
+              }
+            }
+          }
         }
       }
     }
