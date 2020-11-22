@@ -370,6 +370,18 @@ a:focus {
   }
 }
 
+@media (max-width: 46em) {
+  .post-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .global-nav {
+    pointer-events: initial;
+    background-color: #fff;
+  }
+
+}
+
 @media (max-width: 37.5em) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
@@ -377,15 +389,6 @@ a:focus {
 
   .header-brand {
     width: 14rem;
-  }
-
-  .global-nav-top,
-  .global-nav {
-    pointer-events: initial;
-  }
-
-  .global-nav {
-    background-color: #fff;
   }
 
   .global-main-top {
