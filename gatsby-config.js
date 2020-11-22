@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `foo-x`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    description: `主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。`,
+    siteUrl: `https://foo-x.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `f_akira_s`,
     },
   },
   plugins: [
