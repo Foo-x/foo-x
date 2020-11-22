@@ -56,11 +56,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `foo-x`,
+        short_name: `foo-x`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#222933`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
         include_favicon: false,
