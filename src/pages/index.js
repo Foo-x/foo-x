@@ -26,11 +26,13 @@ const BlogIndex = ({ data, location }) => {
                 itemType="http://schema.org/Article"
               >
                 <Link to={post.fields.slug} itemProp="url">
-                  <Img
-                    fluid={{ ...img, aspectRatio: 1 }}
-                    alt="thumbnail"
-                    itemProp="image"
-                  />
+                  <div className="post-list-item-image-wrapper">
+                    <Img
+                      fluid={{ ...img, aspectRatio: 1 }}
+                      alt="thumbnail"
+                      itemProp="image"
+                    />
+                  </div>
                   <section>
                     <h2>
                       <span itemProp="headline">{title}</span>
@@ -62,7 +64,7 @@ export const pageQuery = graphql`
           description
           thumbnail {
             childImageSharp {
-              fluid(maxWidth: 500, grayscale: true) {
+              fluid(maxWidth: 300) {
                 ...GatsbyImageSharpFluid_noBase64
               }
             }
@@ -70,11 +72,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    defaultImg: file(
-      absolutePath: { regex: "//content/assets/default-img.png/" }
-    ) {
+    defaultImg: file(absolutePath: { regex: "//content/assets/favicon.png/" }) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }

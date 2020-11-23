@@ -332,6 +332,11 @@ a:focus {
   color: var(--color-text);
 }
 
+.post-list-item-image-wrapper {
+  padding: 20%;
+  background-color: #fff;
+}
+
 .post-list-item section {
   word-break: break-word;
   padding-top: var(--spacing-4);
