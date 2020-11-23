@@ -3,12 +3,20 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeaderBlogPost from "../components/header-blog-post"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
 
   return (
-    <Layout location={location}>
+    <Layout
+      location={location}
+      header={
+        <HeaderBlogPost
+          fluid={post.frontmatter.header?.childImageSharp?.fluid}
+        />
+      }
+    >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
@@ -47,6 +55,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY-MM-DD")
         description
+        header {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
+          }
+        }
       }
     }
   }

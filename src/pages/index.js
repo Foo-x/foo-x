@@ -4,13 +4,14 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import HeaderTop from "../components/header-top"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
   const defaultImg = data.defaultImg.childImageSharp.fluid
 
   return (
-    <Layout location={location}>
+    <Layout location={location} header={<HeaderTop />}>
       <SEO title="All posts" location={location} />
       <ul className="post-list" style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
