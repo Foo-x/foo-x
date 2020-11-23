@@ -83,6 +83,7 @@
   --color-heading: #222933;
   --color-accent: #d1dce5;
   --color-brand: #222933;
+  --color-brand-transparent: rgba(34, 41, 51, 0.5);
   --color-top-background: #f8fafc;
   --scrollBarWidth: calc(100vw - 100%);
 }
@@ -361,17 +362,92 @@ a:focus {
   height: 100%;
 }
 
-.blog-post header {
+.blog-post > header {
   text-align: center;
 }
 
-.blog-post header h1 {
+.blog-post > header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
   text-align: left;
 }
 
-.blog-post header time {
+.blog-post > header time {
   color: #999;
+}
+
+.blog-post nav {
+  margin: 3rem 0;
+}
+
+.blog-post nav header {
+  font-weight: var(--fontWeight-bold);
+}
+
+.blog-post nav a {
+  display: block;
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+.blog-post nav a:hover {
+  color: var(--color-brand-transparent);
+}
+
+.blog-post nav section {
+  margin: 1rem 0;
+  border-top: 2px solid var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  text-align: initial;
+}
+
+.blog-post nav section ul {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.blog-post nav section > ul {
+  margin: 2rem 0;
+}
+
+.blog-post nav section ul li {
+  position: relative;
+  margin-bottom: var(--spacing-4);
+}
+
+.blog-post nav section > ul > li {
+  padding-left: var(--spacing-6);
+  font-weight: var(--fontWeight-bold);
+}
+
+.blog-post nav section > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0.37rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--color-brand);
+  border-radius: 50%;
+}
+
+.blog-post nav section > ul > li > ul {
+  margin-top: var(--spacing-4);
+}
+
+.blog-post nav section > ul > li > ul > li {
+  font-weight: var(--fontWeight-normal);
+}
+
+.blog-post nav section > ul > li > ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.36rem;
+  top: 0.6rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-brand-transparent);
+  border-radius: 50%;
 }
 
 .gatsby-highlight {

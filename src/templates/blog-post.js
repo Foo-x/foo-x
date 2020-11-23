@@ -7,6 +7,7 @@ import HeaderBlogPost from "../components/header-blog-post"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  const toc = post.tableOfContents.replace(/<\/?p>/g, "")
 
   return (
     <Layout
@@ -32,6 +33,10 @@ const BlogPostTemplate = ({ data, location }) => {
           <time dateTime={post.frontmatter.date}>
             {post.frontmatter.date.replace(/-/g, ".")}
           </time>
+          <nav>
+            <header>目次</header>
+            <section dangerouslySetInnerHTML={{ __html: toc }}></section>
+          </nav>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -63,6 +68,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      tableOfContents(maxDepth: 3)
     }
   }
 `
