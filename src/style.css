@@ -371,7 +371,9 @@ a:focus {
   text-align: left;
 }
 
-.blog-post > header time {
+.blog-post > header time,
+.blog-post-tag-list {
+  margin-top: var(--spacing-2);
   color: #999;
 }
 

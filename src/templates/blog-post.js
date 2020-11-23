@@ -33,6 +33,9 @@ const BlogPostTemplate = ({ data, location }) => {
           <time dateTime={post.frontmatter.date}>
             {post.frontmatter.date.replace(/-/g, ".")}
           </time>
+          <section className="blog-post-tag-list">
+            {post.frontmatter.tags?.join(" / ") || ""}
+          </section>
           <nav>
             <header>目次</header>
             <section dangerouslySetInnerHTML={{ __html: toc }}></section>
@@ -67,6 +70,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        tags
       }
       tableOfContents(maxDepth: 3)
     }
