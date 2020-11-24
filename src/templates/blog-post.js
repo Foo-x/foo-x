@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderBlogPost from "../components/header-blog-post"
+import ShareFooter from "../components/share-footer"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -46,6 +47,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
+        <ShareFooter url={location.href} title={post.frontmatter.title} />
       </article>
     </Layout>
   )

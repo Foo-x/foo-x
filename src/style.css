@@ -453,6 +453,28 @@ a:focus {
   border-radius: 50%;
 }
 
+.share-footer {
+  display: flex;
+  justify-content: center;
+  column-gap: 2vw;
+}
+
+.share-footer rect {
+  fill: #fff;
+}
+
+.share-footer path {
+  fill: var(--color-brand);
+}
+
+.share-footer button {
+  transition: opacity .2s;
+}
+
+.share-footer button:hover {
+  opacity: .5;
+}
+
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
 }
