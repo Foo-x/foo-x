@@ -389,6 +389,7 @@ a:focus {
   display: block;
   color: var(--color-brand);
   text-decoration: none;
+  transition: color .2s;
 }
 
 .blog-post nav a:hover {
