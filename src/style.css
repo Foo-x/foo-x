@@ -77,12 +77,12 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-brand: #222933;
+  --color-primary: var(--color-brand);
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #222933;
   --color-accent: #d1dce5;
-  --color-brand: #222933;
   --color-brand-transparent: rgba(34, 41, 51, 0.5);
   --color-top-background: #f8fafc;
   --scrollBarWidth: calc(100vw - 100%);
