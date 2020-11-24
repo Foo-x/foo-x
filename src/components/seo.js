@@ -25,15 +25,14 @@ const SEO = ({ description, lang, meta, title, location }) => {
   const bodyClass = isRootPath ? "body-top" : "body-blog-post"
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const pageTitle = `${title} | ${site.siteMetadata.title}`
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={pageTitle}
       link={[
         {
           rel: "icon",
@@ -51,7 +50,7 @@ const SEO = ({ description, lang, meta, title, location }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: pageTitle,
         },
         {
           property: `og:description`,
@@ -71,7 +70,7 @@ const SEO = ({ description, lang, meta, title, location }) => {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: pageTitle,
         },
         {
           name: `twitter:description`,
