@@ -319,8 +319,8 @@ a:focus {
 .post-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 10vw;
-  row-gap: 10vw;
+  column-gap: 9vw;
+  row-gap: 5vw;
   margin: 0;
 }
 
@@ -468,6 +468,11 @@ a:focus {
 @media (max-width: 64em) {
   .post-list {
     grid-template-columns: 1fr 1fr;
+    column-gap: 12vw;
+  }
+
+  .global-main-top {
+    padding: 7vw 10vw;
   }
 }
 
@@ -493,5 +498,6 @@ a:focus {
 
   .post-list {
     grid-template-columns: 1fr;
+    row-gap: 10vw;
   }
 }
