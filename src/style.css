@@ -385,6 +385,12 @@ a:focus {
   font-weight: var(--fontWeight-bold);
 }
 
+.blog-post nav hr {
+  height: 2px;
+  background-color: var(--color-brand);
+  margin: 1rem 0;
+}
+
 .blog-post nav a {
   display: block;
   color: var(--color-brand);
@@ -398,8 +404,6 @@ a:focus {
 
 .blog-post nav section {
   margin: 1rem 0;
-  border-top: 2px solid var(--color-brand);
-  border-bottom: 2px solid var(--color-brand);
   text-align: initial;
 }
 

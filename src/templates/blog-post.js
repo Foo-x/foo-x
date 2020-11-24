@@ -39,7 +39,9 @@ const BlogPostTemplate = ({ data, location }) => {
           </section>
           <nav>
             <header>目次</header>
+            <hr />
             <section dangerouslySetInnerHTML={{ __html: toc }}></section>
+            <hr />
           </nav>
         </header>
         <section
