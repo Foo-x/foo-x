@@ -460,7 +460,7 @@ a:focus {
 .share-footer {
   display: flex;
   justify-content: center;
-  column-gap: 2vw;
+  column-gap: var(--spacing-5);
 }
 
 .share-footer rect {
