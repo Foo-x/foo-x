@@ -1,14 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderTop from "../components/header-top"
+import ThumbnailRaster from "../components/thumbnail-raster"
+import ThumbnailVector from "../components/thumbnail-vector"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-  const defaultImg = data.defaultImg.childImageSharp.fluid
 
   return (
     <Layout location={location} header={<HeaderTop />}>
@@ -16,8 +16,14 @@ const BlogIndex = ({ data, location }) => {
       <ul className="post-list" style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          const img =
-            post.frontmatter.thumbnail?.childImageSharp?.fluid || defaultImg
+          const imgSrc = post.frontmatter.thumbnail?.childImageSharp?.fluid
+          const thumbnail = imgSrc ? (
+            <ThumbnailRaster img={imgSrc} />
+          ) : (
+            <ThumbnailVector
+              img={post.frontmatter.thumbnail?.publicURL || "/favicon.svg"}
+            />
+          )
 
           return (
             <li key={post.fields.slug}>
@@ -28,11 +34,7 @@ const BlogIndex = ({ data, location }) => {
               >
                 <Link to={post.fields.slug} itemProp="url">
                   <div className="post-list-item-image-wrapper">
-                    <Img
-                      fluid={{ ...img, aspectRatio: 1 }}
-                      alt="thumbnail"
-                      itemProp="image"
-                    />
+                    {thumbnail}
                   </div>
                   <section>
                     <h2>
@@ -69,14 +71,8 @@ export const pageQuery = graphql`
                 ...GatsbyImageSharpFluid_noBase64
               }
             }
+            publicURL
           }
-        }
-      }
-    }
-    defaultImg: file(absolutePath: { regex: "//content/assets/favicon.png/" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }

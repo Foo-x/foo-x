@@ -338,6 +338,20 @@ a:focus {
   background-color: #fff;
 }
 
+.post-list-item-image-wrapper img {
+  width: 100%;
+}
+
+.post-list-item-image-space {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.post-list-item-image-vector {
+  position: absolute;
+  transition: opacity .5s, visibility .5s;
+}
+
 .post-list-item section {
   word-break: break-word;
   padding-top: var(--spacing-4);
