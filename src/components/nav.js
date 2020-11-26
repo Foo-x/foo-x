@@ -1,12 +1,8 @@
 import React from "react"
 import BrandIcon from "./brand-icon"
 
-const Nav = ({ isHidden, location }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  const navClassName = isRootPath ? "global-nav-top" : "global-nav"
-
-  const classNames = isHidden ? [navClassName, "is-hidden"] : [navClassName]
+const Nav = ({ isHidden, className }) => {
+  const classNames = isHidden ? [className, "is-hidden"] : [className]
   return (
     <nav className={classNames.join(" ")}>
       <BrandIcon />
