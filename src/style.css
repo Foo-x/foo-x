@@ -281,6 +281,13 @@ a:focus {
   background-color: #fff;
 }
 
+.global-header-common {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 8rem 0 2rem;
+}
+
 .header-top {
   margin: 0;
   max-width: var(--maxWidth-wrapper);
@@ -293,14 +300,19 @@ a:focus {
   width: 18rem;
 }
 
+.global-nav,
 .global-nav-top,
-.global-nav {
+.global-nav-common {
   position: fixed;
   top: 0;
   padding: 0.4rem;
   z-index: 1;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
+}
+
+.global-nav,
+.global-nav-top {
   transition: opacity 0.3s, visibility 0.3s;
 }
 
@@ -311,6 +323,10 @@ a:focus {
 
 .brand-icon {
   pointer-events: auto;
+}
+
+.heading-common {
+  width: 8rem;
 }
 
 .global-main {
@@ -369,6 +385,13 @@ a:focus {
   line-height: var(--lineHeight-normal);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
+}
+
+.about-page {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-2) var(--spacing-5);
+  word-wrap: break-word;
 }
 
 .blog-post {
@@ -537,6 +560,10 @@ a:focus {
 
   .header-brand {
     width: 14rem;
+  }
+
+  .global-header-common {
+    padding: 6rem 0 2rem;
   }
 
   .global-main-top {
