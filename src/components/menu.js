@@ -70,7 +70,12 @@ const Menu = () => {
       <nav className={navClassNames.join(" ")} ref={target}>
         <ul>
           <li>
-            <Link to="/">
+            <Link
+              to="/"
+              onClick={() => {
+                setIsActive(false)
+              }}
+            >
               <img src={data.blog.publicURL} alt="blog" />
             </Link>
           </li>
@@ -79,7 +84,12 @@ const Menu = () => {
             <img src={data.archive.publicURL} alt="archive" />
           </li>
           <li>
-            <Link to="/about">
+            <Link
+              to="/about"
+              onClick={() => {
+                setIsActive(false)
+              }}
+            >
               <img src={data.about.publicURL} alt="about" />
             </Link>
           </li>
