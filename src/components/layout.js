@@ -5,7 +5,9 @@ const Layout = ({ location, children, header }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const mainClassName = isRootPath ? "global-main-top" : "global-main"
-  const navClassName = isRootPath ? "global-nav-top" : "global-nav"
+  const navClassName = isRootPath
+    ? "global-nav-wrapper-top"
+    : "global-nav-wrapper"
 
   const target = useRef(null)
   const [isHidden, setIsHidden] = useState(true)

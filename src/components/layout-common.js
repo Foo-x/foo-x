@@ -8,7 +8,7 @@ const LayoutCommon = ({ children, titleSvg }) => {
       <header className="global-header-common">
         <HeaderCommon titleSvg={titleSvg} />
       </header>
-      <Nav isHidden={false} className="global-nav-common" />
+      <Nav isHidden={false} className="global-nav-wrapper" />
       <main className="global-main">{children}</main>
     </div>
   )

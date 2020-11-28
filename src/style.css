@@ -300,20 +300,21 @@ a:focus {
   width: 18rem;
 }
 
-.global-nav,
-.global-nav-top,
-.global-nav-common {
+.global-nav-wrapper,
+.global-nav-wrapper-top {
   position: fixed;
   top: 0;
   padding: 0.4rem;
   z-index: 1;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
+  transition: opacity 0.3s, visibility 0.3s;
 }
 
-.global-nav,
-.global-nav-top {
-  transition: opacity 0.3s, visibility 0.3s;
+.global-nav {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
 }
 
 .is-hidden {
@@ -607,7 +608,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (max-width: 46em) {
-  .global-nav {
+  .global-nav-wrapper {
     pointer-events: initial;
     background-color: #fff;
   }
