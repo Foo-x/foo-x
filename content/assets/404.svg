@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53.627" height="20.32" version="1.1" viewBox="0 0 14.189 5.3763" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-30.436 -122.56)">
+  <g fill="#222933" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="404">
+   <path d="m31.628 125.75 1.1642-2.0391v2.0391zm1.1642 0.89605v1.1148h1.1853v-1.1148h0.59267v-0.89605h-0.59267v-3.0127h-1.6228l-1.9191 3.2597v0.64911z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   <path d="m37.597 127.93c1.3547 0 2.2931-1.1289 2.2931-2.6882s-0.93839-2.6882-2.2931-2.6882c-1.3476 0-2.286 1.1289-2.286 2.6882s0.93839 2.6882 2.286 2.6882zm0-4.3603c0.66322 0 1.1007 0.70556 1.1007 1.6722s-0.43744 1.6722-1.1007 1.6722c-0.66322 0-1.1007-0.70556-1.1007-1.6722s0.43744-1.6722 1.1007-1.6722z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   <path d="m41.682 125.75 1.1642-2.0391v2.0391zm1.1642 0.89605v1.1148h1.1853v-1.1148h0.59267v-0.89605h-0.59267v-3.0127h-1.6228l-1.9191 3.2597v0.64911z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+  </g>
+ </g>
+</svg>
