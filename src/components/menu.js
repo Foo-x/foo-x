@@ -1,3 +1,4 @@
+import { Link, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
 
 const touchmoveListener = event => {
@@ -13,6 +14,25 @@ const keydownListener = event => {
 }
 
 const Menu = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        archive: file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "archive.svg" }
+        ) {
+          publicURL
+        }
+        about: file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "about.svg" }
+        ) {
+          publicURL
+        }
+      }
+    `
+  )
+
   const [isActive, setIsActive] = useState(false)
   const hamburgerClassNames = isActive ? ["hamburger", "active"] : ["hamburger"]
   const navClassNames = isActive ? ["menu-nav"] : ["menu-nav", "is-hidden"]
@@ -43,8 +63,15 @@ const Menu = () => {
     <div className="menu-wrapper">
       <nav className={navClassNames.join(" ")} ref={target}>
         <ul>
-          <li>archive</li>
-          <li>about</li>
+          <li>
+            {/* TODO */}
+            <img src={data.archive.publicURL} alt="archive" />
+          </li>
+          <li>
+            <Link to="/about">
+              <img src={data.about.publicURL} alt="about" />
+            </Link>
+          </li>
         </ul>
       </nav>
       {/*
