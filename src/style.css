@@ -378,6 +378,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   stroke-dashoffset: -64px;
 }
 
+.menu-nav {
+  position: absolute;
+  width: calc(100vw - var(--scrollBarWidth));
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: initial;
+  background: #fff;
+}
+
 .line {
   fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;

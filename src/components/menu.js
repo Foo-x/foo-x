@@ -1,11 +1,52 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
+
+const touchmoveListener = event => {
+  event.preventDefault()
+}
+const wheelListener = event => {
+  event.preventDefault()
+}
+const keydownListener = event => {
+  if (["ArrowUp", "ArrowDown"].includes(event.key)) {
+    event.preventDefault()
+  }
+}
 
 const Menu = () => {
   const [isActive, setIsActive] = useState(false)
-  const classNames = isActive ? ["hamburger", "active"] : ["hamburger"]
+  const hamburgerClassNames = isActive ? ["hamburger", "active"] : ["hamburger"]
+  const navClassNames = isActive ? ["menu-nav"] : ["menu-nav", "is-hidden"]
+
+  const target = useRef(null)
+
+  useEffect(() => {
+    if (isActive) {
+      target.current.addEventListener("touchmove", touchmoveListener, {
+        passive: false,
+      })
+      target.current.addEventListener("wheel", wheelListener, {
+        passive: false,
+      })
+      document.addEventListener("keydown", keydownListener)
+    } else {
+      target.current.removeEventListener("touchmove", touchmoveListener, {
+        passive: false,
+      })
+      target.current.removeEventListener("wheel", wheelListener, {
+        passive: false,
+      })
+      document.removeEventListener("keydown", keydownListener)
+    }
+  }, [isActive])
 
   return (
     <div className="menu-wrapper">
+      <nav className={navClassNames.join(" ")} ref={target}>
+        <ul>
+          <li>archive</li>
+          <li>about</li>
+        </ul>
+      </nav>
       {/*
       Copyright (c) 2020 by Mikael Ainalem (https://codepen.io/ainalem/pen/LJYRxz)
 
@@ -16,7 +57,7 @@ const Menu = () => {
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       */}
       <svg
-        className={classNames.join(" ")}
+        className={hamburgerClassNames.join(" ")}
         viewBox="0 0 100 100"
         width="32"
         onClick={() => {
