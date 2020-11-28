@@ -405,6 +405,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .menu-nav li {
   margin-bottom: var(--spacing-8);
+  transition: opacity .2s;
+}
+
+.menu-nav li:hover {
+  opacity: .5;
 }
 
 .menu-nav img {
