@@ -440,6 +440,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .post-list-item {
   margin-bottom: var(--spacing-8);
+  transition: opacity .2s;
+}
+
+.post-list-item:hover {
+  opacity: .5;
 }
 
 .post-list-item a {
