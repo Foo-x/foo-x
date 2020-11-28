@@ -237,7 +237,7 @@ table thead tr th {
 }
 
 code {
-  font-size: .9em;
+  font-size: .9em !important;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", Meiryo, monospace !important;
 }
 
@@ -667,6 +667,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @media (max-width: 37.5em) {
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
+  }
+
+  code {
+    font-size: .8em !important;
   }
 
   .header-brand {
