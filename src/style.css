@@ -308,18 +308,13 @@ a:focus {
   z-index: 1;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity .5s;
 }
 
 .global-nav {
   display: flex;
   justify-content: space-between;
   height: 32px;
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
 }
 
 .brand-icon {
@@ -390,6 +385,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   align-items: center;
   pointer-events: initial;
   background: #fff;
+  transition: opacity .5s;
 }
 
 .line {
@@ -447,7 +443,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .post-list-item-image-vector {
   position: absolute;
-  transition: opacity .5s, visibility .5s;
+  transition: opacity .5s;
 }
 
 .post-list-item section {
@@ -649,4 +645,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     grid-template-columns: 1fr;
     row-gap: 10vw;
   }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility 0s .5s !important;
 }
