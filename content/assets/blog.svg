@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56.987" height="26.453" version="1.1" viewBox="0 0 15.078 6.9991" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-63.203 -106.65)">
+  <g fill="#222933" stroke-width=".26458" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal" aria-label="blog">
+   <path d="m65.164 109.08c0.55033 0 0.94544 0.42334 0.94544 0.99484 0 0.57855-0.40217 0.99483-0.94544 0.99483-0.55033 0-0.94544-0.42333-0.94544-0.99483s0.39511-0.99484 0.94544-0.99484zm2.0038 0.99484c0-1.143-0.70556-1.9473-1.7145-1.9473-0.49389 0-0.90311 0.21167-1.1924 0.57856v-2.0602h-1.0583v5.2352h1.0442v-0.43744c0.28928 0.35983 0.70556 0.57855 1.2065 0.57855 1.0019 0 1.7145-0.80433 1.7145-1.9473z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   <path d="m67.916 106.65v5.2352h1.0583v-5.2352z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   <path d="m71.719 108.13c-1.1853 0-2.0038 0.79023-2.0038 1.9473 0 1.15 0.81844 1.9473 2.0038 1.9473 1.1924 0 2.0108-0.79728 2.0108-1.9473 0-1.1571-0.81844-1.9473-2.0108-1.9473zm0 2.9633c-0.55033 0-0.93839-0.42334-0.93839-1.016 0-0.59267 0.38806-1.016 0.93839-1.016 0.55739 0 0.94544 0.42333 0.94544 1.016 0 0.59266-0.38806 1.016-0.94544 1.016z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+   <path d="m76.319 111.06c-0.55033 0-0.94544-0.41628-0.94544-0.98778 0-0.58561 0.39511-1.016 0.94544-1.016 0.55033 0 0.94544 0.43039 0.94544 1.016 0 0.5715-0.39511 0.98778-0.94544 0.98778zm-0.01411 1.7427c-0.43039 0-0.81139-0.29633-0.90311-0.70556l-0.94544 0.10584c0.10583 0.83255 0.90311 1.4393 1.8909 1.4393 1.143 0 1.9332-0.68439 1.9332-1.8062v-3.5701h-1.0583v0.43039c-0.27517-0.35277-0.68439-0.56444-1.1924-0.56444-0.99483 0-1.7145 0.80433-1.7145 1.9403 0 1.0936 0.71967 1.8556 1.7145 1.8556 0.50094 0 0.91017-0.20461 1.1924-0.55033v0.43039c0 0.62794-0.381 0.99483-0.91722 0.99483z" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal"/>
+  </g>
+ </g>
+</svg>

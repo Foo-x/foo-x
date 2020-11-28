@@ -1,4 +1,4 @@
-import { Link, useStaticQuery } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
 
 const touchmoveListener = event => {
@@ -17,6 +17,12 @@ const Menu = () => {
   const data = useStaticQuery(
     graphql`
       query {
+        blog: file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "blog.svg" }
+        ) {
+          publicURL
+        }
         archive: file(
           sourceInstanceName: { eq: "assets" }
           relativePath: { eq: "archive.svg" }
@@ -63,6 +69,11 @@ const Menu = () => {
     <div className="menu-wrapper">
       <nav className={navClassNames.join(" ")} ref={target}>
         <ul>
+          <li>
+            <Link to="/">
+              <img src={data.blog.publicURL} alt="blog" />
+            </Link>
+          </li>
           <li>
             {/* TODO */}
             <img src={data.archive.publicURL} alt="archive" />
