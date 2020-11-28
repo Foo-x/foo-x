@@ -32,7 +32,7 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <Link to={post.fields.slug} itemProp="url">
+                <Link to={`/blog${post.fields.slug}`} itemProp="url">
                   <div className="post-list-item-image-wrapper">
                     {thumbnail}
                   </div>
