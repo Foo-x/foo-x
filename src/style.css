@@ -84,6 +84,7 @@
   --color-heading: #222933;
   --color-accent: #d1dce5;
   --color-brand-transparent: rgba(34, 41, 51, 0.5);
+  --color-selection: rgba(175, 192, 209, .5);
   --color-top-background: #f8fafc;
   --scrollBarWidth: calc(100vw - 100%);
 }
@@ -239,6 +240,10 @@ table thead tr th {
 code {
   font-size: .9em !important;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", Meiryo, monospace !important;
+}
+
+::selection {
+  background: var(--color-selection) !important;
 }
 
 /* Link */
