@@ -600,7 +600,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .share-footer {
   display: flex;
   justify-content: center;
-  column-gap: var(--spacing-5);
 }
 
 .share-footer rect {
@@ -617,6 +616,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .share-footer button:hover {
   opacity: .5;
+}
+
+.share-footer button:not(:first-of-type) {
+  margin-left: var(--spacing-5);
 }
 
 .gatsby-highlight {
