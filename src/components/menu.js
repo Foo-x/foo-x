@@ -17,9 +17,9 @@ const Menu = () => {
   const data = useStaticQuery(
     graphql`
       query {
-        blog: file(
+        home: file(
           sourceInstanceName: { eq: "assets" }
-          relativePath: { eq: "blog.svg" }
+          relativePath: { eq: "home.svg" }
         ) {
           publicURL
         }
@@ -76,7 +76,7 @@ const Menu = () => {
                 setIsActive(false)
               }}
             >
-              <img src={data.blog.publicURL} alt="blog" />
+              <img src={data.home.publicURL} alt="home" />
             </Link>
           </li>
           <li>
