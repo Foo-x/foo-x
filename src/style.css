@@ -724,6 +724,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-radius: 50%;
 }
 
+.blog-post-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  font-size: .9rem;
+}
+
+.blog-post-tag-list li {
+  margin: 0;
+}
+
+.blog-post-tag-list li:not(:first-of-type)::before {
+  content: "/";
+  padding: 0 .5rem;
+}
+
+.blog-post-tag-list a {
+  text-decoration: none;
+  color: #999;
+}
+
 .share-footer {
   display: flex;
   justify-content: center;

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -34,9 +34,15 @@ const BlogPostTemplate = ({ data, location }) => {
           <time dateTime={post.frontmatter.date}>
             {post.frontmatter.date.replace(/-/g, ".")}
           </time>
-          <section className="blog-post-tag-list">
-            {post.frontmatter.tags?.join(" / ") || ""}
-          </section>
+          <ul className="blog-post-tag-list">
+            {post.frontmatter.tags?.map(tag => {
+              return (
+                <li>
+                  <Link to={`/archive?tag=${tag}`}>{tag}</Link>
+                </li>
+              )
+            }) || ""}
+          </ul>
           <nav>
             <header>目次</header>
             <hr />
