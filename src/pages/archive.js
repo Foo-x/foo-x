@@ -3,16 +3,16 @@ import { graphql } from "gatsby"
 
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
+import Search from "../components/search"
 
 const Archive = ({ data, location }) => {
+  const query = new URLSearchParams(location.search)
   return (
     <LayoutCommon titleSvg={data.file.publicURL}>
       <SEO title="archive" location={location} />
-      <article
-        className="archive-page"
-        itemScope
-        itemType="http://schema.org/Article"
-      ></article>
+      <section className="archive-page">
+        <Search query={query} />
+      </section>
     </LayoutCommon>
   )
 }
