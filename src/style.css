@@ -466,16 +466,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 100%;
 }
 
-.post-list-item-image-space {
-  position: relative;
-  padding-bottom: 100%;
-}
-
-.post-list-item-image-vector {
-  position: absolute;
-  transition: opacity .5s;
-}
-
 .post-list-item section {
   word-break: break-word;
   padding-top: var(--spacing-4);
@@ -486,6 +476,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   line-height: var(--lineHeight-normal);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
+}
+
+.thumbnail-vector-space {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.thumbnail-vector {
+  position: absolute;
+  transition: opacity .5s;
 }
 
 .about-page {
