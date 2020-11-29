@@ -1,5 +1,5 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { useState } from "react"
 import ThumbnailRaster from "./thumbnail-raster"
 import ThumbnailVectorArchive from "./thumbnail-vector-archive"
 
@@ -32,17 +32,26 @@ const Search = ({ query }) => {
             }
           }
         }
+        file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "search.svg" }
+        ) {
+          publicURL
+        }
       }
     `
   )
-  const queryTags = query.getAll("tags")
+
+  const queryTag = query.get("tag")
+  const [tag, setTag] = useState(queryTag || "")
+
   const queryDate = validDatePattern.test(query.get("date"))
     ? new Date(query.get("date"))
     : new Date()
 
   const results = data.allMarkdownRemark.nodes.filter(node => {
-    const nodeTagSet = new Set(node.frontmatter.tags)
-    if (!queryTags.every(tag => nodeTagSet.has(tag))) {
+    const nodeTags = node.frontmatter.tags || []
+    if (tag && nodeTags.every(nodeTag => !nodeTag.includes(tag))) {
       return false
     }
 
@@ -59,7 +68,20 @@ const Search = ({ query }) => {
       <section className="search-area">
         <label>
           <h2 className="search-area-label-tag">タグ</h2>
-          <input type="text"></input>
+          <div className="search-area-input">
+            <input
+              type="text"
+              value={tag}
+              onChange={event => {
+                setTag(event.target.value)
+              }}
+            />
+            <img
+              className="search-button"
+              src={data.file.publicURL}
+              alt="search"
+            />
+          </div>
         </label>
       </section>
       <ul

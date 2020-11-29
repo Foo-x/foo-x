@@ -507,6 +507,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   margin-top: 0;
 }
 
+.search-area-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-area-input input {
+  border: none;
+  border-bottom: 1px solid;
+  border-radius: 0;
+  background: transparent;
+  outline: none;
+}
+
+.search-button {
+  margin-left: -1.3rem;
+  height: 1rem;
+}
+
 .search-result-list {
   display: grid;
   word-break: break-word;
