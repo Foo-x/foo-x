@@ -80,8 +80,14 @@ const Menu = () => {
             </Link>
           </li>
           <li>
-            {/* TODO */}
-            <img src={data.archive.publicURL} alt="archive" />
+            <Link
+              to="/archive"
+              onClick={() => {
+                setIsActive(false)
+              }}
+            >
+              <img src={data.archive.publicURL} alt="archive" />
+            </Link>
           </li>
           <li>
             <Link
