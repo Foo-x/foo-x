@@ -3,8 +3,6 @@ import React, { useState } from "react"
 import ThumbnailRaster from "./thumbnail-raster"
 import ThumbnailVectorArchive from "./thumbnail-vector-archive"
 
-const validDatePattern = /20[0-9]{2}-(?:0[1-9])|(?:1[0-2])/
-
 /**
  * @param {object} param0
  * @param {URLSearchParams} param0.query
@@ -45,18 +43,9 @@ const Search = ({ query }) => {
   const queryTag = query.get("tag")
   const [tag, setTag] = useState(queryTag || "")
 
-  const queryDate = validDatePattern.test(query.get("date"))
-    ? new Date(query.get("date"))
-    : new Date()
-
   const results = data.allMarkdownRemark.nodes.filter(node => {
     const nodeTags = node.frontmatter.tags || []
     if (tag && nodeTags.every(nodeTag => !nodeTag.includes(tag))) {
-      return false
-    }
-
-    const nodeDate = new Date(node.frontmatter.date)
-    if (nodeDate > queryDate) {
       return false
     }
 
