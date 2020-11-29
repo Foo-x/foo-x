@@ -55,48 +55,59 @@ const Search = ({ query }) => {
   })
 
   return (
-    <ul
-      className="search-result-list"
-      style={{ listStyle: `none`, padding: 0 }}
-    >
-      {results.map(result => {
-        const title = result.frontmatter.title || result.fields.slug
-        const imgSrc = result.frontmatter.header?.childImageSharp?.fluid
-        const thumbnail = imgSrc ? (
-          <ThumbnailRaster img={imgSrc} />
-        ) : (
-          <ThumbnailVectorArchive img={"/favicon.svg"} />
-        )
-        const tags = result.frontmatter.tags
-          ? result.frontmatter.tags.map(tag => {
-              return <li key={tag}>{tag}</li>
-            })
-          : null
+    <div>
+      <section className="search-area">
+        <label>
+          <h2 className="search-area-label-tag">タグ</h2>
+          <input type="text"></input>
+        </label>
+      </section>
+      <ul
+        className="search-result-list"
+        style={{ listStyle: `none`, padding: 0 }}
+      >
+        {results.map(result => {
+          const title = result.frontmatter.title || result.fields.slug
+          const imgSrc = result.frontmatter.header?.childImageSharp?.fluid
+          const thumbnail = imgSrc ? (
+            <ThumbnailRaster img={imgSrc} />
+          ) : (
+            <ThumbnailVectorArchive img={"/favicon.svg"} />
+          )
+          const tags = result.frontmatter.tags
+            ? result.frontmatter.tags.map(tag => {
+                return <li key={tag}>{tag}</li>
+              })
+            : null
 
-        return (
-          <li key={result.fields.slug}>
-            <article
-              className="search-result-item"
-              itemScope
-              itemType="http://schema.org/Article"
-            >
-              <Link to={`/blog${result.fields.slug}`} itemProp="url">
-                <div className="search-result-image-wrapper">{thumbnail}</div>
-                <section>
-                  <h2 className="search-result-item-title" itemProp="headline">
-                    {title}
-                  </h2>
-                  <time dateTime={result.frontmatter.date}>
-                    {result.frontmatter.date.replace(/-/g, ".")}
-                  </time>
-                  <ul className="search-result-tag-list">{tags}</ul>
-                </section>
-              </Link>
-            </article>
-          </li>
-        )
-      })}
-    </ul>
+          return (
+            <li key={result.fields.slug}>
+              <article
+                className="search-result-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <Link to={`/blog${result.fields.slug}`} itemProp="url">
+                  <div className="search-result-image-wrapper">{thumbnail}</div>
+                  <section>
+                    <h2
+                      className="search-result-item-title"
+                      itemProp="headline"
+                    >
+                      {title}
+                    </h2>
+                    <time dateTime={result.frontmatter.date}>
+                      {result.frontmatter.date.replace(/-/g, ".")}
+                    </time>
+                    <ul className="search-result-tag-list">{tags}</ul>
+                  </section>
+                </Link>
+              </article>
+            </li>
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 
