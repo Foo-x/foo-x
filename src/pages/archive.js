@@ -8,7 +8,10 @@ import Search from "../components/search"
 const Archive = ({ data, location }) => {
   const query = new URLSearchParams(location.search)
   return (
-    <LayoutCommon titleSvg={data.file.publicURL}>
+    <LayoutCommon
+      titleSvg={data.file.publicURL}
+      mainClassName="global-main-archive"
+    >
       <SEO title="archive" location={location} />
       <section className="archive-page">
         <Search query={query} />

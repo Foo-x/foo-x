@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 
 const About = ({ data, location }) => {
   return (
-    <LayoutCommon titleSvg={data.file.publicURL}>
+    <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
       <SEO title="about" location={location} />
       <article
         className="about-page"

@@ -292,7 +292,7 @@ a:focus {
   display: flex;
   justify-content: center;
   background-color: #fff;
-  padding: 8rem 0 2rem;
+  padding: 8rem 0 6rem;
 }
 
 .header-top {
@@ -493,7 +493,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .archive-page {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-archive);
-  padding: 5vw;
+  padding: 3vw 5vw;
   word-wrap: break-word;
 }
 
@@ -779,7 +779,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 
   .global-header-common {
-    padding: 6rem 0 2rem;
+    padding: 6rem 0 4rem;
   }
 
   .global-main-top {

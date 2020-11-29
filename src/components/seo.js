@@ -22,7 +22,9 @@ const SEO = ({ description, lang, meta, title, location }) => {
 
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const bodyClass = isRootPath ? "body-top" : "body-blog-post"
+  const archivePath = `${__PATH_PREFIX__}/archive`
+  const isArchivePath = location.pathname === archivePath
+  const bodyClass = isRootPath || isArchivePath ? "body-top" : "body-blog-post"
 
   const metaDescription = description || site.siteMetadata.description
   const pageTitle = `${title} | ${site.siteMetadata.title}`
