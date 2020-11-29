@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderTop from "../components/header-top"
-import ThumbnailRaster from "../components/thumbnail-raster"
 import ThumbnailVector from "../components/thumbnail-vector"
 
 const BlogIndex = ({ data, location }) => {
@@ -16,14 +15,6 @@ const BlogIndex = ({ data, location }) => {
       <ul className="post-list" style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-          const imgSrc = post.frontmatter.thumbnail?.childImageSharp?.fluid
-          const thumbnail = imgSrc ? (
-            <ThumbnailRaster img={imgSrc} />
-          ) : (
-            <ThumbnailVector
-              img={post.frontmatter.thumbnail?.publicURL || "/favicon.svg"}
-            />
-          )
 
           return (
             <li key={post.fields.slug}>
@@ -34,7 +25,11 @@ const BlogIndex = ({ data, location }) => {
               >
                 <Link to={`/blog${post.fields.slug}`} itemProp="url">
                   <div className="post-list-item-image-wrapper">
-                    {thumbnail}
+                    <ThumbnailVector
+                      img={
+                        post.frontmatter.thumbnail?.publicURL || "/favicon.svg"
+                      }
+                    />
                   </div>
                   <section>
                     <h2>
@@ -63,11 +58,6 @@ export const pageQuery = graphql`
         frontmatter {
           title
           thumbnail {
-            childImageSharp {
-              fluid(maxWidth: 300) {
-                ...GatsbyImageSharpFluid_noBase64
-              }
-            }
             publicURL
           }
         }
