@@ -8,28 +8,25 @@ const About = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
       <SEO title="about" location={location} />
-      <article
-        className="about-page"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <h2 itemProp="headline">アクセス解析ツールについて</h2>
-        <section itemProp="articleBody">
-          <p>
-            当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。
-          </p>
-          <p>
-            この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は
-            <a href="https://marketingplatform.google.com/about/analytics/terms/jp/">
-              Googleアナリティクスサービス利用規約
-            </a>
-            のページや
-            <a href="https://policies.google.com/technologies/ads?hl=ja">
-              Googleポリシーと規約
-            </a>
-            ページをご覧ください。
-          </p>
-        </section>
+      <article className="about-page">
+        <p>
+          このサイトは、foo-x（ふー）が学んだ内容をアウトプットする場です。ソフトウェア開発やWeb技術のことを中心に展開していきます。
+        </p>
+        <h2>アクセス解析ツールについて</h2>
+        <p>
+          当サイトでは「Googleアナリティクス」を導入しています。このツールではデータを収集するためにCookieを使用しています。データは匿名で収集されており、個人を特定できるものではありません。
+        </p>
+        <p>
+          この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認いただけると幸いです。詳細は
+          <a href="https://marketingplatform.google.com/about/analytics/terms/jp/">
+            Googleアナリティクスサービス利用規約
+          </a>
+          や
+          <a href="https://policies.google.com/technologies/ads?hl=ja">
+            Googleポリシーと規約
+          </a>
+          をご覧ください。
+        </p>
       </article>
     </LayoutCommon>
   )
