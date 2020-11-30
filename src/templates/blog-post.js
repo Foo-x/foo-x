@@ -37,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <ul className="blog-post-tag-list">
             {post.frontmatter.tags?.map(tag => {
               return (
-                <li>
+                <li key={tag}>
                   <Link to={`/archive?tag=${tag}`}>{tag}</Link>
                 </li>
               )
