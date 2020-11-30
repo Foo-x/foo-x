@@ -617,6 +617,35 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   word-wrap: break-word;
 }
 
+.about-page-socials {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-page-socials .social-svg-icon path {
+  fill: var(--color-brand);
+}
+
+.about-page-socials .social-svg-mask path {
+  fill: #fff;
+}
+
+.about-page-socials a {
+  transition: opacity .2s;
+  opacity: .5;
+}
+
+.about-page-socials a:hover {
+  opacity: 1;
+}
+
+.about-page-socials li:not(:first-of-type) {
+  margin-left: var(--spacing-1);
+}
+
 .blog-post {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);

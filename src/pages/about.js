@@ -1,14 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { SocialIcon } from "react-social-icons"
 
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
+
+const iconSize = 40
 
 const About = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
       <SEO title="about" location={location} />
       <article className="about-page">
+        <ul className="about-page-socials">
+          <li>
+            <SocialIcon
+              url="https://github.com/Foo-x"
+              style={{ width: iconSize, height: iconSize }}
+            />
+          </li>
+          <li>
+            <SocialIcon
+              url="/rss.xml"
+              network="rss"
+              style={{ width: iconSize, height: iconSize }}
+            />
+          </li>
+        </ul>
         <p>
           このサイトは、foo-x（ふー）が学んだ内容をアウトプットする場です。ソフトウェア開発やWeb技術のことを中心に展開していきます。
         </p>
