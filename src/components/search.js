@@ -42,10 +42,11 @@ const Search = ({ query }) => {
 
   const queryTag = query.get("tag")
   const [tag, setTag] = useState(queryTag || "")
+  const tagPattern = new RegExp(tag, "i")
 
   const results = data.allMarkdownRemark.nodes.filter(node => {
     const nodeTags = node.frontmatter.tags || []
-    if (tag && nodeTags.every(nodeTag => !nodeTag.includes(tag))) {
+    if (tag && nodeTags.every(nodeTag => !tagPattern.test(nodeTag))) {
       return false
     }
 
