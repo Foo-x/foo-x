@@ -27,7 +27,9 @@ const SEO = ({ description, lang, meta, title, location }) => {
   const bodyClass = isRootPath || isArchivePath ? "body-top" : "body-blog-post"
 
   const metaDescription = description || site.siteMetadata.description
-  const pageTitle = `${title} | ${site.siteMetadata.title}`
+  const pageTitle = isRootPath
+    ? site.siteMetadata.title
+    : `${title} | ${site.siteMetadata.title}`
 
   return (
     <Helmet
