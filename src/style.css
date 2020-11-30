@@ -673,6 +673,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: #999;
 }
 
+.blog-post-tag-list a {
+  transition: color .2s;
+}
+
+.blog-post-tag-list a:hover {
+  color: var(--color-text);
+}
+
 .blog-post nav {
   margin: 3rem 0;
 }
