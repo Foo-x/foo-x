@@ -43,6 +43,7 @@ module.exports = {
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-remark-line-breaks`,
+          `gatsby-remark-twemoji-shortcut`,
         ],
       },
     },
