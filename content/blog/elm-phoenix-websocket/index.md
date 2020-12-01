@@ -66,7 +66,9 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
     - elm.jsonを作成するか聞かれるのでEnter
 4. Main.elm
 
-    ```elm:/assets/elm/Main.elm
+    ```elm
+    -- /assets/elm/Main.elm
+
     module Main exposing (main)
 
     import Browser
@@ -133,7 +135,9 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
 
 5. app.js
 
-    ```js:/assets/js/app.js
+    ```js
+    // /assets/js/app.js
+
     // ...
 
     import { Elm } from "../elm/src/Main.elm"
@@ -147,7 +151,9 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
 7. `$ npm install --save-dev elm-webpack-loader`
 8. webpack.config.js
 
-    ```js:/assets/webpack.config.js
+    ```js
+    // /assets/webpack.config.js
+
     module.exports = (env, options) => ({
       // ...
       module: {
@@ -172,7 +178,8 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
 9. `/lib/elm_websocket_sample_web/templates/layout/app.html.eex`の`<header>`を削除
 10. index.html.eex
 
-    ```html:/lib/elm_websocket_sample_web/templates/page/index.html.eex
+    ```html
+    <!-- /lib/elm_websocket_sample_web/templates/page/index.html.eex -->
     <div id="elm-container"></div>
     ```
 
@@ -186,7 +193,9 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
 1. `$ mix phx.gen.channel Room`
 2. user_socket.ex
 
-    ```elixir:/lib/elm_websocket_sample_web/channels/user_socket.ex
+    ```elixir
+    # /lib/elm_websocket_sample_web/channels/user_socket.ex
+
     defmodule ElmWebsocketSampleWeb.UserSocket do
       use Phoenix.Socket
 
@@ -206,7 +215,9 @@ Elm 0.18までは公式のライブラリでWebSocketがサポートされてい
 2. `$ npm install elm-phoenix-websocket-ports`
 3. elm.json
 
-    ```json:/assets/elm/elm.json
+    ```json
+    // /assets/elm/elm.json
+
     {
         "type": "application",
         "source-directories": [
@@ -221,7 +232,9 @@ Elm 0.18までは公式のライブラリでWebSocketがサポートされてい
 5. `$ elm install elm/json`
 6. Main.elm
 
-    ```elm:/assets/elm/Main.elm
+    ```elm
+    -- /assets/elm/Main.elm
+
     module Main exposing (main)
 
     import Browser
@@ -342,7 +355,9 @@ Elm 0.18までは公式のライブラリでWebSocketがサポートされてい
 
 7. app.js
 
-    ```js:/assets/js/app.js
+    ```js
+    // /assets/js/app.js
+
     // ...
 
     import * as phoenix from "phoenix"
@@ -370,7 +385,9 @@ Elm 0.18までは公式のライブラリでWebSocketがサポートされてい
 Phoenixには、WebSocketでの送受信に関する処理を行うChannelというモジュールが用意されています。
 `$ mix phx.gen.channel Room`というコマンドを実行すると、"RoomChannel"が自動で作成されます。
 
-```elixir:/lib/elm_websocket_sample_web/channels/room_channel.ex
+```elixir
+# /lib/elm_websocket_sample_web/channels/room_channel.ex
+
 defmodule ElmWebsocketSampleWeb.RoomChannel do
   use ElmWebsocketSampleWeb, :channel
 
