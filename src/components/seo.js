@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ description, lang, meta, title, location }) => {
-  const { site } = useStaticQuery(
+const SEO = ({ description, lang, meta, title, imageURL, location }) => {
+  const { site, defaultImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -16,9 +16,16 @@ const SEO = ({ description, lang, meta, title, location }) => {
             }
           }
         }
+        defaultImage: file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "default-ogp.png" }
+        ) {
+          publicURL
+        }
       }
     `
   )
+  const defaultImageURL = location.origin + defaultImage.publicURL
 
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -63,6 +70,10 @@ const SEO = ({ description, lang, meta, title, location }) => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: imageURL || defaultImageURL,
         },
         {
           name: `twitter:card`,
