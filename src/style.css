@@ -78,14 +78,18 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  /* PCCS dkg18 */
   --color-brand: #222933;
   --color-primary: var(--color-brand);
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #222933;
   --color-accent: #d1dce5;
+  /* PCCS dkg18 */
   --color-brand-transparent: rgba(34, 41, 51, 0.5);
+  /* PCCS pp18 */
   --color-selection: rgba(175, 192, 209, .5);
+  /* PCCS ltp18 alpha:0.045 */
   --color-top-background: #f8fafc;
   --thumbnail-size: 7rem;
   --scrollBarWidth: calc(100vw - 100%);
