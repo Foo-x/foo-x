@@ -57,19 +57,19 @@
      id="circle851" />
   <path
      d="M38.2373 41.0339L14 14"
-     stroke="#272727"
+     stroke="#222933"
      stroke-width="6"
      stroke-linecap="round"
      id="path853" />
   <path
      d="M38.2373 41.0339L62.4746 14"
-     stroke="#272727"
+     stroke="#222933"
      stroke-width="6"
      stroke-linecap="round"
      id="path855" />
   <path
      d="M38.2373 41.0339L38.2373 69"
-     stroke="#272727"
+     stroke="#222933"
      stroke-width="6"
      stroke-linecap="round"
      id="path857" />
@@ -78,7 +78,7 @@
      cy="41"
      r="7"
      fill="#aeaeae"
-     stroke="#272727"
+     stroke="#222933"
      stroke-width="4"
      id="circle859" />
 </svg>
