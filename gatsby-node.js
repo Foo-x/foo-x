@@ -97,6 +97,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       date: Date @dateformat
       thumbnail: File @fileByRelativePath
       header: File @fileByRelativePath
+      ogp: File @fileByRelativePath
       tags: [String]
     }
 

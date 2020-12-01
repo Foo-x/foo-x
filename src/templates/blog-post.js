@@ -23,6 +23,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         location={location}
+        imageURL={post.frontmatter.ogp?.publicURL}
       />
       <article
         className="blog-post"
@@ -79,6 +80,9 @@ export const pageQuery = graphql`
               ...GatsbyImageSharpFluid_noBase64
             }
           }
+        }
+        ogp {
+          publicURL
         }
         tags
       }

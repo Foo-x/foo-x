@@ -25,7 +25,6 @@ const SEO = ({ description, lang, meta, title, imageURL, location }) => {
       }
     `
   )
-  const defaultImageURL = location.origin + defaultImage.publicURL
 
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
@@ -73,7 +72,7 @@ const SEO = ({ description, lang, meta, title, imageURL, location }) => {
         },
         {
           property: `og:image`,
-          content: imageURL || defaultImageURL,
+          content: location.origin + (imageURL || defaultImage.publicURL),
         },
         {
           name: `twitter:card`,
