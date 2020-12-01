@@ -245,6 +245,10 @@ code {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", Meiryo, monospace !important;
 }
 
+.token.operator {
+  background: initial !important;
+}
+
 ::selection {
   background: var(--color-selection) !important;
 }
