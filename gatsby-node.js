@@ -79,11 +79,6 @@ exports.createSchemaCustomization = ({ actions }) => {
   createTypes(`
     type SiteSiteMetadata {
       siteUrl: String
-      social: Social
-    }
-
-    type Social {
-      twitter: String
     }
 
     type MarkdownRemark implements Node {

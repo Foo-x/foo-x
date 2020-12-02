@@ -11,9 +11,6 @@ const SEO = ({ description, lang, meta, title, imageURL, location }) => {
           siteMetadata {
             title
             description
-            social {
-              twitter
-            }
           }
         }
         defaultImage: file(

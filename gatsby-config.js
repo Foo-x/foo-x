@@ -3,9 +3,6 @@ module.exports = {
     title: `foo-x`,
     description: `主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。`,
     siteUrl: `https://foo-x.com/`,
-    social: {
-      twitter: `f_akira_s`,
-    },
   },
   plugins: [
     {
