@@ -76,7 +76,20 @@ const SEO = ({ description, lang, meta, title, imageURL, location }) => {
           content: `summary_large_image`,
         },
       ].concat(meta)}
-    />
+    >
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XNZ8Y97RCM"
+      ></script>
+      <script>
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-XNZ8Y97RCM');
+        `}
+      </script>
+    </Helmet>
   )
 }
 
