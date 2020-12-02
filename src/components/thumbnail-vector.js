@@ -13,6 +13,7 @@ const ThumbnailVector = ({ img }) => {
         className={classNames.join(" ")}
         alt="thumbnail"
         itemProp="image"
+        loading="lazy"
         onLoad={() => setIsHidden(false)}
       />
     </div>
