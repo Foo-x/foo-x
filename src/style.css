@@ -247,6 +247,7 @@ table thead tr th {
 code {
   font-size: .9em !important;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", Meiryo, monospace !important;
+  word-wrap: break-word !important;
 }
 
 .token.operator {
@@ -478,7 +479,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .post-list-item section {
-  word-break: break-word;
+  word-wrap: break-word;
   padding-top: var(--spacing-4);
 }
 
@@ -537,7 +538,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .search-result-list {
   display: grid;
-  word-break: break-word;
+  word-wrap: break-word;
   grid-template-columns: 1fr 1fr;
   column-gap: 4vw;
   row-gap: 4vw;
