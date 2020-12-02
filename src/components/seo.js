@@ -72,6 +72,10 @@ const SEO = ({ description, lang, meta, title, imageURL, location }) => {
           content: location.origin + (imageURL || defaultImage.publicURL),
         },
         {
+          property: `og:url`,
+          content: location.href,
+        },
+        {
           name: `twitter:card`,
           content: `summary_large_image`,
         },
