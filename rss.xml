@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[foo-x]]></title><description><![CDATA[主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。]]></description><link>https://foo-x.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Dec 2020 14:20:10 GMT</lastBuildDate><item><title><![CDATA[Nimの競プロ用標準入力マクロ]]></title><description><![CDATA[Nimで競プロの入力を変数にバインドするマクロを作成しました。 2020/08/25 floatに変換するものを追加 タプルにバインドするものを追加 例 実装 については以下の記事を参考にさせていただきました。 Nimの競技プログラミング用標準入力 オーバーロードしている…]]></description><link>https://foo-x.com/nim-contest-macro/</link><guid isPermaLink="false">https://foo-x.com/nim-contest-macro/</guid><pubDate>Thu, 23 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nimで競プロの入力を変数にバインドするマクロを作成しました。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[foo-x]]></title><description><![CDATA[主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。]]></description><link>https://foo-x.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Dec 2020 15:15:15 GMT</lastBuildDate><item><title><![CDATA[Nimの競プロ用標準入力マクロ]]></title><description><![CDATA[Nimで競プロの入力を変数にバインドするマクロを作成しました。 2020/08/25 floatに変換するものを追加 タプルにバインドするものを追加 例 実装 については以下の記事を参考にさせていただきました。 Nimの競技プログラミング用標準入力 オーバーロードしている…]]></description><link>https://foo-x.com/nim-contest-macro/</link><guid isPermaLink="false">https://foo-x.com/nim-contest-macro/</guid><pubDate>Thu, 23 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nimで競プロの入力を変数にバインドするマクロを作成しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;2020/08/25&lt;/p&gt;
@@ -150,6 +150,89 @@ forループの部分は&lt;code class=&quot;language-text&quot;&gt;read(1, 2)&l
 &lt;li&gt;マクロを呼び出す部分の記法を参考にさせていただきました&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[データストア選択チャート(AWS編)]]></title><description><![CDATA[(PlantUMLで作成) 2020/12/03 追記 現在はRDS Proxyを使用することで、サーバーレスでもRDS…]]></description><link>https://foo-x.com/data-store-chart/</link><guid isPermaLink="false">https://foo-x.com/data-store-chart/</guid><pubDate>Sun, 06 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5e21e6db1bcf9c666115842f417a586d/08037/chart.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.67088607594937%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAAA6UlEQVQoz4VS2Q6EIAzk/7/OVxON922M9611pxsNccVtUgoFpsMUQR/L85yKoqB/tu/75ef6biJNU3Ich8IwpCAIODZNQ8Mw0DiONM8zbdvG/gR8BxdxHDNIlmWUJAnVdc2AZx4FT2C8pCxLJTBcYFiWhaqq4otY4/I0TQwMKTDHGRQwTZPz67o+yiHuGoBh13VcABGMwBZAYKvrOrvneRzBGgQuDWUdsBFFET8fEeygKxihUNu2ZBgGR7C1LIs0TWNg13U5L2TKT12VmyEbmtb3/aWxbdvk+/4X8O0bqMRX2Q+gyuX9t7MHgeK8vb/rAFMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;データストア選択チャート(AWS編)_.png&quot;
+        title=&quot;データストア選択チャート(AWS編)_.png&quot;
+        src=&quot;/static/5e21e6db1bcf9c666115842f417a586d/f058b/chart.png&quot;
+        srcset=&quot;/static/5e21e6db1bcf9c666115842f417a586d/c26ae/chart.png 158w,
+/static/5e21e6db1bcf9c666115842f417a586d/6bdcf/chart.png 315w,
+/static/5e21e6db1bcf9c666115842f417a586d/f058b/chart.png 630w,
+/static/5e21e6db1bcf9c666115842f417a586d/40601/chart.png 945w,
+/static/5e21e6db1bcf9c666115842f417a586d/78612/chart.png 1260w,
+/static/5e21e6db1bcf9c666115842f417a586d/08037/chart.png 1379w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(PlantUMLで作成)&lt;/p&gt;
+&lt;p&gt;2020/12/03 追記&lt;br&gt;
+現在はRDS Proxyを使用することで、サーバーレスでもRDSを使いやすくなっています。&lt;/p&gt;
+&lt;h2 id=&quot;はじめに&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB&quot; aria-label=&quot;はじめに permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;新しくサービスを作るたびにデータストアの選定を行いますが、チャートがあると便利かな、と思ったので作りました。&lt;br&gt;
+なお、私はインフラエンジニアではないので、参考程度に見ていただけると幸いです。&lt;br&gt;
+このチャートに沿っていないデータベースが不適切というわけではありません。&lt;/p&gt;
+&lt;p&gt;ちなみにAWS編以外の編は予定しておりませんので、あしからず。&lt;/p&gt;
+&lt;h2 id=&quot;s3&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#s3&quot; aria-label=&quot;s3 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;S3&lt;/h2&gt;
+&lt;p&gt;オブジェクトストレージ。&lt;br&gt;
+基本的にはオブジェクト単位で扱うので、データの一部で検索したり、一部だけ更新したりすることは苦手。&lt;br&gt;
+(検索に関しては&lt;code class=&quot;language-text&quot;&gt;S3 Select&lt;/code&gt;や&lt;code class=&quot;language-text&quot;&gt;Athena&lt;/code&gt;などを使えば可能)&lt;br&gt;
+音声、画像、ログなどの非構造化データや、アプリに対して1つだけ用意すれば良い設定ファイルなどの保存先に適している。&lt;br&gt;
+&lt;strong&gt;S3 Glacier&lt;/strong&gt;はアクセス頻度が少なく、長期保存するデータ向け。&lt;/p&gt;
+&lt;h2 id=&quot;redshift&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#redshift&quot; aria-label=&quot;redshift permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redshift&lt;/h2&gt;
+&lt;p&gt;データウェアハウス。&lt;br&gt;
+S3や他のDBからデータをロードし、分析を行う。&lt;/p&gt;
+&lt;h2 id=&quot;elasticache&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#elasticache&quot; aria-label=&quot;elasticache permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Elasticache&lt;/h2&gt;
+&lt;p&gt;キーバリュー型のNoSQL(KVS)。&lt;br&gt;
+インメモリにデータを保持し、ミリ秒未満のリアルタイムな処理が必要なユースケースで使用する。&lt;br&gt;
+一応パフォーマンスを犠牲にして永続化することも可能だが、長所を活かせないので別のDBと併用するのが無難。&lt;/p&gt;
+&lt;h2 id=&quot;neptune&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#neptune&quot; aria-label=&quot;neptune permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Neptune&lt;/h2&gt;
+&lt;p&gt;グラフ型のNoSQL。&lt;br&gt;
+ソーシャルネットワークや交通網のような、グラフ構造のデータを扱うのに適している。&lt;/p&gt;
+&lt;h2 id=&quot;timestream&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#timestream&quot; aria-label=&quot;timestream permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Timestream&lt;/h2&gt;
+&lt;p&gt;時系列データ(タイムスタンプをキーにしたデータ)に最適化されたDB。&lt;br&gt;
+IoTやアプリのモニタリングなどに使用する。&lt;/p&gt;
+&lt;h2 id=&quot;rds&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rds&quot; aria-label=&quot;rds permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RDS&lt;/h2&gt;
+&lt;p&gt;リレーショナルDB。&lt;br&gt;
+ACID特性を満たすため、強い整合性が必要なデータに適している。&lt;br&gt;
+その代わりにスケールアウトが難しく、大量のデータを扱うのには適さない。&lt;br&gt;
+また、スキーマを定義しておく必要があるので、データ構造が頻繁に変わるプロト開発時にも向かない。&lt;/p&gt;
+&lt;h2 id=&quot;aurora&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aurora&quot; aria-label=&quot;aurora permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Aurora&lt;/h2&gt;
+&lt;p&gt;データモデルや基本的な用途はRDSと同様。&lt;br&gt;
+クラウド向けに最適化し、パフォーマンスや耐障害性を向上している。&lt;br&gt;
+その分、料金はRDSより割高。&lt;/p&gt;
+&lt;h2 id=&quot;aurora-serverless&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aurora-serverless&quot; aria-label=&quot;aurora serverless permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Aurora Serverless&lt;/h2&gt;
+&lt;p&gt;Auroraのサーバーレス版。&lt;br&gt;
+Data API経由でアクセスすることによって最大コネクション数の問題を回避できるので、Lambdaからも使用できる。&lt;/p&gt;
+&lt;h2 id=&quot;dynamodb&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dynamodb&quot; aria-label=&quot;dynamodb permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DynamoDB&lt;/h2&gt;
+&lt;p&gt;ドキュメント型の特徴も持つキーバリュー型のNoSQL(KVS)。&lt;br&gt;
+1つのキーに対して複数の値を持たせたり、範囲のあるキーを定義したりできる。&lt;br&gt;
+サーバーレスで自動的にスケールするので、Lambdaと相性が良い。&lt;br&gt;
+あくまでKVSなので複雑な検索や更新は苦手。&lt;/p&gt;
+&lt;h2 id=&quot;documentdb&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#documentdb&quot; aria-label=&quot;documentdb permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DocumentDB&lt;/h2&gt;
+&lt;p&gt;ドキュメント型のNoSQL。&lt;br&gt;
+MongoDB互換で複雑な構造のデータも扱いやすい。&lt;/p&gt;
+&lt;h2 id=&quot;参考&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83&quot; aria-label=&quot;参考 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/jp/products/databases/&quot;&gt;AWSが提供するクラウドデータベース&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://aws.amazon.com/jp/products/storage/&quot;&gt;AWSが提供するクラウドストレージサービス&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信]]></title><description><![CDATA[背景 Elm 0.19が8月、Phoenix 1.4が11月にリリースされました  Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくはこちら)  Phoenix…]]></description><link>https://foo-x.com/elm-phoenix-websocket/</link><guid isPermaLink="false">https://foo-x.com/elm-phoenix-websocket/</guid><pubDate>Mon, 03 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;背景&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%83%8C%E6%99%AF&quot; aria-label=&quot;背景 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;背景&lt;/h2&gt;
 &lt;p&gt;Elm 0.19が8月、Phoenix 1.4が11月にリリースされました &lt;img class=&quot;emoji&quot; draggable=&quot;false&quot; alt=&quot;&amp;#x1F389;&quot; src=&quot;https://twemoji.maxcdn.com/2/72x72/1f389.png&quot; style=&quot;height: 1em; width: 1em; margin: 0 .05em 0 .1em; vertical-align: -0.1em;&quot;&gt;&lt;br&gt;
 Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくは&lt;a href=&quot;https://github.com/elm/compiler/blob/master/upgrade-docs/0.19.md&quot;&gt;こちら&lt;/a&gt;)&lt;/p&gt;
