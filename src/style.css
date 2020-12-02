@@ -807,6 +807,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .share-footer button {
+  outline: none;
   transition: opacity .2s;
 }
 
