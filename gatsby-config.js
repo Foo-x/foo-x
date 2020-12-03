@@ -77,7 +77,7 @@ module.exports = {
                   enclosure: {
                     url:
                       site.siteMetadata.siteUrl +
-                      edge.node.frontmatter.header.publicURL,
+                      edge.node.frontmatter.header.childImageSharp.fixed.src,
                   },
                   header: undefined,
                 })
@@ -96,6 +96,11 @@ module.exports = {
                         title
                         date
                         header {
+                          childImageSharp {
+                            fixed {
+                              src
+                            }
+                          }
                           publicURL
                         }
                       }
