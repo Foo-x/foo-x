@@ -66,122 +66,122 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
     - elm.jsonを作成するか聞かれるのでEnter
 4. Main.elm
 
-    ```elm
-    -- /assets/elm/Main.elm
+```elm
+-- /assets/elm/Main.elm
 
-    module Main exposing (main)
+module Main exposing (main)
 
-    import Browser
-    import Html exposing (..)
-    import Html.Attributes exposing (..)
-
-
-
-    -- MODEL
-
-
-    type alias Model
-        = {}
-
-    init : () -> ( Model, Cmd Msg )
-    init _ =
-        ( {}, Cmd.none )
+import Browser
+import Html exposing (..)
+import Html.Attributes exposing (..)
 
 
 
-    -- VIEW
+-- MODEL
 
 
-    view : Model -> Html Msg
-    view model =
-        div [] [ text "Hello World!" ]
+type alias Model
+    = {}
 
-
-
-    -- UPDATE
-
-
-    type alias Msg
-        = {}
-
-
-    update : Msg -> Model -> ( Model, Cmd Msg )
-    update msg model =
-        ( model, Cmd.none )
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( {}, Cmd.none )
 
 
 
-    -- SUBSCRIPTIONS
+-- VIEW
 
 
-    subscriptions : Model -> Sub Msg
-    subscriptions model =
-        Sub.none
+view : Model -> Html Msg
+view model =
+    div [] [ text "Hello World!" ]
 
 
 
-    -- MAIN
+-- UPDATE
 
 
-    main : Program () Model Msg
-    main =
-        Browser.element
-            { init = init
-            , view = view
-            , update = update
-            , subscriptions = subscriptions
-            }
-    ```
+type alias Msg
+    = {}
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    ( model, Cmd.none )
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+
+
+-- MAIN
+
+
+main : Program () Model Msg
+main =
+    Browser.element
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
+```
 
 5. app.js
 
-    ```js
-    // /assets/js/app.js
+```js
+// /assets/js/app.js
 
-    // ...
+// ...
 
-    import { Elm } from "../elm/src/Main.elm"
+import { Elm } from "../elm/src/Main.elm"
 
-    Elm.Main.init({
-      node: document.getElementById("elm-container")
-    })
-    ```
+Elm.Main.init({
+    node: document.getElementById("elm-container")
+})
+```
 
 6. `$ cd /assets`
 7. `$ npm install --save-dev elm-webpack-loader`
 8. webpack.config.js
 
-    ```js
-    // /assets/webpack.config.js
+```js
+// /assets/webpack.config.js
 
-    module.exports = (env, options) => ({
-      // ...
-      module: {
-        rules: [
-          // ...
-          {
-            test: /\.elm$/,
-            exclude: [/elm-stuff/, /node_modules/],
-            use: {
-              loader: 'elm-webpack-loader',
-              options: {
-                cwd: __dirname + "/elm"
-              }
+module.exports = (env, options) => ({
+    // ...
+    module: {
+    rules: [
+        // ...
+        {
+        test: /\.elm$/,
+        exclude: [/elm-stuff/, /node_modules/],
+        use: {
+            loader: 'elm-webpack-loader',
+            options: {
+            cwd: __dirname + "/elm"
             }
-          }
-        ]
-      },
-      // ...
-    });
-    ```
+        }
+        }
+    ]
+    },
+    // ...
+});
+```
 
 9. `/lib/elm_websocket_sample_web/templates/layout/app.html.eex`の`<header>`を削除
 10. index.html.eex
 
-    ```html
-    <!-- /lib/elm_websocket_sample_web/templates/page/index.html.eex -->
-    <div id="elm-container"></div>
-    ```
+```html
+<!-- /lib/elm_websocket_sample_web/templates/page/index.html.eex -->
+<div id="elm-container"></div>
+```
 
 11. `$ mix phx.server`
 12. ブラウザでhttp://localhost:4000/ にアクセスして以下の画面が表示されればOK
@@ -193,18 +193,18 @@ Hi, thank you for trying out Elm 0.19.0. I hope you like it!
 1. `$ mix phx.gen.channel Room`
 2. user_socket.ex
 
-    ```elixir
-    # /lib/elm_websocket_sample_web/channels/user_socket.ex
+```elixir
+# /lib/elm_websocket_sample_web/channels/user_socket.ex
 
-    defmodule ElmWebsocketSampleWeb.UserSocket do
-      use Phoenix.Socket
+defmodule ElmWebsocketSampleWeb.UserSocket do
+    use Phoenix.Socket
 
-      ## Channels
-      channel "room:*", ElmWebsocketSampleWeb.RoomChannel # ← コメントアウトを解除
+    ## Channels
+    channel "room:*", ElmWebsocketSampleWeb.RoomChannel # ← コメントアウトを解除
 
-      # ...
-    end
-    ```
+    # ...
+end
+```
 
 ### Elm側
 Elm 0.18までは公式のライブラリでWebSocketがサポートされていたのですが、0.19では現時点で存在しません。
@@ -215,165 +215,165 @@ Elm 0.18までは公式のライブラリでWebSocketがサポートされてい
 2. `$ npm install elm-phoenix-websocket-ports`
 3. elm.json
 
-    ```json
-    // /assets/elm/elm.json
+```json
+// /assets/elm/elm.json
 
-    {
-        "type": "application",
-        "source-directories": [
-            "../node_modules/elm-phoenix-websocket-ports/lib/elm",
-            ...
-        ],
+{
+    "type": "application",
+    "source-directories": [
+        "../node_modules/elm-phoenix-websocket-ports/lib/elm",
         ...
-    }
-    ```
+    ],
+    ...
+}
+```
 
 4. `$ cd /assets/elm`
 5. `$ elm install elm/json`
 6. Main.elm
 
-    ```elm
-    -- /assets/elm/Main.elm
+```elm
+-- /assets/elm/Main.elm
 
-    module Main exposing (main)
+module Main exposing (main)
 
-    import Browser
-    import Html exposing (..)
-    import Html.Attributes exposing (..)
-    import Html.Events exposing (..)
-    import Json.Decode as D
-    import Json.Encode as E
-    import Ports.Websocket as Websocket
-
-
-
-    -- MODEL
+import Browser
+import Html exposing (..)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
+import Json.Decode as D
+import Json.Encode as E
+import Ports.Websocket as Websocket
 
 
-    type alias Model =
-        { inputText : String
-        , receivedText : String
+
+-- MODEL
+
+
+type alias Model =
+    { inputText : String
+    , receivedText : String
+    }
+
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( { inputText = ""
+        , receivedText = ""
         }
-
-    init : () -> ( Model, Cmd Msg )
-    init _ =
-        ( { inputText = ""
-          , receivedText = ""
-          }
-        , Websocket.websocketListen ("room:lobby", "shout")
-        )
+    , Websocket.websocketListen ("room:lobby", "shout")
+    )
 
 
 
-    -- VIEW
+-- VIEW
 
 
-    view : Model -> Html Msg
-    view model =
-        div
+view : Model -> Html Msg
+view model =
+    div
+        []
+        [ div
             []
-            [ div
-                []
-                [ input
-                    [ type_ "text"
-                    , onInput UpdateInputText
-                    ]
-                    []
-                , button
-                    [ onClick (Send model.inputText) ]
-                    [ text "送信" ]
+            [ input
+                [ type_ "text"
+                , onInput UpdateInputText
                 ]
-            , div
                 []
-                [ text <| "received: " ++ model.receivedText ]
+            , button
+                [ onClick (Send model.inputText) ]
+                [ text "送信" ]
             ]
+        , div
+            []
+            [ text <| "received: " ++ model.receivedText ]
+        ]
 
 
 
-    -- UPDATE
+-- UPDATE
 
 
-    type Msg
-        = WebsocketReceive (String, String, D.Value)
-        | UpdateInputText String
-        | Send String
+type Msg
+    = WebsocketReceive (String, String, D.Value)
+    | UpdateInputText String
+    | Send String
 
 
-    update : Msg -> Model -> ( Model, Cmd Msg )
-    update msg model =
-        case msg of
-            WebsocketReceive ("room:lobby", "shout", payload) ->
-                case D.decodeValue textDecoder payload of
-                    Ok receivedText ->
-                        ( { model | receivedText = receivedText }, Cmd.none )
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        WebsocketReceive ("room:lobby", "shout", payload) ->
+            case D.decodeValue textDecoder payload of
+                Ok receivedText ->
+                    ( { model | receivedText = receivedText }, Cmd.none )
 
-                    Err _ ->
-                        ( model, Cmd.none )
+                Err _ ->
+                    ( model, Cmd.none )
 
-            WebsocketReceive (_, _, _) ->
-                ( model, Cmd.none )
+        WebsocketReceive (_, _, _) ->
+            ( model, Cmd.none )
 
-            UpdateInputText inputText ->
-                ( { model | inputText = inputText }, Cmd.none )
+        UpdateInputText inputText ->
+            ( { model | inputText = inputText }, Cmd.none )
 
-            Send inputText ->
-                ( model, Websocket.websocketSend ( "room:lobby", "shout", textEncoder inputText ) )
-
-
-    textDecoder : D.Decoder String
-    textDecoder =
-        D.at ["data"] D.string
+        Send inputText ->
+            ( model, Websocket.websocketSend ( "room:lobby", "shout", textEncoder inputText ) )
 
 
-    textEncoder : String -> E.Value
-    textEncoder string =
-        E.object
-            [ ( "data", E.string string ) ]
+textDecoder : D.Decoder String
+textDecoder =
+    D.at ["data"] D.string
 
 
-    -- SUBSCRIPTIONS
+textEncoder : String -> E.Value
+textEncoder string =
+    E.object
+        [ ( "data", E.string string ) ]
 
 
-    subscriptions : Model -> Sub Msg
-    subscriptions model =
-        Websocket.websocketReceive WebsocketReceive
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Websocket.websocketReceive WebsocketReceive
 
 
 
-    -- MAIN
+-- MAIN
 
 
-    main : Program () Model Msg
-    main =
-        Browser.element
-            { init = init
-            , view = view
-            , update = update
-            , subscriptions = subscriptions
-            }
-    ```
+main : Program () Model Msg
+main =
+    Browser.element
+        { init = init
+        , view = view
+        , update = update
+        , subscriptions = subscriptions
+        }
+```
 
 7. app.js
 
-    ```js
-    // /assets/js/app.js
+```js
+// /assets/js/app.js
 
-    // ...
+// ...
 
-    import * as phoenix from "phoenix"
-    import websocketPortsFactory from "elm-phoenix-websocket-ports"
+import * as phoenix from "phoenix"
+import websocketPortsFactory from "elm-phoenix-websocket-ports"
 
-    import { Elm } from "../elm/src/Main.elm"
+import { Elm } from "../elm/src/Main.elm"
 
-    const socketAddress = "/socket"
-    const websocketPorts = websocketPortsFactory(phoenix, socketAddress)
+const socketAddress = "/socket"
+const websocketPorts = websocketPortsFactory(phoenix, socketAddress)
 
-    const elm = Elm.Main.init({
-      node: document.getElementById("elm-container")
-    })
+const elm = Elm.Main.init({
+    node: document.getElementById("elm-container")
+})
 
-    websocketPorts.register(elm.ports)
-    ```
+websocketPorts.register(elm.ports)
+```
 
 8. `$ mix phx.server`
 9. ブラウザでhttp://localhost:4000/ にアクセスし、inputに入力して送信ボタンを押すとメッセージが送られます。Phoenixでは受け取った文字列を接続中のクライアントすべてに返し、Elmで受け取った結果が`received: `に表示されます。タブを２つ以上開いておくと送信していないタブでも表示されるはずです。
