@@ -10,7 +10,7 @@ const iconSize = 40
 const About = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
-      <SEO title="about" location={location} />
+      <SEO title="about" location={location} url="/about" />
       <article className="about-page">
         <ul className="about-page-socials">
           <li>

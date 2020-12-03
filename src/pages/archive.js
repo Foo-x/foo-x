@@ -12,7 +12,7 @@ const Archive = ({ data, location }) => {
       titleSvg={data.file.publicURL}
       mainClassName="global-main-archive"
     >
-      <SEO title="archive" location={location} />
+      <SEO title="archive" location={location} url="/archive" />
       <section className="archive-page">
         <Search query={query} />
       </section>

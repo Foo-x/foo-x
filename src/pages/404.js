@@ -9,7 +9,7 @@ const NotFoundPage = ({ data, location }) => {
   console.log(data)
   return (
     <LayoutCommon titleSvg={data.notFound.publicURL}>
-      <SEO title="404" location={location} />
+      <SEO title="404" location={location} url="/" />
       <article
         className="not-found-page"
         itemScope

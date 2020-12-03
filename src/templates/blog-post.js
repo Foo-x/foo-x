@@ -26,6 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         location={location}
         imageURL={post.frontmatter.ogp?.publicURL}
+        url={`/blog${post.fields.slug}`}
       />
       <article
         className="blog-post"
@@ -69,6 +70,9 @@ export default BlogPostTemplate
 export const pageQuery = graphql`
   query BlogPostBySlug($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      fields {
+        slug
+      }
       id
       excerpt(pruneLength: 160)
       html
