@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[foo-x]]></title><description><![CDATA[主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。]]></description><link>https://foo-x.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Dec 2020 15:25:29 GMT</lastBuildDate><item><title><![CDATA[Nimの競プロ用標準入力マクロ]]></title><description><![CDATA[Nimで競プロの入力を変数にバインドするマクロを作成しました。 2020/08/25 floatに変換するものを追加 タプルにバインドするものを追加 例 実装 については以下の記事を参考にさせていただきました。 Nimの競技プログラミング用標準入力 オーバーロードしている…]]></description><link>https://foo-x.com/nim-contest-macro/</link><guid isPermaLink="false">https://foo-x.com/nim-contest-macro/</guid><pubDate>Thu, 23 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nimで競プロの入力を変数にバインドするマクロを作成しました。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[foo-x]]></title><description><![CDATA[主に技術のことについて学んだ内容を記録したり、制作した作品を紹介したりするサイトです。]]></description><link>https://foo-x.com</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Dec 2020 03:54:48 GMT</lastBuildDate><item><title><![CDATA[Nimの競プロ用標準入力マクロ]]></title><description><![CDATA[Nimで競プロの入力を変数にバインドするマクロを作成しました。 2020/08/25 floatに変換するものを追加 タプルにバインドするものを追加 例 実装 については以下の記事を参考にさせていただきました。 Nimの競技プログラミング用標準入力 オーバーロードしている…]]></description><link>https://foo-x.com/nim-contest-macro/</link><guid isPermaLink="false">https://foo-x.com/nim-contest-macro/</guid><pubDate>Thu, 23 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Nimで競プロの入力を変数にバインドするマクロを作成しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;2020/08/25&lt;/p&gt;
@@ -354,8 +354,8 @@ Elmについてはコンパイルが爆速になったり、成果物のサイ�
 &lt;li&gt;elm.jsonを作成するか聞かれるのでEnter&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Main.elm&lt;/p&gt;
+&lt;li&gt;Main.elm&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elm&quot;&gt;&lt;pre class=&quot;language-elm&quot;&gt;&lt;code class=&quot;language-elm&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;-- /assets/elm/Main.elm&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;exposing&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -420,9 +420,9 @@ Elmについてはコンパイルが爆速になったり、成果物のサイ�
         &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;app.js&lt;/p&gt;
+&lt;ol start=&quot;5&quot;&gt;
+&lt;li&gt;app.js&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// /assets/js/app.js&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
@@ -430,41 +430,41 @@ Elmについてはコンパイルが爆速になったり、成果物のサイ�
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Elm &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;../elm/src/Main.elm&quot;&lt;/span&gt;
 
 Elm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  node&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;elm-container&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    node&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;elm-container&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;ol start=&quot;6&quot;&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd /assets&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install --save-dev elm-webpack-loader&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;webpack.config.js&lt;/p&gt;
+&lt;li&gt;webpack.config.js&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// /assets/webpack.config.js&lt;/span&gt;
 
 module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;exports&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;env&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; options&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-  module&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    module&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     rules&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
         test&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;\.elm$&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
         exclude&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;elm-stuff&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;node_modules&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
         use&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-          loader&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;elm-webpack-loader&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-          options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            loader&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;elm-webpack-loader&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
             cwd&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; __dirname &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/elm&quot;&lt;/span&gt;
-          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;ol start=&quot;9&quot;&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;/lib/elm_websocket_sample_web/templates/layout/app.html.eex&lt;/code&gt;の&lt;code class=&quot;language-text&quot;&gt;&amp;lt;header&amp;gt;&lt;/code&gt;を削除&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;index.html.eex&lt;/p&gt;
+&lt;li&gt;index.html.eex&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;html&quot;&gt;&lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;&amp;lt;!-- /lib/elm_websocket_sample_web/templates/page/index.html.eex --&gt;&lt;/span&gt;
 &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;elm-container&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;ol start=&quot;11&quot;&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ mix phx.server&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;ブラウザで&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt; にアクセスして以下の画面が表示されればOK&lt;/li&gt;
 &lt;/ol&gt;
@@ -501,20 +501,18 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;h3 id=&quot;phoenix側&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#phoenix%E5%81%B4&quot; aria-label=&quot;phoenix側 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Phoenix側&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ mix phx.gen.channel Room&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;user_socket.ex&lt;/p&gt;
+&lt;li&gt;user_socket.ex&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elixir&quot;&gt;&lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# /lib/elm_websocket_sample_web/channels/user_socket.ex&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;defmodule&lt;/span&gt; ElmWebsocketSampleWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;UserSocket &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; Phoenix&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Socket
+    &lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; Phoenix&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Socket
 
-  &lt;span class=&quot;token comment&quot;&gt;## Channels&lt;/span&gt;
-  channel &lt;span class=&quot;token string&quot;&gt;&quot;room:*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ElmWebsocketSampleWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;RoomChannel &lt;span class=&quot;token comment&quot;&gt;# ← コメントアウトを解除&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;## Channels&lt;/span&gt;
+    channel &lt;span class=&quot;token string&quot;&gt;&quot;room:*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ElmWebsocketSampleWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;RoomChannel &lt;span class=&quot;token comment&quot;&gt;# ← コメントアウトを解除&lt;/span&gt;
 
-  &lt;span class=&quot;token comment&quot;&gt;# ...&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;# ...&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;h3 id=&quot;elm側&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#elm%E5%81%B4&quot; aria-label=&quot;elm側 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Elm側&lt;/h3&gt;
 &lt;p&gt;Elm 0.18までは公式のライブラリでWebSocketがサポートされていたのですが、0.19では現時点で存在しません。&lt;br&gt;
 そのため、WebSocket通信を行うにはJavaScriptを通して行う必要があります。&lt;br&gt;
@@ -522,8 +520,8 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;ol&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd /assets&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install elm-phoenix-websocket-ports&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;elm.json&lt;/p&gt;
+&lt;li&gt;elm.json&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// /assets/elm/elm.json&lt;/span&gt;
 
 &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -534,11 +532,11 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
     ...
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;ol start=&quot;4&quot;&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ cd /assets/elm&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ elm install elm/json&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Main.elm&lt;/p&gt;
+&lt;li&gt;Main.elm&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elm&quot;&gt;&lt;pre class=&quot;language-elm&quot;&gt;&lt;code class=&quot;language-elm&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;-- /assets/elm/Main.elm&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;exposing&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -564,8 +562,8 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token hvariable&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;init&lt;/span&gt; _ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketListen&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;room:lobby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
@@ -657,9 +655,9 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
         &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt;
         &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;app.js&lt;/p&gt;
+&lt;ol start=&quot;7&quot;&gt;
+&lt;li&gt;app.js&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// /assets/js/app.js&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
@@ -673,11 +671,11 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cla
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; websocketPorts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;websocketPortsFactory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;phoenix&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socketAddress&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; elm &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Elm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Main&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;init&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  node&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;elm-container&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    node&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;elm-container&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;register&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;elm&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;ports&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
+&lt;ol start=&quot;8&quot;&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;$ mix phx.server&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;ブラウザで&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt; にアクセスし、inputに入力して送信ボタンを押すとメッセージが送られます。Phoenixでは受け取った文字列を接続中のクライアントすべてに返し、Elmで受け取った結果が&lt;code class=&quot;language-text&quot;&gt;received:&lt;/code&gt;に表示されます。タブを２つ以上開いておくと送信していないタブでも表示されるはずです。&lt;/li&gt;
 &lt;/ol&gt;
@@ -716,24 +714,24 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;h2 id=&quot;解説&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%A7%A3%E8%AA%AC&quot; aria-label=&quot;解説 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;解説&lt;/h2&gt;
 &lt;h3 id=&quot;phoenix側-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#phoenix%E5%81%B4-1&quot; aria-label=&quot;phoenix側 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Phoenix側&lt;/h3&gt;
 &lt;p&gt;Phoenixには、WebSocketでの送受信に関する処理を行うChannelというモジュールが用意されています。&lt;br&gt;
-&lt;code class=&quot;language-text&quot;&gt;$ mix phx.gen.channel Room&lt;/code&gt;というコマンドを実行すると、“RoomChannel”が自動で作成されます。&lt;/p&gt;
+&lt;code class=&quot;language-text&quot;&gt;$ mix phx.gen.channel Room&lt;/code&gt;というコマンドを実行すると、”RoomChannel”が自動で作成されます。&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elixir&quot;&gt;&lt;pre class=&quot;language-elixir&quot;&gt;&lt;code class=&quot;language-elixir&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# /lib/elm_websocket_sample_web/channels/room_channel.ex&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;defmodule&lt;/span&gt; ElmWebsocketSampleWeb&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;RoomChannel &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;use&lt;/span&gt; ElmWebsocketSampleWeb&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token atom symbol&quot;&gt;:channel&lt;/span&gt;
 
-  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token capture function&quot;&gt;&amp;amp;quot;room&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:lobby&lt;/span&gt;&lt;span class=&quot;token capture function&quot;&gt;&amp;amp;quot;,&lt;/span&gt; payload&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; join&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;room:lobby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; payload&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; authorized?&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;payload&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:ok&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;reason:&lt;/span&gt; &lt;span class=&quot;token capture function&quot;&gt;&amp;amp;quot;unauthorized&amp;amp;quot;}}&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token attr-name&quot;&gt;reason:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;unauthorized&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
 
   &lt;span class=&quot;token comment&quot;&gt;# ...&lt;/span&gt;
 
-  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; handle_in&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token capture function&quot;&gt;&amp;amp;quot;shout&amp;amp;quot;,&lt;/span&gt; payload&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
-    broadcast socket&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token capture function&quot;&gt;&amp;amp;quot;shout&amp;amp;quot;,&lt;/span&gt; payload
+  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; handle_in&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; payload&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;
+    broadcast socket&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; payload
     &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token atom symbol&quot;&gt;:noreply&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; socket&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;end&lt;/span&gt;
 
@@ -745,14 +743,14 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;join(&amp;quot;room:lobby&amp;quot;, payload, socket)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;“room:lobby”というトピックの定義と、購読時の処理の実装です。&lt;/li&gt;
+&lt;li&gt;”room:lobby”というトピックの定義と、購読時の処理の実装です。&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;authorized?&lt;/code&gt;がtrueの場合はok, falseの場合はerrorを返します。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;handle_in(&amp;quot;shout&amp;quot;, payload, socket)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;“shout”というイベントのメッセージを受信した時の処理の実装です。&lt;/li&gt;
+&lt;li&gt;”shout”というイベントのメッセージを受信した時の処理の実装です。&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;payload&lt;/code&gt;は受信したメッセージです。&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;socket&lt;/code&gt;はメッセージの送信元とのソケットです。&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;broadcast&lt;/code&gt;の部分では、&lt;code class=&quot;language-text&quot;&gt;socket&lt;/code&gt;と同じトピック(ここでは”room:lobby”)を購読しているクライアントに対し、受信したメッセージを”shout”というイベントでそのまま送信しています。&lt;/li&gt;
@@ -768,12 +766,12 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;h3 id=&quot;elm側-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#elm%E5%81%B4-1&quot; aria-label=&quot;elm側 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Elm側&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elm&quot;&gt;&lt;pre class=&quot;language-elm&quot;&gt;&lt;code class=&quot;language-elm&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;-- ...&lt;/span&gt;
 
-&lt;span class=&quot;token hvariable&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token hvariable&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;init&lt;/span&gt; _ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;
-      &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;
+    &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketListen&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;lobby&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketListen&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;room:lobby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;-- ...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -781,7 +779,7 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Websocket.websocketListen (&amp;quot;room:lobby&amp;quot;, &amp;quot;shout&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;“room:lobby”というトピックの”shout”というイベントのメッセージを受信できるように登録しています。&lt;/li&gt;
+&lt;li&gt;”room:lobby”というトピックの”shout”というイベントのメッセージを受信できるように登録しています。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -794,41 +792,41 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
     &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Send&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;String&lt;/span&gt;
 
 
-&lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Cmd&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;update&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt;
-        &lt;span class=&quot;token constant&quot;&gt;WebsocketReceive&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;lobby&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;;
+        &lt;span class=&quot;token constant&quot;&gt;WebsocketReceive&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;room:lobby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
             &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;D.decodeValue&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;textDecoder&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;of&lt;/span&gt;
-                &lt;span class=&quot;token constant&quot;&gt;Ok&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;;
+                &lt;span class=&quot;token constant&quot;&gt;Ok&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
                     &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;receivedText&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Cmd.none&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
                 &lt;span class=&quot;token comment&quot;&gt;-- ...&lt;/span&gt;
         &lt;span class=&quot;token comment&quot;&gt;-- ...&lt;/span&gt;
 
-        &lt;span class=&quot;token constant&quot;&gt;Send&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;;
-            &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketSend&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;room&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;lobby&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;textEncoder&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token constant&quot;&gt;Send&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketSend&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;room:lobby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;shout&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;textEncoder&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;inputText&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
 
 &lt;span class=&quot;token hvariable&quot;&gt;textDecoder&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;D.Decoder&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;String&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;textDecoder&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;token hvariable&quot;&gt;D.at&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;D.string&lt;/span&gt;
+    &lt;span class=&quot;token hvariable&quot;&gt;D.at&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;D.string&lt;/span&gt;
 
 
-&lt;span class=&quot;token hvariable&quot;&gt;textEncoder&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;; &lt;span class=&quot;token constant&quot;&gt;E.Value&lt;/span&gt;
+&lt;span class=&quot;token hvariable&quot;&gt;textEncoder&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;E.Value&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;textEncoder&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
     &lt;span class=&quot;token hvariable&quot;&gt;E.object&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token hvariable&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;quot&lt;/span&gt;;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;E.string&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;data&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;E.string&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;WebsocketReceive (&amp;quot;room:lobby&amp;quot;, &amp;quot;shout&amp;quot;, payload)&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;“room:lobby”というトピックの”shout”というイベントのメッセージを受信したときの処理の実装です。&lt;/li&gt;
+&lt;li&gt;”room:lobby”というトピックの”shout”というイベントのメッセージを受信したときの処理の実装です。&lt;/li&gt;
 &lt;li&gt;JSONをデコードし、modelの&lt;code class=&quot;language-text&quot;&gt;receivedText&lt;/code&gt;にセットしています。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Send inputText&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;文字列をJSONにエンコードし、“room:lobby”というトピックの”shout”というイベントでメッセージを送信する処理の実装です。&lt;/li&gt;
+&lt;li&gt;文字列をJSONにエンコードし、”room:lobby”というトピックの”shout”というイベントでメッセージを送信する処理の実装です。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -849,7 +847,7 @@ websocketPorts&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;elm&quot;&gt;&lt;pre class=&quot;language-elm&quot;&gt;&lt;code class=&quot;language-elm&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;-- SUBSCRIPTIONS&lt;/span&gt;
 
 
-&lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&amp;amp;&lt;/span&gt;&lt;span class=&quot;token hvariable&quot;&gt;gt&lt;/span&gt;; &lt;span class=&quot;token constant&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt;
+&lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Sub&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Msg&lt;/span&gt;
 &lt;span class=&quot;token hvariable&quot;&gt;subscriptions&lt;/span&gt; &lt;span class=&quot;token hvariable&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;
     &lt;span class=&quot;token hvariable&quot;&gt;Websocket.websocketReceive&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;WebsocketReceive&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Websocket.websocketListen&lt;/code&gt;で受信したメッセージを処理する関数を登録しています。&lt;/p&gt;
