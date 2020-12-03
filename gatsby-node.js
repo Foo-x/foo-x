@@ -43,7 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (posts.length > 0) {
     posts.forEach(post => {
       createPage({
-        path: `/blog${post.fields.slug}`,
+        path: post.fields.slug,
         component: blogPost,
         context: {
           id: post.id,
@@ -62,7 +62,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: `/blog${value}`,
     })
   }
 }

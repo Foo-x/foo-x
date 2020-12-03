@@ -99,7 +99,7 @@ const Search = ({ query }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <Link to={`/blog${result.fields.slug}`} itemProp="url">
+                <Link to={result.fields.slug} itemProp="url">
                   <div className="search-result-image-wrapper">{thumbnail}</div>
                   <section>
                     <h2

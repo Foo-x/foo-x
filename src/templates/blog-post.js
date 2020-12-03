@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
         location={location}
         imageURL={post.frontmatter.ogp?.publicURL}
-        url={`/blog${post.fields.slug}`}
+        url={post.fields.slug}
       />
       <article
         className="blog-post"
