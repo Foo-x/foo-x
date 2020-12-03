@@ -1,0 +1,19 @@
+{
+	"frontmatter": {
+		"scope": "markdown",
+		"prefix": "frontmatter",
+		"body": [
+			"---",
+			"title: $1",
+			"date: \"$2-$3-$4\"",
+			"thumbnail: $5",
+			"header: header.jpg",
+			"ogp: ogp.jpg",
+			"tags:",
+			"    - $6",
+			"---",
+			"",
+			"$0"
+		]
+	}
+}
