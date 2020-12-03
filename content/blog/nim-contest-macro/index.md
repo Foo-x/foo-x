@@ -125,7 +125,7 @@ macro read(n: int, ts: varargs[auto]): untyped =
 ```
 
 `readNext`については以下の記事を参考にさせていただきました。
-[Nimの競技プログラミング用標準入力](https://qiita.com/cunitac/items/f0900f17d8d1c652855e)
+[Nimの競技プログラミング用標準入力](https://qiita.com/cunitac/items/f0900f17d8d1c652855e)（追記: リンク切れ）
 
 オーバーロードしている4つの`proc read`で、与えられた型に応じて読み込んだ文字列を変換しています。
 
