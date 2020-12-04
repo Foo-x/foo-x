@@ -16,6 +16,7 @@
     "gatsby-plugin-sharp": "^2.7.1",
     "gatsby-remark-autolink-headers": "^2.6.0",
     "gatsby-remark-copy-linked-files": "^2.3.19",
+    "gatsby-remark-external-links": "0.0.4",
     "gatsby-remark-images": "^3.4.1",
     "gatsby-remark-katex": "^3.5.0",
     "gatsby-remark-line-breaks": "^1.0.0",

@@ -47,6 +47,7 @@ module.exports = {
           `gatsby-remark-smartypants`,
           `gatsby-remark-line-breaks`,
           `gatsby-remark-twemoji-shortcut`,
+          `gatsby-remark-external-links`,
         ],
       },
     },
