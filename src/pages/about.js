@@ -16,6 +16,8 @@ const About = ({ data, location }) => {
           <li>
             <SocialIcon
               url="https://github.com/Foo-x"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               style={{ width: iconSize, height: iconSize }}
             />
           </li>
@@ -23,6 +25,8 @@ const About = ({ data, location }) => {
             <SocialIcon
               url="/rss.xml"
               network="rss"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
               style={{ width: iconSize, height: iconSize }}
             />
           </li>
@@ -36,11 +40,19 @@ const About = ({ data, location }) => {
         </p>
         <p>
           この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認いただけると幸いです。詳細は
-          <a href="https://marketingplatform.google.com/about/analytics/terms/jp/">
+          <a
+            href="https://marketingplatform.google.com/about/analytics/terms/jp/"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             Googleアナリティクスサービス利用規約
           </a>
           や
-          <a href="https://policies.google.com/technologies/ads?hl=ja">
+          <a
+            href="https://policies.google.com/technologies/ads?hl=ja"
+            target="_blank"
+            rel="nofollow noopener noreferrer"
+          >
             Googleポリシーと規約
           </a>
           をご覧ください。
