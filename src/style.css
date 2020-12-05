@@ -516,17 +516,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   list-style: none;
 }
 
-.works-item {
+.work-card {
+  display: block;
+  text-decoration: none;
+  text-align: center;
   transition: opacity .2s;
 }
 
-.works-item:hover {
+.work-card:hover {
   opacity: .5;
-}
-
-.work-card {
-  text-decoration: none;
-  text-align: center;
 }
 
 .work-card-title {
