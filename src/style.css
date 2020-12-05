@@ -500,6 +500,37 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transition: opacity .5s;
 }
 
+.work-card {
+  text-decoration: none;
+  text-align: center;
+}
+
+.work-card-title {
+  font-size: var(--fontSize-4);
+  margin-bottom: var(--spacing-3);
+  text-decoration: underline;
+}
+
+.work-card-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-1);
+  font-size: .9rem;
+  color: var(--color-text-light);
+}
+
+.work-card-tag-list li:not(:first-of-type)::before {
+  content: "/";
+  padding: 0 .5rem;
+}
+
+.work-card-tag {
+  margin: 0;
+}
+
 .archive-page {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-archive);
@@ -889,6 +920,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .post-list {
     grid-template-columns: 1fr;
     row-gap: 10vw;
+  }
+
+  .work-card-tag-list {
+    font-size: .8rem;
   }
 
   .search-result-list {
