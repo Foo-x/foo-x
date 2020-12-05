@@ -33,7 +33,7 @@ const items = [
   },
   {
     title: "nacc | Nim AtCoder CLI",
-    tags: ["Nim"],
+    tags: ["Nim", "競プロ"],
     description: "Nim製のAtCoderコマンドラインツール",
     link: "https://github.com/Foo-x/nacc",
   },
