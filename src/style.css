@@ -516,6 +516,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   list-style: none;
 }
 
+.works-item {
+  transition: opacity .2s;
+}
+
+.works-item:hover {
+  opacity: .5;
+}
+
 .work-card {
   text-decoration: none;
   text-align: center;
