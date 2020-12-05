@@ -23,6 +23,12 @@ const Menu = () => {
         ) {
           publicURL
         }
+        works: file(
+          sourceInstanceName: { eq: "assets" }
+          relativePath: { eq: "works.svg" }
+        ) {
+          publicURL
+        }
         archive: file(
           sourceInstanceName: { eq: "assets" }
           relativePath: { eq: "archive.svg" }
@@ -77,6 +83,16 @@ const Menu = () => {
               }}
             >
               <img src={data.home.publicURL} alt="home" />
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/works"
+              onClick={() => {
+                setIsActive(false)
+              }}
+            >
+              <img src={data.works.publicURL} alt="works" />
             </Link>
           </li>
           <li>
