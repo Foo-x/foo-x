@@ -14,6 +14,7 @@
     "gatsby-plugin-preload-fonts": "^1.2.30",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-plugin-sharp": "^2.7.1",
+    "gatsby-plugin-sitemap": "^2.8.0",
     "gatsby-remark-autolink-headers": "^2.6.0",
     "gatsby-remark-copy-linked-files": "^2.3.19",
     "gatsby-remark-external-links": "0.0.4",
