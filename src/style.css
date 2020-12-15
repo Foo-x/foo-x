@@ -502,16 +502,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .works-page {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-archive);
+  max-width: var(--maxWidth-2xl);
   padding: var(--spacing-8) 5vw;
   word-wrap: break-word;
 }
 
 .works-item-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 4vw;
-  row-gap: 4vw;
+  grid-template-columns: 1fr;
+  row-gap: calc(var(--spacing-8) + 6vw);
   padding: 0;
   list-style: none;
 }
@@ -529,6 +528,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .work-card-title {
   font-size: var(--fontSize-4);
+  margin-top: 0;
   margin-bottom: var(--spacing-3);
   text-decoration: underline;
 }
@@ -942,10 +942,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   .post-list {
     grid-template-columns: 1fr;
     row-gap: 10vw;
-  }
-
-  .works-item-list {
-    grid-template-columns: 1fr;
   }
 
   .work-card-tag-list {
