@@ -19,6 +19,7 @@ tags:
 たとえば、コンパイルエラーの出力には元の型名が表示されていた。
 
 > Type aliases don’t create a new name — for instance, error messages won’t use the alias name.
+
 (https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c)
 
 他にも`type`はextends/implementsできないという仕様もあったりして、なかなかに使いにくかった。

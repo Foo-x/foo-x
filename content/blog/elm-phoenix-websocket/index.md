@@ -12,7 +12,7 @@ tags:
 ---
 ## 背景
 
-Elm 0.19が8月、Phoenix 1.4が11月にリリースされました :tada:
+Elm 0.19が8月、Phoenix 1.4が11月にリリースされました！
 Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくは[こちら](https://github.com/elm/compiler/blob/master/upgrade-docs/0.19.md))
 
 ![image.png](./asset-size.png)
