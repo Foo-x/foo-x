@@ -50,7 +50,7 @@
         }
       }
     })
-  </script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#222933"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><title data-react-helmet="true">Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信 | foo-x</title><link data-react-helmet="true" rel="icon" type="image/png" href="/favicon.png"/><meta data-react-helmet="true" name="description" content="背景 Elm 0.19が8月、Phoenix 1.4が11月にリリースされました  Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくはこちら)  PhoenixについてもHTTP2のサポートが入ったり、JS…"/><meta data-react-helmet="true" property="og:title" content="Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信 | foo-x"/><meta data-react-helmet="true" property="og:description" content="背景 Elm 0.19が8月、Phoenix 1.4が11月にリリースされました  Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくはこちら)  PhoenixについてもHTTP2のサポートが入ったり、JS…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:image" content="https://foo-x.com/static/a8b99a21a63b303e1a6f4d259fbe703f/ogp.jpg"/><meta data-react-helmet="true" property="og:url" content="https://foo-x.com/blog/elm-phoenix-websocket/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><script data-react-helmet="true" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNZ8Y97RCM"></script><script data-react-helmet="true">window.dataLayer = window.dataLayer || [];
+  </script><link rel="alternate" type="application/rss+xml" href="/rss.xml"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#222933"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=b00eea9b3e376ef94fc5fe666ba3327e"/><title data-react-helmet="true">Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信 | foo-x</title><link data-react-helmet="true" rel="icon" type="image/png" href="/favicon.png"/><meta data-react-helmet="true" name="description" content="背景 Elm 0.19が8月、Phoenix 1.4が11月にリリースされました！ Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくはこちら)  PhoenixについてもHTTP2のサポートが入ったり、JS…"/><meta data-react-helmet="true" property="og:title" content="Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信 | foo-x"/><meta data-react-helmet="true" property="og:description" content="背景 Elm 0.19が8月、Phoenix 1.4が11月にリリースされました！ Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくはこちら)  PhoenixについてもHTTP2のサポートが入ったり、JS…"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:image" content="https://foo-x.com/static/a8b99a21a63b303e1a6f4d259fbe703f/ogp.jpg"/><meta data-react-helmet="true" property="og:url" content="https://foo-x.com/blog/elm-phoenix-websocket/"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><script data-react-helmet="true" async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNZ8Y97RCM"></script><script data-react-helmet="true">window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
@@ -86,7 +86,7 @@
 </li>
 <li><a href="/blog/elm-phoenix-websocket/#%E3%81%BE%E3%81%A8%E3%82%81">まとめ</a></li>
 </ul></section><hr/></nav></header><section itemProp="articleBody"><h2 id="背景" style="position:relative;"><a href="#%E8%83%8C%E6%99%AF" aria-label="背景 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>背景</h2>
-<p>Elm 0.19が8月、Phoenix 1.4が11月にリリースされました <img class="emoji" draggable="false" alt="&#x1F389;" src="https://twemoji.maxcdn.com/2/72x72/1f389.png" style="height: 1em; width: 1em; margin: 0 .05em 0 .1em; vertical-align: -0.1em;"><br>
+<p>Elm 0.19が8月、Phoenix 1.4が11月にリリースされました！<br>
 Elmについてはコンパイルが爆速になったり、成果物のサイズが小さくなったり、標準ライブラリのAPIに破壊的変更が入ったりなど、大きな変更が加えられました。(詳しくは<a href="https://github.com/elm/compiler/blob/master/upgrade-docs/0.19.md" target="_blank" rel="nofollow noopener noreferrer">こちら</a>)</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -566,7 +566,7 @@ websocketPorts<span class="token punctuation">.</span><span class="token functio
 <h2 id="解説" style="position:relative;"><a href="#%E8%A7%A3%E8%AA%AC" aria-label="解説 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>解説</h2>
 <h3 id="phoenix側-1" style="position:relative;"><a href="#phoenix%E5%81%B4-1" aria-label="phoenix側 1 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Phoenix側</h3>
 <p>Phoenixには、WebSocketでの送受信に関する処理を行うChannelというモジュールが用意されています。<br>
-<code class="language-text">$ mix phx.gen.channel Room</code>というコマンドを実行すると、”RoomChannel”が自動で作成されます。</p>
+<code class="language-text">$ mix phx.gen.channel Room</code>というコマンドを実行すると、“RoomChannel”が自動で作成されます。</p>
 <div class="gatsby-highlight" data-language="elixir"><pre class="language-elixir"><code class="language-elixir"><span class="token comment"># /lib/elm_websocket_sample_web/channels/room_channel.ex</span>
 
 <span class="token keyword">defmodule</span> ElmWebsocketSampleWeb<span class="token punctuation">.</span>RoomChannel <span class="token keyword">do</span>
@@ -595,14 +595,14 @@ websocketPorts<span class="token punctuation">.</span><span class="token functio
 <li>
 <p><code class="language-text">join(&quot;room:lobby&quot;, payload, socket)</code></p>
 <ul>
-<li>”room:lobby”というトピックの定義と、購読時の処理の実装です。</li>
+<li>“room:lobby”というトピックの定義と、購読時の処理の実装です。</li>
 <li><code class="language-text">authorized?</code>がtrueの場合はok, falseの場合はerrorを返します。</li>
 </ul>
 </li>
 <li>
 <p><code class="language-text">handle_in(&quot;shout&quot;, payload, socket)</code></p>
 <ul>
-<li>”shout”というイベントのメッセージを受信した時の処理の実装です。</li>
+<li>“shout”というイベントのメッセージを受信した時の処理の実装です。</li>
 <li><code class="language-text">payload</code>は受信したメッセージです。</li>
 <li><code class="language-text">socket</code>はメッセージの送信元とのソケットです。</li>
 <li><code class="language-text">broadcast</code>の部分では、<code class="language-text">socket</code>と同じトピック(ここでは”room:lobby”)を購読しているクライアントに対し、受信したメッセージを”shout”というイベントでそのまま送信しています。</li>
@@ -631,7 +631,7 @@ websocketPorts<span class="token punctuation">.</span><span class="token functio
 <li>
 <p><code class="language-text">Websocket.websocketListen (&quot;room:lobby&quot;, &quot;shout&quot;)</code></p>
 <ul>
-<li>”room:lobby”というトピックの”shout”というイベントのメッセージを受信できるように登録しています。</li>
+<li>“room:lobby”というトピックの”shout”というイベントのメッセージを受信できるように登録しています。</li>
 </ul>
 </li>
 </ul>
@@ -671,14 +671,14 @@ websocketPorts<span class="token punctuation">.</span><span class="token functio
 <li>
 <p><code class="language-text">WebsocketReceive (&quot;room:lobby&quot;, &quot;shout&quot;, payload)</code></p>
 <ul>
-<li>”room:lobby”というトピックの”shout”というイベントのメッセージを受信したときの処理の実装です。</li>
+<li>“room:lobby”というトピックの”shout”というイベントのメッセージを受信したときの処理の実装です。</li>
 <li>JSONをデコードし、modelの<code class="language-text">receivedText</code>にセットしています。</li>
 </ul>
 </li>
 <li>
 <p><code class="language-text">Send inputText</code></p>
 <ul>
-<li>文字列をJSONにエンコードし、”room:lobby”というトピックの”shout”というイベントでメッセージを送信する処理の実装です。</li>
+<li>文字列をJSONにエンコードし、“room:lobby”というトピックの”shout”というイベントでメッセージを送信する処理の実装です。</li>
 </ul>
 </li>
 <li>
