@@ -2,6 +2,7 @@
     "svg.preview.background": "custom",
     "conventionalCommits.scopes": [
         "blog",
-        "style"
+        "style",
+        "page"
     ],
 }
