@@ -42,7 +42,7 @@ export const pageQuery = graphql`
       relativePath: { eq: "sleeping-cat.jpg" }
     ) {
       childImageSharp {
-        fluid {
+        fluid(maxWidth: 800, srcSetBreakpoints: [400, 800], toFormat: WEBP) {
           ...GatsbyImageSharpFluid_noBase64
         }
       }

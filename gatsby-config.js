@@ -27,6 +27,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              linkImagesToOriginal: false,
+              srcSetBreakpoints: [315, 630],
             },
           },
           {
@@ -97,7 +99,7 @@ module.exports = {
                         date
                         header {
                           childImageSharp {
-                            fixed {
+                            fixed(toFormat: WEBP) {
                               src
                             }
                           }

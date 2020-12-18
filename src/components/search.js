@@ -21,7 +21,11 @@ const Search = ({ query }) => {
               title
               header {
                 childImageSharp {
-                  fluid(maxWidth: 300, srcSetBreakpoints: [300]) {
+                  fluid(
+                    maxWidth: 300
+                    srcSetBreakpoints: [300]
+                    toFormat: WEBP
+                  ) {
                     ...GatsbyImageSharpFluid_noBase64
                   }
                 }
