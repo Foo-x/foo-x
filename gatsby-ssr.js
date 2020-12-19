@@ -4,7 +4,7 @@ exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
 
   let hc = getHeadComponents()
   hc.forEach(el => {
-    if (el.type === "style") {
+    if (el.type === "style" && el.props["data-href"]) {
       el.type = "link"
       el.props["href"] = el.props["data-href"]
       el.props["rel"] = "stylesheet"
