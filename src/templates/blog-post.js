@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 
-import "katex/dist/katex.min.css"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderBlogPost from "../components/header-blog-post"
