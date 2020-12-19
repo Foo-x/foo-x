@@ -6,7 +6,6 @@ import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
 
 const NotFoundPage = ({ data, location }) => {
-  console.log(data)
   return (
     <LayoutCommon titleSvg={data.notFound.publicURL}>
       <SEO title="404" location={location} url="/" />
