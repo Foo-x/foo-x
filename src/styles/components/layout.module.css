@@ -1,0 +1,39 @@
+.globalHeader {
+  position: sticky;
+  z-index: -1;
+  top: 0;
+  width: calc(100vw - var(--scrollBarWidth));
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.globalNavWrapperTop {
+  position: fixed;
+  top: 0;
+  padding: 0.4rem;
+  z-index: 1;
+  width: calc(100vw - var(--scrollBarWidth));
+  pointer-events: none;
+  transition: opacity .5s;
+}
+
+.globalMainTop {
+  padding: 5vw 10vw;
+  min-height: 50vh;
+  background-color: var(--color-top-background);
+}
+
+@media (max-width: 64em) {
+  .globalMainTop {
+    padding: 7vw 10vw;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .globalMainTop {
+    padding: 15vw 15vw;
+  }
+}

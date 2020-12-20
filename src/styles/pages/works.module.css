@@ -1,0 +1,14 @@
+.worksPage {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-2xl);
+  padding: var(--spacing-8) 5vw;
+  word-wrap: break-word;
+}
+
+.worksItemList {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: calc(var(--spacing-8) + 6vw);
+  padding: 0;
+  list-style: none;
+}

@@ -1,0 +1,35 @@
+.aboutPage {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-2) var(--spacing-5);
+  word-wrap: break-word;
+}
+
+.aboutPageSocials {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aboutPageSocials :global(.social-svg-icon) path {
+  fill: var(--color-brand);
+}
+
+.aboutPageSocials :global(.social-svg-mask) path {
+  fill: #fff;
+}
+
+.aboutPageSocials a {
+  transition: opacity .2s;
+  opacity: .5;
+}
+
+.aboutPageSocials a:hover {
+  opacity: 1;
+}
+
+.aboutPageSocials li:not(:first-of-type) {
+  margin-left: var(--spacing-1);
+}

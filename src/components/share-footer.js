@@ -9,6 +9,8 @@ import {
   TwitterShareButton,
 } from "react-share"
 
+import styles from "styles/components/share-footer.module.css"
+
 const ShareFooter = ({ url, title }) => {
   const { site } = useStaticQuery(
     graphql`
@@ -26,7 +28,7 @@ const ShareFooter = ({ url, title }) => {
   const size = 32
 
   return (
-    <footer className="share-footer">
+    <footer className={styles.shareFooter}>
       <TwitterShareButton url={url} title={pageTitle}>
         <TwitterIcon size={size} />
       </TwitterShareButton>

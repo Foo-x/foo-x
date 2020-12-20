@@ -3,6 +3,8 @@ import React, { useState } from "react"
 import ThumbnailRaster from "./thumbnail-raster"
 import ThumbnailVectorArchive from "./thumbnail-vector-archive"
 
+import styles from "styles/components/search.module.css"
+
 /**
  * @param {object} param0
  * @param {URLSearchParams} param0.query
@@ -59,10 +61,10 @@ const Search = ({ query }) => {
 
   return (
     <div>
-      <section className="search-area">
+      <section className={styles.searchArea}>
         <label>
-          <h2 className="search-area-label-tag">タグ</h2>
-          <div className="search-area-input">
+          <h2 className={styles.searchAreaLabelTag}>タグ</h2>
+          <div className={styles.searchAreaInput}>
             <input
               type="text"
               value={tag}
@@ -71,7 +73,7 @@ const Search = ({ query }) => {
               }}
             />
             <img
-              className="search-button"
+              className={styles.searchButton}
               src={data.file.publicURL}
               alt="search"
             />
@@ -79,7 +81,7 @@ const Search = ({ query }) => {
         </label>
       </section>
       <ul
-        className="search-result-list"
+        className={styles.searchResultList}
         style={{ listStyle: `none`, padding: 0 }}
       >
         {results.map(result => {
@@ -99,15 +101,17 @@ const Search = ({ query }) => {
           return (
             <li key={result.fields.slug}>
               <article
-                className="search-result-item"
+                className={styles.searchResultItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <Link to={result.fields.slug} itemProp="url">
-                  <div className="search-result-image-wrapper">{thumbnail}</div>
+                  <div className={styles.searchResultImageWrapper}>
+                    {thumbnail}
+                  </div>
                   <section>
                     <h2
-                      className="search-result-item-title"
+                      className={styles.searchResultItemTitle}
                       itemProp="headline"
                     >
                       {title}
@@ -115,7 +119,7 @@ const Search = ({ query }) => {
                     <time dateTime={result.frontmatter.date}>
                       {result.frontmatter.date.replace(/-/g, ".")}
                     </time>
-                    <ul className="search-result-tag-list">{tags}</ul>
+                    <ul className={styles.searchResultTagList}>{tags}</ul>
                   </section>
                 </Link>
               </article>

@@ -1,0 +1,6 @@
+.archivePage {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-archive);
+  padding: var(--spacing-8) 5vw;
+  word-wrap: break-word;
+}

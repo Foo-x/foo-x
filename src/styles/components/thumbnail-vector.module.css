@@ -1,0 +1,9 @@
+.thumbnailVectorSpace {
+  position: relative;
+  padding-bottom: 100%;
+}
+
+.thumbnailVector {
+  position: absolute;
+  transition: opacity .5s;
+}

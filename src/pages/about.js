@@ -4,6 +4,7 @@ import { SocialIcon } from "react-social-icons"
 
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
+import styles from "styles/pages/about.module.css"
 
 const iconSize = 40
 
@@ -11,8 +12,8 @@ const About = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
       <SEO title="about" location={location} url="/about" />
-      <article className="about-page">
-        <ul className="about-page-socials">
+      <article className={styles.aboutPage}>
+        <ul className={styles.aboutPageSocials}>
           <li>
             <SocialIcon
               url="https://github.com/Foo-x"

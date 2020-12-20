@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
+import styles from "styles/components/header-top.module.css"
+
 const HeaderTop = () => {
   const { brand } = useStaticQuery(
     graphql`
@@ -13,8 +15,8 @@ const HeaderTop = () => {
   )
 
   return (
-    <h1 className="header-top">
-      <img className="header-brand" src={brand.publicURL} alt="foo-x" />
+    <h1 className={styles.headerTop}>
+      <img className={styles.headerBrand} src={brand.publicURL} alt="foo-x" />
     </h1>
   )
 }

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderBlogPost from "../components/header-blog-post"
 import ShareFooter from "../components/share-footer"
+import styles from "styles/templates/blog-post.module.css"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -27,7 +28,7 @@ const BlogPostTemplate = ({ data, location }) => {
         url={post.fields.slug}
       />
       <article
-        className="blog-post"
+        className={styles.blogPost}
         itemScope
         itemType="http://schema.org/Article"
       >
@@ -36,7 +37,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <time dateTime={post.frontmatter.date}>
             {post.frontmatter.date.replace(/-/g, ".")}
           </time>
-          <ul className="blog-post-tag-list">
+          <ul className={styles.blogPostTagList}>
             {post.frontmatter.tags?.map(tag => {
               return (
                 <li key={tag}>

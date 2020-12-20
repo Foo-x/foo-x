@@ -4,13 +4,14 @@ import Img from "gatsby-image"
 
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
+import styles from "styles/pages/404.module.css"
 
 const NotFoundPage = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.notFound.publicURL}>
       <SEO title="404" location={location} url="/" />
       <article
-        className="not-found-page"
+        className={styles.notFoundPage}
         itemScope
         itemType="http://schema.org/Article"
       >

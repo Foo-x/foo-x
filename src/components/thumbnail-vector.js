@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 
+import styles from "styles/components/thumbnail-vector.module.css"
+
 const ThumbnailVector = ({ img }) => {
   const [isHidden, setIsHidden] = useState(true)
 
@@ -7,11 +9,11 @@ const ThumbnailVector = ({ img }) => {
     setIsHidden(false)
   }, [])
 
-  const className = "thumbnail-vector"
+  const className = styles.thumbnailVector
   const classNames = isHidden ? [className, "is-hidden"] : [className]
 
   return (
-    <div className="thumbnail-vector-space">
+    <div className={styles.thumbnailVectorSpace}>
       <img
         src={img}
         className={classNames.join(" ")}

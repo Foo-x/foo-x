@@ -1,0 +1,43 @@
+.workCard {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity .2s;
+}
+
+.workCard:hover {
+  opacity: .5;
+}
+
+.workCardTitle {
+  font-size: var(--fontSize-4);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  text-decoration: underline;
+}
+
+.workCardTagList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-1);
+  font-size: .9rem;
+  color: var(--color-text-light);
+}
+
+.workCardTagList li:not(:first-of-type)::before {
+  content: "/";
+  padding: 0 .5rem;
+}
+
+.workCardTag {
+  margin: 0;
+}
+
+@media (max-width: 37.5em) {
+  .workCardTagList {
+    font-size: .8rem;
+  }
+}

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HeaderTop from "../components/header-top"
 import ThumbnailVector from "../components/thumbnail-vector"
+import styles from "styles/pages/index.module.css"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -12,19 +13,19 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} header={<HeaderTop />}>
       <SEO title="All posts" location={location} url="/" />
-      <ul className="post-list" style={{ listStyle: `none`, padding: 0 }}>
+      <ul className={styles.postList} style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className={styles.postListItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <Link to={post.fields.slug} itemProp="url">
-                  <div className="post-list-item-image-wrapper">
+                  <div className={styles.postListItemImageWrapper}>
                     <ThumbnailVector
                       img={
                         post.frontmatter.thumbnail?.publicURL || "/favicon.svg"

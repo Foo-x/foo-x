@@ -1,6 +1,8 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
 
+import styles from "styles/components/menu.module.css"
+
 const touchmoveListener = event => {
   event.preventDefault()
 }
@@ -46,8 +48,12 @@ const Menu = () => {
   )
 
   const [isActive, setIsActive] = useState(false)
-  const hamburgerClassNames = isActive ? ["hamburger", "active"] : ["hamburger"]
-  const navClassNames = isActive ? ["menu-nav"] : ["menu-nav", "is-hidden"]
+  const hamburgerClassName = isActive
+    ? styles.hamburgerActive
+    : styles.hamburger
+  const navClassNames = isActive
+    ? [styles.menuNav]
+    : [styles.menuNav, "is-hidden"]
 
   const target = useRef(null)
 
@@ -127,7 +133,7 @@ const Menu = () => {
       THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       */}
       <svg
-        className={hamburgerClassNames.join(" ")}
+        className={hamburgerClassName}
         viewBox="0 0 100 100"
         width="32"
         onClick={() => {
@@ -135,12 +141,12 @@ const Menu = () => {
         }}
       >
         <path
-          className="line top"
+          className={`${styles.line} ${styles.top}`}
           d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
         />
-        <path className="line middle" d="m 30,50 h 40" />
+        <path className={`${styles.line} ${styles.middle}`} d="m 30,50 h 40" />
         <path
-          className="line bottom"
+          className={`${styles.line} ${styles.bottom}`}
           d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
         />
       </svg>

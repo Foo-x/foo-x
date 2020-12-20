@@ -1,0 +1,13 @@
+.thumbnailVectorArchiveSpace {
+  position: relative;
+  width: var(--thumbnail-size);
+  height: var(--thumbnail-size);
+  padding: 20%;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.thumbnailVectorArchive {
+  width: 100%;
+  transition: opacity .5s;
+}

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
 import WorkCard from "../components/work-card"
+import styles from "styles/pages/works.module.css"
 
 const items = [
   {
@@ -70,8 +71,8 @@ const Works = ({ data, location }) => {
       mainClassName="global-main-works"
     >
       <SEO title="works" location={location} url="/works" />
-      <section className="works-page">
-        <ul className="works-item-list">
+      <section className={styles.worksPage}>
+        <ul className={styles.worksItemList}>
           {items.map(item => (
             <li className="works-item" key={item.title}>
               <WorkCard {...item} />

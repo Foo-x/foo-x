@@ -1,0 +1,109 @@
+/*
+Copyright (c) 2020 by Mikael Ainalem (https://codepen.io/ainalem/pen/LJYRxz)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+.hamburger {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.hamburgerActive {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  transform: rotate(45deg);
+}
+
+.hamburger .top {
+  stroke-dasharray: 40 160;
+}
+
+.hamburger .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+}
+
+.hamburger .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+}
+
+.hamburgerActive .top {
+  stroke-dasharray: 40 160;
+  stroke-dashoffset: -64px;
+}
+
+.hamburgerActive .middle {
+  stroke-dasharray: 40 142;
+  transform-origin: 50%;
+  transition: transform 400ms;
+  transform: rotate(90deg);
+}
+
+.hamburgerActive .bottom {
+  stroke-dasharray: 40 85;
+  transform-origin: 50%;
+  transition: transform 400ms, stroke-dashoffset 400ms;
+  stroke-dashoffset: -64px;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: var(--color-brand);
+  stroke-width: 7.5;
+  stroke-linecap: round;
+}
+
+.menuNav {
+  position: absolute;
+  width: calc(100vw - var(--scrollBarWidth));
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  pointer-events: initial;
+  background: #fff;
+  transition: opacity .5s;
+}
+
+.menuNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuNav li {
+  margin-bottom: var(--spacing-8);
+  transition: opacity .2s;
+}
+
+.menuNav li:hover {
+  opacity: .5;
+}
+
+.menuNav img {
+  height: 3rem;
+}

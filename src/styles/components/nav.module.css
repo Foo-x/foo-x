@@ -1,0 +1,5 @@
+.globalNav {
+  display: flex;
+  justify-content: space-between;
+  height: 32px;
+}

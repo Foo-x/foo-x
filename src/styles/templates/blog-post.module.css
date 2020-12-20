@@ -1,0 +1,132 @@
+.blogPost {
+  margin: var(--spacing-0) auto;
+  max-width: var(--maxWidth-wrapper);
+  padding: var(--spacing-16) var(--spacing-5);
+  word-wrap: break-word;
+}
+
+.blogPost > header {
+  text-align: center;
+}
+
+.blogPost > header h1 {
+  margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
+  text-align: left;
+}
+
+.blogPost > header time,
+.blogPostTagList {
+  margin-top: var(--spacing-2);
+  color: #999;
+}
+
+.blogPostTagList a {
+  transition: color .2s;
+}
+
+.blogPostTagList a:hover {
+  color: var(--color-text);
+}
+
+.blogPost nav {
+  margin: 3rem 0;
+}
+
+.blogPost nav header {
+  font-weight: var(--fontWeight-bold);
+}
+
+.blogPost nav hr {
+  height: 2px;
+  background-color: var(--color-brand);
+  margin: 1rem 0;
+}
+
+.blogPost nav a {
+  display: block;
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.blogPost nav a:hover {
+  color: var(--color-brand-transparent);
+}
+
+.blogPost nav section {
+  margin: 1rem 0;
+  text-align: initial;
+}
+
+.blogPost nav section ul {
+  list-style: none;
+  margin-left: 0;
+  padding: 0;
+}
+
+.blogPost nav section > ul {
+  margin: 2rem 0;
+}
+
+.blogPost nav section ul li {
+  position: relative;
+  margin-bottom: var(--spacing-4);
+}
+
+.blogPost nav section > ul > li {
+  padding-left: var(--spacing-6);
+  font-weight: var(--fontWeight-bold);
+}
+
+.blogPost nav section > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0.37rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--color-brand);
+  border-radius: 50%;
+}
+
+.blogPost nav section > ul > li > ul {
+  margin-top: var(--spacing-4);
+}
+
+.blogPost nav section > ul > li > ul > li {
+  font-weight: var(--fontWeight-normal);
+}
+
+.blogPost nav section > ul > li > ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1.36rem;
+  top: 0.6rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-brand-transparent);
+  border-radius: 50%;
+}
+
+.blogPostTagList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  font-size: .9rem;
+}
+
+.blogPostTagList li {
+  margin: 0;
+}
+
+.blogPostTagList li:not(:first-of-type)::before {
+  content: "/";
+  padding: 0 .5rem;
+}
+
+.blogPostTagList a {
+  text-decoration: none;
+  color: #999;
+}

@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import styles from "styles/components/seo.module.css"
+
 const SEO = ({ description, lang, meta, title, url, imageURL, location }) => {
   const { site, defaultImage } = useStaticQuery(
     graphql`
@@ -28,7 +30,8 @@ const SEO = ({ description, lang, meta, title, url, imageURL, location }) => {
   const isRootPath = location.pathname === rootPath
   const archivePath = `${__PATH_PREFIX__}/archive`
   const isArchivePath = location.pathname === archivePath
-  const bodyClass = isRootPath || isArchivePath ? "body-top" : "body-blog-post"
+  const bodyClass =
+    isRootPath || isArchivePath ? styles.bodyTop : styles.bodyBlogPost
 
   const metaDescription = description || site.siteMetadata.description
   const pageTitle =

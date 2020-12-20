@@ -1,0 +1,17 @@
+.headerTop {
+  margin: 0;
+  max-width: var(--maxWidth-wrapper);
+  display: flex;
+  justify-content: center;
+}
+
+.headerBrand {
+  vertical-align: middle;
+  width: 18rem;
+}
+
+@media (max-width: 37.5em) {
+  .headerBrand {
+    width: 14rem;
+  }
+}

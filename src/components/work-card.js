@@ -1,22 +1,24 @@
 import React from "react"
 
+import styles from "styles/components/work-card.module.css"
+
 const WorkCard = ({ title, tags, description, link }) => {
   return (
     <a
-      className="work-card"
+      className={styles.workCard}
       href={link}
       target="_blank"
       rel="nofollow noopener noreferrer"
     >
-      <h2 className="work-card-title">{title}</h2>
-      <ul className="work-card-tag-list">
+      <h2 className={styles.workCardTitle}>{title}</h2>
+      <ul className={styles.workCardTagList}>
         {tags.map(tag => (
-          <li className="work-card-tag" key={tag}>
+          <li className={styles.workCardTag} key={tag}>
             {tag}
           </li>
         ))}
       </ul>
-      <div className="work-card-description">{description}</div>
+      <div className={styles.workCardDescription}>{description}</div>
     </a>
   )
 }

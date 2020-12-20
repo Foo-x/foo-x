@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
 import Search from "../components/search"
+import styles from "styles/pages/archive.module.css"
 
 const Archive = ({ data, location }) => {
   const query = new URLSearchParams(location.search)
@@ -13,7 +14,7 @@ const Archive = ({ data, location }) => {
       mainClassName="global-main-archive"
     >
       <SEO title="archive" location={location} url="/archive" />
-      <section className="archive-page">
+      <section className={styles.archivePage}>
         <Search query={query} />
       </section>
     </LayoutCommon>

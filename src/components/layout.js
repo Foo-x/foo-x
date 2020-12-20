@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from "react"
 import Nav from "./nav"
 
+import styles from "styles/components/layout.module.css"
+
 const Layout = ({ location, children, header }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const mainClassName = isRootPath ? "global-main-top" : "global-main"
+  const mainClassName = isRootPath ? styles.globalMainTop : "global-main"
   const navClassName = isRootPath
-    ? "global-nav-wrapper-top"
+    ? styles.globalNavWrapperTop
     : "global-nav-wrapper"
 
   const target = useRef(null)
@@ -36,7 +38,7 @@ const Layout = ({ location, children, header }) => {
   }, [])
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <header className="global-header">{header}</header>
+      <header className={styles.globalHeader}>{header}</header>
       <Nav isHidden={isHidden} className={navClassName} />
       <main ref={target} className={mainClassName}>
         {children}

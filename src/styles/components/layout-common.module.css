@@ -1,0 +1,12 @@
+.globalHeaderCommon {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 8rem 0 6rem;
+}
+
+@media (max-width: 37.5em) {
+  .globalHeaderCommon {
+    padding: 6rem 0 4rem;
+  }
+}
