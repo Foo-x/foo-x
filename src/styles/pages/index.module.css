@@ -11,10 +11,6 @@
   transition: opacity .2s;
 }
 
-.postListItem:hover {
-  opacity: .5;
-}
-
 .postListItem a {
   text-decoration: none;
   color: var(--color-text);
@@ -58,5 +54,11 @@
   .postList {
     grid-template-columns: 1fr;
     row-gap: 10vw;
+  }
+}
+
+@media (hover: hover) {
+  .postListItem:hover {
+    opacity: .5;
   }
 }

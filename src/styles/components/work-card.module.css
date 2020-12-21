@@ -5,10 +5,6 @@
   transition: opacity .2s;
 }
 
-.workCard:hover {
-  opacity: .5;
-}
-
 .workCardTitle {
   font-size: var(--fontSize-4);
   margin-top: 0;
@@ -39,5 +35,11 @@
 @media (max-width: 37.5em) {
   .workCardTagList {
     font-size: .8rem;
+  }
+}
+
+@media (hover: hover) {
+  .workCard:hover {
+    opacity: .5;
   }
 }

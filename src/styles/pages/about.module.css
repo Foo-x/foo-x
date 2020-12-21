@@ -26,10 +26,12 @@
   opacity: .5;
 }
 
-.aboutPageSocials a:hover {
-  opacity: 1;
-}
-
 .aboutPageSocials li:not(:first-of-type) {
   margin-left: var(--spacing-1);
+}
+
+@media (hover: hover) {
+  .aboutPageSocials a:hover {
+    opacity: 1;
+  }
 }

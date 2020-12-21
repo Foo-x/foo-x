@@ -16,10 +16,12 @@
   transition: opacity .2s;
 }
 
-.shareFooter button:hover {
-  opacity: .5;
-}
-
 .shareFooter button:not(:first-of-type) {
   margin-left: var(--spacing-5);
+}
+
+@media (hover: hover) {
+  .shareFooter button:hover {
+    opacity: .5;
+  }
 }

@@ -52,10 +52,6 @@
   transition: opacity .2s;
 }
 
-.searchResultItem a:hover{
-  opacity: .5;
-}
-
 .searchResultItem section {
   display: flex;
   flex-direction: column;
@@ -104,5 +100,11 @@
   .searchResultItem time,
   .searchResultTagList {
     font-size: .8rem;
+  }
+}
+
+@media (hover: hover) {
+  .searchResultItem a:hover{
+    opacity: .5;
   }
 }

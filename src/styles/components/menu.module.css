@@ -100,10 +100,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transition: opacity .2s;
 }
 
-.menuNav li:hover {
-  opacity: .5;
-}
-
 .menuNav img {
   height: 3rem;
+}
+
+@media (hover: hover) {
+  .menuNav li:hover {
+    opacity: .5;
+  }
 }

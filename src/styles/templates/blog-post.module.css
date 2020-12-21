@@ -21,11 +21,7 @@
 }
 
 .blogPostTagList a {
-  transition: color .2s;
-}
-
-.blogPostTagList a:hover {
-  color: var(--color-text);
+  transition: color 0.2s;
 }
 
 .blogPost nav {
@@ -46,11 +42,7 @@
   display: block;
   color: var(--color-brand);
   text-decoration: none;
-  transition: color .2s;
-}
-
-.blogPost nav a:hover {
-  color: var(--color-brand-transparent);
+  transition: color 0.2s;
 }
 
 .blogPost nav section {
@@ -114,7 +106,7 @@
   justify-content: center;
   list-style: none;
   padding: 0;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .blogPostTagList li {
@@ -123,10 +115,20 @@
 
 .blogPostTagList li:not(:first-of-type)::before {
   content: "/";
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .blogPostTagList a {
   text-decoration: none;
   color: #999;
+}
+
+@media (hover: hover) {
+  .blogPostTagList a:hover {
+    color: var(--color-text);
+  }
+
+  .blogPost nav a:hover {
+    color: var(--color-brand-transparent);
+  }
 }
