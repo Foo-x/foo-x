@@ -151,8 +151,7 @@ JSの中に各コンポーネントのCSSを書く方法です。スタイルを
 なお、[css-loader](https://github.com/webpack-contrib/css-loader)のIssueに書かれた[こちらのコメント](https://github.com/webpack-contrib/css-loader/issues/1050?#issuecomment-592541379)を根拠に、CSS Modulesは廃止される可能性が高い、という意見があります。
 css-loaderはwebpackでCSS Modulesを実現するライブラリです。
 
-結論としては特に心配する必要はありません。
-[その後のコメント](https://github.com/webpack-contrib/css-loader/issues/1050?#issuecomment-729606066)にある通り、廃止されたとしても別のライブラリに分かれるだけでしょう。
+結論としては特に心配する必要はありません。[その後のコメント](https://github.com/webpack-contrib/css-loader/issues/1050?#issuecomment-729606066)にある通り、廃止されたとしても別のライブラリに分かれるだけでしょう。
 
 
 ## Vue.js
