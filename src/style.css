@@ -309,6 +309,26 @@ a:focus {
     --thumbnail-size: 5rem;
   }
 
+  h1 {
+    font-size: var(--fontSize-5);
+  }
+
+  h2 {
+    font-size: var(--fontSize-4);
+  }
+
+  h3 {
+    font-size: var(--fontSize-3);
+  }
+
+  h4 {
+    font-size: var(--fontSize-2);
+  }
+
+  h5 {
+    font-size: var(--fontSize-1);
+  }
+
   blockquote {
     padding: var(--spacing-0) var(--spacing-0) var(--spacing-0) var(--spacing-4);
   }
