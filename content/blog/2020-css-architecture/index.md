@@ -59,7 +59,7 @@ https://ja.reactjs.org/docs/faq-styling.html
 ```css
 /* app.css */
 
-.foo {
+.example {
   background-color: black;
   color: white;
 }
@@ -69,7 +69,7 @@ https://ja.reactjs.org/docs/faq-styling.html
 // app.js
 
 export default function App() {
-  return <div className="foo">bar</div>
+  return <div className="example">bar</div>
 }
 ```
 
@@ -86,7 +86,7 @@ CSS ModulesやCSS in JSがある現代において、あえて採用する必要
 ```css
 /* foo-component.module.css */
 
-.foo {
+.example {
   background-color: black;
   color: white;
 }
@@ -98,7 +98,7 @@ CSS ModulesやCSS in JSがある現代において、あえて採用する必要
 import styles from "./foo-component.module.css"
 
 export default function FooComponent() {
-  return <div className={styles.foo}>bar</div>
+  return <div className={styles.example}>bar</div>
 }
 ```
 
@@ -182,7 +182,7 @@ export default {
 </style>
 ```
 
-`<style>`タグに何も加えないとグローバルに適用されます。すでに上で書いたように、競合しやすいので避けましょう。
+`<style>`タグの属性に何も加えないとグローバルに適用されます。すでに上で書いたように、競合しやすいので避けましょう。
 
 `scoped`を加えると**Scoped CSS**、`module`を加えると**CSS Modules**になります。
 
