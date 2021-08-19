@@ -74,7 +74,7 @@
   content: "";
   position: absolute;
   left: 0px;
-  top: 0.37rem;
+  top: 0.6rem;
   width: 0.7rem;
   height: 0.7rem;
   background-color: var(--color-brand);
@@ -93,7 +93,7 @@
   content: "";
   position: absolute;
   left: -1.36rem;
-  top: 0.6rem;
+  top: 0.8rem;
   width: 0.4rem;
   height: 0.4rem;
   background-color: var(--color-brand-transparent);
