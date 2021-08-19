@@ -1,12 +1,17 @@
-import React from "react"
 import { graphql } from "gatsby"
-
+import React from "react"
+import styles from "styles/pages/works.module.css"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
 import WorkCard from "../components/work-card"
-import styles from "styles/pages/works.module.css"
 
 const items = [
+  {
+    title: "あにいも名場面集",
+    tags: ["TypeScript", "React", "Gatsby"],
+    description: "兄妹 YouTuber の名場面集",
+    link: "https://ani-imo-scenes.com",
+  },
   {
     title: "コーディングの指針",
     tags: ["Vuepress", "プログラミング"],
@@ -27,15 +32,15 @@ const items = [
   },
   {
     title: "YouTube Timestamp Comments",
-    tags: ["Elm", "Chrome Extensions"],
-    description: "YouTubeの時間指定コメントを表示するChrome拡張機能",
+    tags: ["TypeScript", "React", "Chrome Extensions"],
+    description: "YouTube の時間指定コメントを表示するChrome拡張機能",
     link:
       "https://chrome.google.com/webstore/detail/youtube-timestamp-comment/khngjoedfeicfbjlcfmiigbokbnlibei",
   },
   {
     title: "nacc | Nim AtCoder CLI",
     tags: ["Nim", "競プロ"],
-    description: "Nim製のAtCoderコマンドラインツール",
+    description: "Nim製の AtCoder コマンドラインツール",
     link: "https://github.com/Foo-x/nacc",
   },
   {
