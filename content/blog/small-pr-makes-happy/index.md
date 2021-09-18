@@ -108,4 +108,6 @@ https://twitter.com/iamdevloper/status/397664295875805184
 意味もなく細かくする必要はありませんが、タスクを解決するのであれば1行でも問題ありません。
 （もちろん、OSSはバグ修正やドキュメント修正の割合が圧倒的に多いので、システム開発などとはまた違いますが...）
 
+なお、問題を見つけるには、[1時間あたり200行以下](https://ieeexplore.ieee.org/abstract/document/4815279) や、[一度に400行以下かつ1時間以下](https://smartbear.com/learn/code-review/best-practices-for-peer-code-review/) のレビューにするのが効果的であるという研究結果があります。
+
 プルリクを小さくしてみんな幸せになりましょう。
