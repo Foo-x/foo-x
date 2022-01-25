@@ -1,10 +1,9 @@
-import React from "react"
 import { graphql } from "gatsby"
-
+import React from "react"
+import * as styles from "styles/pages/archive.module.css"
 import LayoutCommon from "../components/layout-common"
-import SEO from "../components/seo"
 import Search from "../components/search"
-import styles from "styles/pages/archive.module.css"
+import SEO from "../components/seo"
 
 const Archive = ({ data, location }) => {
   const query = new URLSearchParams(location.search)

@@ -1,7 +1,6 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import styles from "styles/components/header-top.module.css"
+import * as styles from "styles/components/header-top.module.css"
 
 const HeaderTop = () => {
   const { brand } = useStaticQuery(

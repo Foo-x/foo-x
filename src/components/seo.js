@@ -1,9 +1,8 @@
-import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
+import React from "react"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-
-import styles from "styles/components/seo.module.css"
+import * as styles from "styles/components/seo.module.css"
 
 const SEO = ({ description, lang, meta, title, url, imageURL, location }) => {
   const { site, defaultImage } = useStaticQuery(

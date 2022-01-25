@@ -1,10 +1,9 @@
-import React from "react"
 import { graphql } from "gatsby"
+import React from "react"
 import { SocialIcon } from "react-social-icons"
-
+import * as styles from "styles/pages/about.module.css"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
-import styles from "styles/pages/about.module.css"
 
 const iconSize = 40
 

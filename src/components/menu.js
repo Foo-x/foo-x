@@ -1,7 +1,6 @@
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useEffect, useRef, useState } from "react"
-
-import styles from "styles/components/menu.module.css"
+import * as styles from "styles/components/menu.module.css"
 
 const touchmoveListener = event => {
   event.preventDefault()

@@ -1,6 +1,5 @@
 import React from "react"
-
-import styles from "styles/components/header-common.module.css"
+import * as styles from "styles/components/header-common.module.css"
 
 const HeaderCommon = ({ titleSvg }) => {
   return (

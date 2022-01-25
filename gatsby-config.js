@@ -27,8 +27,10 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              withWebp: true,
               linkImagesToOriginal: false,
               srcSetBreakpoints: [315, 630],
+              wrapperStyle: `white-space: initial`,
             },
           },
           {
@@ -41,11 +43,11 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-line-breaks`,
           `gatsby-remark-external-links`,
         ],
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -73,7 +75,8 @@ module.exports = {
                   enclosure: {
                     url:
                       site.siteMetadata.siteUrl +
-                      edge.node.frontmatter.header.childImageSharp.fixed.src,
+                      edge.node.frontmatter.header.childImageSharp
+                        .gatsbyImageData.images.fallback.src,
                   },
                   header: undefined,
                 })
@@ -93,11 +96,12 @@ module.exports = {
                         date
                         header {
                           childImageSharp {
-                            fixed(toFormat: WEBP) {
-                              src
-                            }
+                            gatsbyImageData(
+                              placeholder: NONE
+                              formats: [WEBP]
+                              width: 600
+                            )
                           }
-                          publicURL
                         }
                       }
                     }
@@ -105,6 +109,7 @@ module.exports = {
                 }
               }
             `,
+            title: "foo-x",
             output: "/rss.xml",
           },
         ],

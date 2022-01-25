@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
+import * as styles from "styles/components/layout.module.css"
 import Nav from "./nav"
-
-import styles from "styles/components/layout.module.css"
 
 const Layout = ({ location, children, header }) => {
   const rootPath = `${__PATH_PREFIX__}/`

@@ -1,11 +1,10 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
-import { Link, graphql } from "gatsby"
-
+import * as styles from "styles/pages/index.module.css"
+import HeaderTop from "../components/header-top"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeaderTop from "../components/header-top"
 import ThumbnailVector from "../components/thumbnail-vector"
-import styles from "styles/pages/index.module.css"
 
 const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes

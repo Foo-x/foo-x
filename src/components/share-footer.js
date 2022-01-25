@@ -1,5 +1,5 @@
-import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import React from "react"
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -8,8 +8,7 @@ import {
   TwitterIcon,
   TwitterShareButton,
 } from "react-share"
-
-import styles from "styles/components/share-footer.module.css"
+import * as styles from "styles/components/share-footer.module.css"
 
 const ShareFooter = ({ url, title }) => {
   const { site } = useStaticQuery(

@@ -1,11 +1,10 @@
-import React from "react"
 import { graphql, Link } from "gatsby"
-
+import React from "react"
+import * as styles from "styles/templates/blog-post.module.css"
+import HeaderBlogPost from "../components/header-blog-post"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import HeaderBlogPost from "../components/header-blog-post"
 import ShareFooter from "../components/share-footer"
-import styles from "styles/templates/blog-post.module.css"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -16,7 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
       location={location}
       header={
         <HeaderBlogPost
-          fluid={post.frontmatter.header?.childImageSharp?.fluid}
+          fluid={post.frontmatter.header?.childImageSharp?.gatsbyImageData}
         />
       }
     >
@@ -54,6 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
           </nav>
         </header>
         <section
+          className={styles.blogPostBody}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
@@ -67,7 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($id: String!) {
+  query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
         slug
@@ -81,9 +81,7 @@ export const pageQuery = graphql`
         description
         header {
           childImageSharp {
-            fluid(maxWidth: 1920, toFormat: WEBP) {
-              ...GatsbyImageSharpFluid_noBase64
-            }
+            gatsbyImageData(placeholder: NONE, layout: FULL_WIDTH)
           }
         }
         ogp {

@@ -1,10 +1,9 @@
 import { graphql, Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
-import Img from "gatsby-image"
-
+import * as styles from "styles/pages/404.module.css"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
-import styles from "styles/pages/404.module.css"
 
 const NotFoundPage = ({ data, location }) => {
   return (
@@ -15,8 +14,8 @@ const NotFoundPage = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <Img
-          fluid={data.sleepingCat.childImageSharp.fluid}
+        <GatsbyImage
+          image={data.sleepingCat.childImageSharp.gatsbyImageData}
           alt="sleeping-cat"
         />
         <section itemProp="articleBody">
@@ -30,7 +29,7 @@ const NotFoundPage = ({ data, location }) => {
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  query {
+  {
     notFound: file(
       sourceInstanceName: { eq: "assets" }
       relativePath: { eq: "404.svg" }
@@ -42,9 +41,7 @@ export const pageQuery = graphql`
       relativePath: { eq: "sleeping-cat.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 800, srcSetBreakpoints: [400, 800], toFormat: WEBP) {
-          ...GatsbyImageSharpFluid_noBase64
-        }
+        gatsbyImageData(formats: [WEBP], placeholder: NONE, layout: CONSTRAINED)
       }
     }
   }

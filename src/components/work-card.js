@@ -1,6 +1,5 @@
 import React from "react"
-
-import styles from "styles/components/work-card.module.css"
+import * as styles from "styles/components/work-card.module.css"
 
 const WorkCard = ({ title, tags, description, link }) => {
   return (

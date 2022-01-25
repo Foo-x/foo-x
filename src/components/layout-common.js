@@ -1,8 +1,7 @@
 import React from "react"
+import * as styles from "styles/components/layout-common.module.css"
 import HeaderCommon from "./header-common"
 import Nav from "./nav"
-
-import styles from "styles/components/layout-common.module.css"
 
 const LayoutCommon = ({ children, titleSvg, mainClassName }) => {
   return (

@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
-import styles from "styles/pages/works.module.css"
+import * as styles from "styles/pages/works.module.css"
 import LayoutCommon from "../components/layout-common"
 import SEO from "../components/seo"
 import WorkCard from "../components/work-card"

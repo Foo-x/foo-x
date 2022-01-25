@@ -1,13 +1,12 @@
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
-import Img from "gatsby-image"
-
-import styles from "styles/components/thumbnail-raster.module.css"
+import * as styles from "styles/components/thumbnail-raster.module.css"
 
 const ThumbnailRaster = ({ img }) => {
   return (
-    <Img
+    <GatsbyImage
+      image={{ ...img, aspectRatio: 1 }}
       className={styles.thumbnailRaster}
-      fluid={{ ...img, aspectRatio: 1 }}
       alt="thumbnail"
       itemProp="image"
     />

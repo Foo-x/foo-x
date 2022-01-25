@@ -123,6 +123,10 @@
   color: #999;
 }
 
+.blogPostBody > p {
+  white-space: pre-line;
+}
+
 @media (hover: hover) {
   .blogPostTagList a:hover {
     color: var(--color-text);

@@ -1,8 +1,7 @@
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
-import Img from "gatsby-image"
-
+import * as styles from "styles/components/header-blog-post.module.css"
 import HeaderTop from "./header-top"
-import styles from "styles/components/header-blog-post.module.css"
 
 const HeaderBlogPost = ({ fluid }) => {
   if (!fluid) {
@@ -10,7 +9,11 @@ const HeaderBlogPost = ({ fluid }) => {
   }
 
   return (
-    <Img className={styles.blogPostHeaderImage} fluid={fluid} alt="header" />
+    <GatsbyImage
+      image={fluid}
+      className={styles.blogPostHeaderImage}
+      alt="header"
+    />
   )
 }
 

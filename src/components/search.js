@@ -1,9 +1,8 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
+import * as styles from "styles/components/search.module.css"
 import ThumbnailRaster from "./thumbnail-raster"
 import ThumbnailVectorArchive from "./thumbnail-vector-archive"
-
-import styles from "styles/components/search.module.css"
 
 /**
  * @param {object} param0
@@ -12,7 +11,7 @@ import styles from "styles/components/search.module.css"
 const Search = ({ query }) => {
   const data = useStaticQuery(
     graphql`
-      query {
+      {
         allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
           nodes {
             fields {
@@ -23,13 +22,12 @@ const Search = ({ query }) => {
               title
               header {
                 childImageSharp {
-                  fluid(
-                    maxWidth: 300
-                    srcSetBreakpoints: [300]
-                    toFormat: WEBP
-                  ) {
-                    ...GatsbyImageSharpFluid_noBase64
-                  }
+                  gatsbyImageData(
+                    aspectRatio: 1
+                    formats: [WEBP]
+                    placeholder: NONE
+                    layout: CONSTRAINED
+                  )
                 }
               }
               tags
@@ -86,7 +84,8 @@ const Search = ({ query }) => {
       >
         {results.map(result => {
           const title = result.frontmatter.title || result.fields.slug
-          const imgSrc = result.frontmatter.header?.childImageSharp?.fluid
+          const imgSrc =
+            result.frontmatter.header?.childImageSharp?.gatsbyImageData
           const thumbnail = imgSrc ? (
             <ThumbnailRaster img={imgSrc} />
           ) : (

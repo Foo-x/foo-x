@@ -1,6 +1,5 @@
 import React, { useState } from "react"
-
-import styles from "styles/components/thumbnail-vector-archive.module.css"
+import * as styles from "styles/components/thumbnail-vector-archive.module.css"
 
 const ThumbnailVectorArchive = ({ img }) => {
   const [isHidden, setIsHidden] = useState(true)
