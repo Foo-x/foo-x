@@ -39,8 +39,8 @@
   },
   "license": "UNLICENSED",
   "scripts": {
-    "build": "gatsby build && rm -f font-preload-cache.json",
-    "develop": "gatsby develop -H 0.0.0.0",
+    "build": "gatsby build",
+    "develop": "rm -f font-preload-cache.json && gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0",
