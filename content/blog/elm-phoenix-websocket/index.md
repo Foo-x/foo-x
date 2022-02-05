@@ -1,7 +1,7 @@
 ---
 title: Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信
 date: "2018-12-03"
-thumbnail: phoenix.svg
+thumbnail: ../../assets/thumb/swap.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:
@@ -503,4 +503,3 @@ subscriptions model =
 ## まとめ
 Elm 0.19 + Elixir/Phoenix 1.4でWebSocket通信を行う実装例を紹介しました。
 参考になれば幸いです。
-

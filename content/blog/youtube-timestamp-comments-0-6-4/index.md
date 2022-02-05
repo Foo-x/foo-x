@@ -1,7 +1,7 @@
 ---
 title: YouTube Timestamp Comments の v0.6.4 をリリースしました
 date: "2021-08-04"
-thumbnail: ../../assets/thumb/youtube.svg
+thumbnail: ../../assets/thumb/play.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:

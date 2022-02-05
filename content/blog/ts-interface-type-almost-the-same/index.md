@@ -1,7 +1,7 @@
 ---
 title: TypeScriptのinterfaceとtypeがいつの間にかほとんど同じになっていた
 date: "2020-12-16"
-thumbnail: typescript.svg
+thumbnail: ../../assets/thumb/settings.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:

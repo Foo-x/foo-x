@@ -1,7 +1,7 @@
 ---
 title: github.dev が便利
 date: "2021-10-26"
-thumbnail: ../../assets/thumb/github.svg
+thumbnail: ../../assets/thumb/edit-note.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:

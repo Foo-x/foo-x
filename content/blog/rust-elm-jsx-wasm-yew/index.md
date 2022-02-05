@@ -1,7 +1,7 @@
 ---
 title: Rust + Elm + JSX + WebAssembly = Yew
 date: "2018-03-18"
-thumbnail: yew.svg
+thumbnail: ../../assets/thumb/settings.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:

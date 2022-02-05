@@ -1,7 +1,7 @@
 ---
 title: Nimの競プロ用標準入力マクロ
 date: "2020-07-23"
-thumbnail: nim-icon.svg
+thumbnail: ../../assets/thumb/keyboard.svg
 header: header.jpg
 ogp: ogp.jpg
 tags:
@@ -192,4 +192,3 @@ var
 ## 参考
 - [Rustで競技プログラミングの入力をスッキリ記述するマクロ](https://qiita.com/tanakh/items/0ba42c7ca36cd29d0ac8)
     - マクロを呼び出す部分の記法を参考にさせていただきました
-
