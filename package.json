@@ -39,13 +39,13 @@
   },
   "license": "UNLICENSED",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build && rm -f font-preload-cache.json",
     "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve -H 0.0.0.0",
     "clean": "gatsby clean",
     "deploy": "gatsby clean && gatsby build && gh-pages -d public",
-    "preload-fonts": "gatsby-preload-fonts"
+    "preload-fonts": "gatsby-preload-fonts && node bin/removeBase64.js"
   }
 }
