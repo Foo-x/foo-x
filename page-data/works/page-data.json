@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-works-js","path":"/works/","result":{"data":{"file":{"publicURL":"/static/e9011768c6d5ccef18580a07fc8b310e/works.svg"}},"pageContext":{}},"staticQueryHashes":["3357329864","3468387890"]}
+{
+    "componentChunkName": "component---src-pages-works-js",
+    "path": "/works/",
+    "result": {"data":{"file":{"publicURL":"/static/e9011768c6d5ccef18580a07fc8b310e/works.svg"}},"pageContext":{}},
+    "staticQueryHashes": ["3357329864","3468387890"]}
