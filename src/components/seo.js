@@ -4,7 +4,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import * as styles from "styles/components/seo.module.css"
 
-const SEO = ({ description, lang, meta, title, url, imageURL, location }) => {
+const Seo = ({ description, lang, meta, title, url, imageURL, location }) => {
   const { site, defaultImage } = useStaticQuery(
     graphql`
       query {
@@ -89,17 +89,17 @@ const SEO = ({ description, lang, meta, title, url, imageURL, location }) => {
   )
 }
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `ja`,
   meta: [],
   description: ``,
 }
 
-SEO.propTypes = {
+Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default Seo

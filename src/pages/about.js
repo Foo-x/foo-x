@@ -3,14 +3,14 @@ import React from "react"
 import { SocialIcon } from "react-social-icons"
 import * as styles from "styles/pages/about.module.css"
 import LayoutCommon from "../components/layout-common"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const iconSize = 40
 
 const About = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
-      <SEO title="about" location={location} url="/about" />
+      <Seo title="about" location={location} url="/about" />
       <article className={styles.aboutPage}>
         <ul className={styles.aboutPageSocials}>
           <li>

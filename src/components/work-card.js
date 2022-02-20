@@ -17,7 +17,7 @@ const WorkCard = ({ title, tags, description, link }) => {
           </li>
         ))}
       </ul>
-      <div className={styles.workCardDescription}>{description}</div>
+      <div>{description}</div>
     </a>
   )
 }

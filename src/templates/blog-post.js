@@ -3,7 +3,7 @@ import React from "react"
 import * as styles from "styles/templates/blog-post.module.css"
 import HeaderBlogPost from "../components/header-blog-post"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ShareFooter from "../components/share-footer"
 
 const BlogPostTemplate = ({ data, location }) => {
@@ -19,7 +19,7 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       }
     >
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         location={location}
@@ -67,7 +67,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
         slug

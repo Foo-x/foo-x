@@ -3,7 +3,7 @@ import React from "react"
 import * as styles from "styles/pages/archive.module.css"
 import LayoutCommon from "../components/layout-common"
 import Search from "../components/search"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Archive = ({ data, location }) => {
   const query = new URLSearchParams(location.search)
@@ -12,7 +12,7 @@ const Archive = ({ data, location }) => {
       titleSvg={data.file.publicURL}
       mainClassName="global-main-archive"
     >
-      <SEO title="archive" location={location} url="/archive" />
+      <Seo title="archive" location={location} url="/archive" />
       <section className={styles.archivePage}>
         <Search query={query} />
       </section>

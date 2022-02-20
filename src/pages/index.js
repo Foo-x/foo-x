@@ -3,7 +3,7 @@ import React from "react"
 import * as styles from "styles/pages/index.module.css"
 import HeaderTop from "../components/header-top"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import ThumbnailVector from "../components/thumbnail-vector"
 
 const BlogIndex = ({ data, location }) => {
@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} header={<HeaderTop />}>
-      <SEO title="All posts" location={location} url="/" />
+      <Seo title="All posts" location={location} url="/" />
       <ul className={styles.postList} style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug

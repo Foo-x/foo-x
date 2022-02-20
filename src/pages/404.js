@@ -3,12 +3,12 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import * as styles from "styles/pages/404.module.css"
 import LayoutCommon from "../components/layout-common"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const NotFoundPage = ({ data, location }) => {
   return (
     <LayoutCommon titleSvg={data.notFound.publicURL}>
-      <SEO title="404" location={location} url="/" />
+      <Seo title="404" location={location} url="/" />
       <article
         className={styles.notFoundPage}
         itemScope

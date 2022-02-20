@@ -2,7 +2,7 @@ import { graphql } from "gatsby"
 import React from "react"
 import * as styles from "styles/pages/works.module.css"
 import LayoutCommon from "../components/layout-common"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import WorkCard from "../components/work-card"
 
 const items = [
@@ -34,8 +34,7 @@ const items = [
     title: "YouTube Timestamp Comments",
     tags: ["TypeScript", "React", "Chrome Extensions"],
     description: "YouTube の時間指定コメントを表示するChrome拡張機能",
-    link:
-      "https://chrome.google.com/webstore/detail/youtube-timestamp-comment/khngjoedfeicfbjlcfmiigbokbnlibei",
+    link: "https://chrome.google.com/webstore/detail/youtube-timestamp-comment/khngjoedfeicfbjlcfmiigbokbnlibei",
   },
   {
     title: "nacc | Nim AtCoder CLI",
@@ -75,7 +74,7 @@ const Works = ({ data, location }) => {
       titleSvg={data.file.publicURL}
       mainClassName="global-main-works"
     >
-      <SEO title="works" location={location} url="/works" />
+      <Seo title="works" location={location} url="/works" />
       <section className={styles.worksPage}>
         <ul className={styles.worksItemList}>
           {items.map(item => (
