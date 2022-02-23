@@ -28,7 +28,7 @@ module.exports = {
             options: {
               maxWidth: 630,
               withWebp: true,
-              linkImagesToOriginal: false,
+              linkImagesToOriginal: true,
               srcSetBreakpoints: [315, 630],
               wrapperStyle: `white-space: initial`,
             },
