@@ -7,6 +7,18 @@ import WorkCard from "../components/work-card"
 
 const items = [
   {
+    title: "react-tea",
+    tags: ["TypeScript", "React", "TEA"],
+    description: "The Elm Architecture for React",
+    link: "https://github.com/Foo-x/react-tea",
+  },
+  {
+    title: "react-container",
+    tags: ["TypeScript", "React"],
+    description: "Hooks + View = Container",
+    link: "https://github.com/Foo-x/react-container",
+  },
+  {
     title: "あにいも名場面集",
     tags: ["TypeScript", "React", "Gatsby"],
     description: "兄妹 YouTuber の名場面集",
