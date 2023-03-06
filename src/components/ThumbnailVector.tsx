@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from "react"
-import * as styles from "styles/components/thumbnail-vector.module.css"
+import { useEffect, useState } from "react"
+import * as styles from "~/styles/components/ThumbnailVector.module.css"
 
-const ThumbnailVector = ({ img }) => {
+export type Props = {
+  img: string
+}
+
+const ThumbnailVector = ({ img }: Props) => {
   const [isHidden, setIsHidden] = useState(true)
 
   useEffect(() => {

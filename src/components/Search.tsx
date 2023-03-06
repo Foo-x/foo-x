@@ -1,17 +1,17 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useState } from "react"
-import * as styles from "styles/components/search.module.css"
-import ThumbnailRaster from "./thumbnail-raster"
-import ThumbnailVectorArchive from "./thumbnail-vector-archive"
+import { useState } from "react"
+import * as styles from "~/styles/components/Search.module.css"
+import ThumbnailRaster from "./ThumbnailRaster"
+import ThumbnailVectorArchive from "./ThumbnailVectorArchive"
 
-/**
- * @param {object} param0
- * @param {URLSearchParams} param0.query
- */
-const Search = ({ query }) => {
-  const data = useStaticQuery(
+export type Props = {
+  query: URLSearchParams
+}
+
+const Search = ({ query }: Props) => {
+  const data = useStaticQuery<Queries.SearchQuery>(
     graphql`
-      {
+      query Search {
         allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
           nodes {
             fields {
@@ -49,7 +49,8 @@ const Search = ({ query }) => {
   const tagPattern = new RegExp(tag, "i")
 
   const results = data.allMarkdownRemark.nodes.filter(node => {
-    const nodeTags = node.frontmatter.tags || []
+    const nodeTags =
+      node.frontmatter?.tags?.filter((tag): tag is string => tag != null) ?? []
     if (tag && nodeTags.every(nodeTag => !tagPattern.test(nodeTag))) {
       return false
     }
@@ -72,7 +73,7 @@ const Search = ({ query }) => {
             />
             <img
               className={styles.searchButton}
-              src={data.file.publicURL}
+              src={data.file?.publicURL ?? undefined}
               alt="search"
             />
           </div>
@@ -83,28 +84,28 @@ const Search = ({ query }) => {
         style={{ listStyle: `none`, padding: 0 }}
       >
         {results.map(result => {
-          const title = result.frontmatter.title || result.fields.slug
+          const title = result.frontmatter?.title || result.fields?.slug
           const imgSrc =
-            result.frontmatter.header?.childImageSharp?.gatsbyImageData
+            result.frontmatter?.header?.childImageSharp?.gatsbyImageData
           const thumbnail = imgSrc ? (
             <ThumbnailRaster img={imgSrc} />
           ) : (
             <ThumbnailVectorArchive img={"/favicon.svg"} />
           )
-          const tags = result.frontmatter.tags
-            ? result.frontmatter.tags.map(tag => {
+          const tags = result.frontmatter?.tags
+            ? result.frontmatter?.tags.map(tag => {
                 return <li key={tag}>{tag}</li>
               })
             : null
 
           return (
-            <li key={result.fields.slug}>
+            <li key={result.fields?.slug}>
               <article
                 className={styles.searchResultItem}
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <Link to={result.fields.slug} itemProp="url">
+                <Link to={result.fields?.slug!} itemProp="url">
                   <div className={styles.searchResultImageWrapper}>
                     {thumbnail}
                   </div>
@@ -115,8 +116,8 @@ const Search = ({ query }) => {
                     >
                       {title}
                     </h2>
-                    <time dateTime={result.frontmatter.date}>
-                      {result.frontmatter.date.replace(/-/g, ".")}
+                    <time dateTime={result.frontmatter?.date ?? undefined}>
+                      {result.frontmatter?.date?.replace(/-/g, ".")}
                     </time>
                     <ul className={styles.searchResultTagList}>{tags}</ul>
                   </section>

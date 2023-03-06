@@ -1,9 +1,8 @@
-import { graphql } from "gatsby"
-import React from "react"
-import * as styles from "styles/pages/works.module.css"
-import LayoutCommon from "../components/layout-common"
-import Seo from "../components/seo"
-import WorkCard from "../components/work-card"
+import { graphql, HeadProps, PageProps } from "gatsby"
+import * as styles from "~/styles/pages/works.module.css"
+import LayoutCommon from "../components/LayoutCommon"
+import Seo from "../components/Seo"
+import WorkCard from "../components/WorkCard"
 
 const items = [
   {
@@ -80,10 +79,10 @@ const items = [
   },
 ]
 
-const Works = ({ data }) => {
+const Works = ({ data }: PageProps<Queries.WorksPageQuery>) => {
   return (
     <LayoutCommon
-      titleSvg={data.file.publicURL}
+      titleSvg={data.file?.publicURL!}
       mainClassName="global-main-works"
     >
       <section className={styles.worksPage}>
@@ -102,7 +101,7 @@ const Works = ({ data }) => {
 export default Works
 
 export const pageQuery = graphql`
-  query {
+  query WorksPage {
     file(
       sourceInstanceName: { eq: "assets" }
       relativePath: { eq: "works.svg" }
@@ -112,6 +111,6 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = ({ location }) => {
+export const Head = ({ location }: HeadProps) => {
   return <Seo title="works" location={location} url="/works" />
 }

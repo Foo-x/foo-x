@@ -1,8 +1,12 @@
 {
-    "svg.preview.background": "custom",
-    "conventionalCommits.scopes": [
-        "blog",
-        "style",
-        "page"
-    ],
+  "svg.preview.background": "custom",
+  "conventionalCommits.scopes": [
+    "blog",
+    "style",
+    "page"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "path-intellisense.mappings": {
+    "~": "${workspaceFolder}/src"
+  }
 }

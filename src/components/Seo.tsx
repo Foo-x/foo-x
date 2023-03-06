@@ -1,20 +1,30 @@
 import { graphql, useStaticQuery } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import * as styles from "styles/components/seo.module.css"
+import { PropsWithChildren } from "react"
+import * as styles from "~/styles/components/Seo.module.css"
+
+export type Props = PropsWithChildren<{
+  description?: string
+  lang?: string
+  title: string
+  url: string
+  imageURL?: string
+  location: {
+    pathname: string
+  }
+}>
 
 const Seo = ({
-  description,
+  description = "",
   lang,
   title,
   url,
   imageURL,
   location,
   children,
-}) => {
+}: Props) => {
   const { site, defaultImage } = useStaticQuery(
     graphql`
-      query {
+      query Seo {
         site {
           siteMetadata {
             title
@@ -66,17 +76,6 @@ const Seo = ({
       {children}
     </>
   )
-}
-
-Seo.defaultProps = {
-  lang: `ja`,
-  description: ``,
-}
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  title: PropTypes.string.isRequired,
 }
 
 export default Seo

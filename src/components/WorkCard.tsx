@@ -1,7 +1,13 @@
-import React from "react"
-import * as styles from "styles/components/work-card.module.css"
+import * as styles from "~/styles/components/WorkCard.module.css"
 
-const WorkCard = ({ title, tags, description, link }) => {
+export type Props = {
+  title: string
+  tags: string[]
+  description: string
+  link: string
+}
+
+const WorkCard = ({ title, tags, description, link }: Props) => {
   return (
     <a
       className={styles.workCard}

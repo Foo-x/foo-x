@@ -1,15 +1,14 @@
-import { graphql } from "gatsby"
-import React from "react"
+import { graphql, HeadProps, PageProps } from "gatsby"
 import { SocialIcon } from "react-social-icons"
-import * as styles from "styles/pages/about.module.css"
-import LayoutCommon from "../components/layout-common"
-import Seo from "../components/seo"
+import * as styles from "~/styles/pages/about.module.css"
+import LayoutCommon from "../components/LayoutCommon"
+import Seo from "../components/Seo"
 
 const iconSize = 40
 
-const About = ({ data }) => {
+const About = ({ data }: PageProps<Queries.AboutPageQuery>) => {
   return (
-    <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
+    <LayoutCommon titleSvg={data.file?.publicURL!} mainClassName="global-main">
       <article className={styles.aboutPage}>
         <ul className={styles.aboutPageSocials}>
           <li>
@@ -64,7 +63,7 @@ const About = ({ data }) => {
 export default About
 
 export const pageQuery = graphql`
-  query {
+  query AboutPage {
     file(
       sourceInstanceName: { eq: "assets" }
       relativePath: { eq: "about.svg" }
@@ -74,6 +73,6 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = ({ location }) => {
+export const Head = ({ location }: HeadProps) => {
   return <Seo title="about" location={location} url="/about" />
 }

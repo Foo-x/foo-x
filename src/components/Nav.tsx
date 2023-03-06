@@ -1,9 +1,13 @@
-import React from "react"
-import * as styles from "styles/components/nav.module.css"
-import BrandIcon from "./brand-icon"
-import Menu from "./menu"
+import * as styles from "~/styles/components/Nav.module.css"
+import BrandIcon from "./BrandIcon"
+import Menu from "./Menu"
 
-const Nav = ({ isHidden, className }) => {
+export type Props = {
+  isHidden: boolean
+  className: string
+}
+
+const Nav = ({ isHidden, className }: Props) => {
   const classNames = isHidden ? [className, "is-hidden"] : [className]
   return (
     <nav className={classNames.join(" ")}>

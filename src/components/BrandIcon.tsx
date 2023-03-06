@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
-import React from "react"
-import * as styles from "styles/components/brand-icon.module.css"
+import * as styles from "~/styles/components/BrandIcon.module.css"
 
 const BrandIcon = () => {
   return (

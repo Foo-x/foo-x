@@ -1,21 +1,20 @@
-import { graphql, Link } from "gatsby"
-import React from "react"
-import * as styles from "styles/templates/blog-post.module.css"
-import HeaderBlogPost from "../components/header-blog-post"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import ShareFooter from "../components/share-footer"
+import { graphql, HeadProps, Link, PageProps } from "gatsby"
+import * as styles from "~/styles/templates/BlogPost.module.css"
+import HeaderBlogPost from "../components/HeaderBlogPost"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
+import ShareFooter from "../components/ShareFooter"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data, location }: PageProps<Queries.Query>) => {
   const post = data.markdownRemark
-  const toc = post.tableOfContents.replace(/<\/?p>/g, "")
+  const toc = post?.tableOfContents?.replace(/<\/?p>/g, "")
 
   return (
     <Layout
       location={location}
       header={
         <HeaderBlogPost
-          fluid={post.frontmatter.header?.childImageSharp?.gatsbyImageData}
+          fluid={post?.frontmatter?.header?.childImageSharp?.gatsbyImageData}
         />
       }
     >
@@ -25,12 +24,12 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <time dateTime={post.frontmatter.date}>
-            {post.frontmatter.date.replace(/-/g, ".")}
+          <h1 itemProp="headline">{post?.frontmatter?.title}</h1>
+          <time dateTime={post?.frontmatter?.date ?? undefined}>
+            {post?.frontmatter?.date?.replace(/-/g, ".")}
           </time>
           <ul className={styles.blogPostTagList}>
-            {post.frontmatter.tags?.map(tag => {
+            {post?.frontmatter?.tags?.map(tag => {
               return (
                 <li key={tag}>
                   <Link to={`/archive?tag=${tag}`}>{tag}</Link>
@@ -41,17 +40,20 @@ const BlogPostTemplate = ({ data, location }) => {
           <nav>
             <header>目次</header>
             <hr />
-            <section dangerouslySetInnerHTML={{ __html: toc }}></section>
+            <section dangerouslySetInnerHTML={{ __html: toc ?? "" }}></section>
             <hr />
           </nav>
         </header>
         <section
           className={styles.blogPostBody}
-          dangerouslySetInnerHTML={{ __html: post.html }}
+          dangerouslySetInnerHTML={{ __html: post?.html ?? "" }}
           itemProp="articleBody"
         />
         <hr />
-        <ShareFooter url={location.href} title={post.frontmatter.title} />
+        <ShareFooter
+          url={location.href}
+          title={post?.frontmatter?.title ?? ""}
+        />
       </article>
     </Layout>
   )
@@ -60,7 +62,7 @@ const BlogPostTemplate = ({ data, location }) => {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query ($id: String!) {
+  query BlogPostPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
         slug
@@ -87,16 +89,16 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = ({ data, location }) => {
+export const Head = ({ data, location }: HeadProps<Queries.Query>) => {
   const post = data.markdownRemark
 
   return (
     <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
+      title={post?.frontmatter?.title ?? ""}
+      description={post?.frontmatter?.description ?? post?.excerpt ?? ""}
       location={location}
-      imageURL={post.frontmatter.ogp?.publicURL}
-      url={post.fields.slug}
+      imageURL={post?.frontmatter?.ogp?.publicURL ?? undefined}
+      url={post?.fields?.slug ?? ""}
     />
   )
 }

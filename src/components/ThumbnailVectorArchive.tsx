@@ -1,7 +1,11 @@
-import React, { useState } from "react"
-import * as styles from "styles/components/thumbnail-vector-archive.module.css"
+import { useState } from "react"
+import * as styles from "~/styles/components/ThumbnailVectorArchive.module.css"
 
-const ThumbnailVectorArchive = ({ img }) => {
+export type Props = {
+  img: string
+}
+
+const ThumbnailVectorArchive = ({ img }: Props) => {
   const [isHidden, setIsHidden] = useState(true)
 
   const className = styles.thumbnailVectorArchive

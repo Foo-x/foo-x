@@ -1,20 +1,19 @@
-import { graphql, Link } from "gatsby"
+import { graphql, HeadProps, Link, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import React from "react"
-import * as styles from "styles/pages/404.module.css"
-import LayoutCommon from "../components/layout-common"
-import Seo from "../components/seo"
+import * as styles from "~/styles/pages/404.module.css"
+import LayoutCommon from "../components/LayoutCommon"
+import Seo from "../components/Seo"
 
-const NotFoundPage = ({ data }) => {
+const NotFoundPage = ({ data }: PageProps<Queries.NotFoundPageQuery>) => {
   return (
-    <LayoutCommon titleSvg={data.notFound.publicURL}>
+    <LayoutCommon titleSvg={data.notFound?.publicURL ?? ""}>
       <article
         className={styles.notFoundPage}
         itemScope
         itemType="http://schema.org/Article"
       >
         <GatsbyImage
-          image={data.sleepingCat.childImageSharp.gatsbyImageData}
+          image={data.sleepingCat?.childImageSharp?.gatsbyImageData!}
           alt="sleeping-cat"
         />
         <section itemProp="articleBody">
@@ -28,7 +27,7 @@ const NotFoundPage = ({ data }) => {
 export default NotFoundPage
 
 export const pageQuery = graphql`
-  {
+  query NotFoundPage {
     notFound: file(
       sourceInstanceName: { eq: "assets" }
       relativePath: { eq: "404.svg" }
@@ -46,6 +45,6 @@ export const pageQuery = graphql`
   }
 `
 
-export const Head = ({ location }) => {
+export const Head = ({ location }: HeadProps) => {
   return <Seo title="404" location={location} url="/" />
 }

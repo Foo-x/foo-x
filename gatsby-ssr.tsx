@@ -1,9 +1,17 @@
+import { GatsbySSR } from "gatsby"
+
 // replace inline css/scss with links
-exports.onPreRenderHTML = ({ getHeadComponents, replaceHeadComponents }) => {
+export const onPreRenderHTML: GatsbySSR["onPreRenderHTML"] = ({
+  getHeadComponents,
+}) => {
   if (process.env.NODE_ENV !== "production") return
 
   let hc = getHeadComponents()
   hc.forEach(el => {
+    if (el == null || typeof el !== "object" || !("type" in el)) {
+      return
+    }
+
     if (el.type === "style" && el.props["data-href"]) {
       el.type = "link"
       el.props["href"] = el.props["data-href"]

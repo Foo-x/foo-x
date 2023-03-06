@@ -1,8 +1,19 @@
-import React, { useEffect, useRef, useState } from "react"
-import * as styles from "styles/components/layout.module.css"
-import Nav from "./nav"
+import {
+  PropsWithChildren,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
+import * as styles from "~/styles/components/Layout.module.css"
+import Nav from "./Nav"
 
-const Layout = ({ location, children, header }) => {
+export type Props = PropsWithChildren<{
+  location: Window["location"]
+  header: ReactNode
+}>
+
+const Layout = ({ location, children, header }: Props) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const mainClassName = isRootPath ? styles.globalMainTop : "global-main"
@@ -10,11 +21,14 @@ const Layout = ({ location, children, header }) => {
     ? styles.globalNavWrapperTop
     : "global-nav-wrapper"
 
-  const target = useRef(null)
+  const target = useRef<HTMLElement>(null)
   const [isHidden, setIsHidden] = useState(true)
 
   useEffect(() => {
-    const callback = entries => {
+    if (target.current == null) {
+      return
+    }
+    const callback: IntersectionObserverCallback = entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setIsHidden(false)

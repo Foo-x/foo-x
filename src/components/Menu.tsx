@@ -1,14 +1,14 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import React, { useEffect, useRef, useState } from "react"
-import * as styles from "styles/components/menu.module.css"
+import { useEffect, useRef, useState } from "react"
+import * as styles from "~/styles/components/Menu.module.css"
 
-const touchmoveListener = event => {
+const touchmoveListener = (event: HTMLElementEventMap["touchmove"]) => {
   event.preventDefault()
 }
-const wheelListener = event => {
+const wheelListener = (event: HTMLElementEventMap["wheel"]) => {
   event.preventDefault()
 }
-const keydownListener = event => {
+const keydownListener = (event: HTMLElementEventMap["keydown"]) => {
   if (["ArrowUp", "ArrowDown"].includes(event.key)) {
     event.preventDefault()
   }
@@ -17,7 +17,7 @@ const keydownListener = event => {
 const Menu = () => {
   const data = useStaticQuery(
     graphql`
-      query {
+      query Menu {
         home: file(
           sourceInstanceName: { eq: "assets" }
           relativePath: { eq: "home.svg" }
@@ -54,24 +54,20 @@ const Menu = () => {
     ? [styles.menuNav]
     : [styles.menuNav, "is-hidden"]
 
-  const target = useRef(null)
+  const target = useRef<HTMLElement>(null)
 
   useEffect(() => {
     if (isActive) {
-      target.current.addEventListener("touchmove", touchmoveListener, {
+      target.current?.addEventListener("touchmove", touchmoveListener, {
         passive: false,
       })
-      target.current.addEventListener("wheel", wheelListener, {
+      target.current?.addEventListener("wheel", wheelListener, {
         passive: false,
       })
       document.addEventListener("keydown", keydownListener)
     } else {
-      target.current.removeEventListener("touchmove", touchmoveListener, {
-        passive: false,
-      })
-      target.current.removeEventListener("wheel", wheelListener, {
-        passive: false,
-      })
+      target.current?.removeEventListener("touchmove", touchmoveListener)
+      target.current?.removeEventListener("wheel", wheelListener)
       document.removeEventListener("keydown", keydownListener)
     }
   }, [isActive])

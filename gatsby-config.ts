@@ -1,4 +1,10 @@
-module.exports = {
+import { GatsbyConfig } from "gatsby"
+
+type FeedsQuery = {
+  query: Queries.Query
+}
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: `foo-x`,
     description: `主に技術のことについて学んだ内容を記録したり、制作したものを紹介したりするサイトです。`,
@@ -54,7 +60,7 @@ module.exports = {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
-          {
+          query Feed {
             site {
               siteMetadata {
                 title
@@ -66,24 +72,24 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
+            serialize: ({ query: { site, allMarkdownRemark } }: FeedsQuery) => {
               return allMarkdownRemark.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  url: site?.siteMetadata?.siteUrl! + edge.node.fields?.slug,
+                  guid: site?.siteMetadata?.siteUrl! + edge.node.fields?.slug,
                   enclosure: {
                     url:
-                      site.siteMetadata.siteUrl +
-                      edge.node.frontmatter.header.childImageSharp
-                        .gatsbyImageData.images.fallback.src,
+                      site?.siteMetadata?.siteUrl! +
+                      edge.node.frontmatter?.header?.childImageSharp
+                        ?.gatsbyImageData?.images?.fallback?.src,
                   },
                   header: undefined,
                 })
               })
             },
             query: `
-              {
+              query Feeds {
                 allMarkdownRemark(
                   sort: { frontmatter: { date: DESC } },
                 ) {
@@ -140,4 +146,7 @@ module.exports = {
       },
     },
   ],
+  graphqlTypegen: true,
 }
+
+export default config
