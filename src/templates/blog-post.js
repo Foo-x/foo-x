@@ -19,13 +19,6 @@ const BlogPostTemplate = ({ data, location }) => {
         />
       }
     >
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        location={location}
-        imageURL={post.frontmatter.ogp?.publicURL}
-        url={post.fields.slug}
-      />
       <article
         className={styles.blogPost}
         itemScope
@@ -93,3 +86,17 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ data, location }) => {
+  const post = data.markdownRemark
+
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+      location={location}
+      imageURL={post.frontmatter.ogp?.publicURL}
+      url={post.fields.slug}
+    />
+  )
+}

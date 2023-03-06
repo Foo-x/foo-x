@@ -7,10 +7,9 @@ import Seo from "../components/seo"
 
 const iconSize = 40
 
-const About = ({ data, location }) => {
+const About = ({ data }) => {
   return (
     <LayoutCommon titleSvg={data.file.publicURL} mainClassName="global-main">
-      <Seo title="about" location={location} url="/about" />
       <article className={styles.aboutPage}>
         <ul className={styles.aboutPageSocials}>
           <li>
@@ -74,3 +73,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => {
+  return <Seo title="about" location={location} url="/about" />
+}

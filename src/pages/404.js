@@ -5,10 +5,9 @@ import * as styles from "styles/pages/404.module.css"
 import LayoutCommon from "../components/layout-common"
 import Seo from "../components/seo"
 
-const NotFoundPage = ({ data, location }) => {
+const NotFoundPage = ({ data }) => {
   return (
     <LayoutCommon titleSvg={data.notFound.publicURL}>
-      <Seo title="404" location={location} url="/" />
       <article
         className={styles.notFoundPage}
         itemScope
@@ -46,3 +45,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => {
+  return <Seo title="404" location={location} url="/" />
+}

@@ -11,7 +11,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} header={<HeaderTop />}>
-      <Seo title="All posts" location={location} url="/" />
       <ul className={styles.postList} style={{ listStyle: `none`, padding: 0 }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -50,7 +49,7 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
       nodes {
         fields {
           slug
@@ -65,3 +64,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => {
+  return <Seo title="All posts" location={location} url="/" />
+}

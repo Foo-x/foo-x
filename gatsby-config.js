@@ -128,7 +128,6 @@ module.exports = {
         include_favicon: false,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
     {

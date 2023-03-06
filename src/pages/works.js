@@ -80,13 +80,12 @@ const items = [
   },
 ]
 
-const Works = ({ data, location }) => {
+const Works = ({ data }) => {
   return (
     <LayoutCommon
       titleSvg={data.file.publicURL}
       mainClassName="global-main-works"
     >
-      <Seo title="works" location={location} url="/works" />
       <section className={styles.worksPage}>
         <ul className={styles.worksItemList}>
           {items.map(item => (
@@ -112,3 +111,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => {
+  return <Seo title="works" location={location} url="/works" />
+}

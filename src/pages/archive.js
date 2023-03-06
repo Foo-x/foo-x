@@ -12,7 +12,6 @@ const Archive = ({ data, location }) => {
       titleSvg={data.file.publicURL}
       mainClassName="global-main-archive"
     >
-      <Seo title="archive" location={location} url="/archive" />
       <section className={styles.archivePage}>
         <Search query={query} />
       </section>
@@ -32,3 +31,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => {
+  return <Seo title="archive" location={location} url="/archive" />
+}

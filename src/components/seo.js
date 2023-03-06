@@ -1,10 +1,17 @@
 import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { Helmet } from "react-helmet"
 import * as styles from "styles/components/seo.module.css"
 
-const Seo = ({ description, lang, meta, title, url, imageURL, location }) => {
+const Seo = ({
+  description,
+  lang,
+  title,
+  url,
+  imageURL,
+  location,
+  children,
+}) => {
   const { site, defaultImage } = useStaticQuery(
     graphql`
       query {
@@ -39,66 +46,36 @@ const Seo = ({ description, lang, meta, title, url, imageURL, location }) => {
       : `${title} | ${site.siteMetadata.title}`
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={pageTitle}
-      link={[
-        {
-          rel: "icon",
-          type: "image/png",
-          href: "/favicon.png",
-        },
-      ]}
-      bodyAttributes={{
-        class: bodyClass,
-      }}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: pageTitle,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content:
-            site.siteMetadata.siteUrl + (imageURL || defaultImage.publicURL),
-        },
-        {
-          property: `og:url`,
-          content: site.siteMetadata.siteUrl + url,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-      ].concat(meta)}
-    ></Helmet>
+    <>
+      <html lang={lang} />
+      <title>{pageTitle}</title>
+      <meta name="description" content={metaDescription} />
+      <meta name="og:title" content={pageTitle} />
+      <meta name="og:description" content={metaDescription} />
+      <meta name="og:type" content="website" />
+      <meta
+        name="og:image"
+        content={
+          site.siteMetadata.siteUrl + (imageURL || defaultImage.publicURL)
+        }
+      />
+      <meta name="og:url" content={site.siteMetadata.siteUrl + url} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <body className={bodyClass} />
+      {children}
+    </>
   )
 }
 
 Seo.defaultProps = {
   lang: `ja`,
-  meta: [],
   description: ``,
 }
 
 Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
