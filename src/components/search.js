@@ -12,7 +12,7 @@ const Search = ({ query }) => {
   const data = useStaticQuery(
     graphql`
       {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
           nodes {
             fields {
               slug
