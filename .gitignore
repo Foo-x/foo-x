@@ -69,3 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 font-preload-cache.json
+/src/gatsby-types.d.ts
