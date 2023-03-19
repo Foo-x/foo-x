@@ -35,76 +35,8 @@
   row-gap: 4vw;
 }
 
-.searchResultImageWrapper {
-  height: var(--thumbnail-size);
-  position: relative;
-}
-
-.searchResultImageWrapper img {
-  width: 100%;
-  border-radius: 1rem;
-  transition: opacity .5s;
-}
-
-.searchResultItem a {
-  display: flex;
-  text-decoration: none;
-  transition: opacity .2s;
-}
-
-.searchResultItem section {
-  display: flex;
-  flex-direction: column;
-  margin-left: var(--spacing-4);
-}
-
-.searchResultItem time {
-  margin-top: 1rem;
-  font-size: .9rem;
-  color: var(--color-text-light);
-}
-
-.searchResultItemTitle {
-  margin-top: var(--spacing-0);
-  margin-bottom: auto;
-  font-size: var(--fontSize-2);
-}
-
-.searchResultTagList {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  font-size: .9rem;
-  color: var(--color-text-light);
-}
-
-.searchResultTagList li {
-  margin: 0;
-}
-
-.searchResultTagList li:not(:first-of-type)::before {
-  content: "/";
-  padding: 0 .5rem;
-}
-
 @media (max-width: 37.5em) {
   .searchResultList {
     grid-template-columns: 1fr;
-  }
-
-  .searchResultItemTitle {
-    font-size: var(--fontSize-1);
-  }
-
-  .searchResultItem time,
-  .searchResultTagList {
-    font-size: .8rem;
-  }
-}
-
-@media (hover: hover) {
-  .searchResultItem a:hover{
-    opacity: .5;
   }
 }

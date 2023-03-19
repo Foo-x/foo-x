@@ -1,6 +1,7 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { useState } from "react"
 import * as styles from "~/styles/components/Search.module.css"
+import ArchiveCard from "./ArchiveCard"
 import ThumbnailRaster from "./ThumbnailRaster"
 import ThumbnailVectorArchive from "./ThumbnailVectorArchive"
 
@@ -92,37 +93,19 @@ const Search = ({ query }: Props) => {
           ) : (
             <ThumbnailVectorArchive img={"/favicon.svg"} />
           )
-          const tags = result.frontmatter?.tags
-            ? result.frontmatter?.tags.map(tag => {
-                return <li key={tag}>{tag}</li>
-              })
-            : null
+          const tags = result.frontmatter?.tags?.map(tag => {
+            return <li key={tag}>{tag}</li>
+          })
 
           return (
             <li key={result.fields?.slug}>
-              <article
-                className={styles.searchResultItem}
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <Link to={result.fields?.slug!} itemProp="url">
-                  <div className={styles.searchResultImageWrapper}>
-                    {thumbnail}
-                  </div>
-                  <section>
-                    <h2
-                      className={styles.searchResultItemTitle}
-                      itemProp="headline"
-                    >
-                      {title}
-                    </h2>
-                    <time dateTime={result.frontmatter?.date ?? undefined}>
-                      {result.frontmatter?.date?.replace(/-/g, ".")}
-                    </time>
-                    <ul className={styles.searchResultTagList}>{tags}</ul>
-                  </section>
-                </Link>
-              </article>
+              <ArchiveCard
+                slug={result.fields?.slug!}
+                title={title!}
+                thumbnail={thumbnail}
+                date={result.frontmatter?.date!}
+                tags={tags!}
+              />
             </li>
           )
         })}
