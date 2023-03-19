@@ -1,6 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby"
-import { useState } from "react"
+import { graphql, navigate, useStaticQuery } from "gatsby"
+import { ChangeEventHandler, useEffect, useState } from "react"
+import { useDebouncedCallback } from "use-debounce"
 import * as styles from "~/styles/components/Search.module.css"
+import { isNonNullable } from "~/utils/core"
 import ArchiveCard from "./ArchiveCard"
 import ThumbnailRaster from "./ThumbnailRaster"
 import ThumbnailVectorArchive from "./ThumbnailVectorArchive"
@@ -45,8 +47,11 @@ const Search = ({ query }: Props) => {
     `
   )
 
-  const queryTag = query.get("tag")
-  const [tag, setTag] = useState(queryTag || "")
+  const queryTag = query.get("tag") ?? ""
+  const [tag, setTag] = useState(queryTag)
+  useEffect(() => {
+    setTag(queryTag)
+  }, [queryTag])
   const tagPattern = new RegExp(tag, "i")
 
   const results = data.allMarkdownRemark.nodes.filter(node => {
@@ -59,6 +64,16 @@ const Search = ({ query }: Props) => {
     return true
   })
 
+  const onChangeInput = useDebouncedCallback<
+    ChangeEventHandler<HTMLInputElement>
+  >(event => {
+    if (event.target.value === "") {
+      navigate(`/archive/`)
+      return
+    }
+    navigate(`/archive/?tag=${event.target.value}`)
+  }, 500)
+
   return (
     <div>
       <section className={styles.searchArea}>
@@ -70,6 +85,7 @@ const Search = ({ query }: Props) => {
               value={tag}
               onChange={event => {
                 setTag(event.target.value)
+                onChangeInput(event)
               }}
             />
             <img
@@ -93,9 +109,6 @@ const Search = ({ query }: Props) => {
           ) : (
             <ThumbnailVectorArchive img={"/favicon.svg"} />
           )
-          const tags = result.frontmatter?.tags?.map(tag => {
-            return <li key={tag}>{tag}</li>
-          })
 
           return (
             <li key={result.fields?.slug}>
@@ -104,7 +117,7 @@ const Search = ({ query }: Props) => {
                 title={title!}
                 thumbnail={thumbnail}
                 date={result.frontmatter?.date!}
-                tags={tags!}
+                tags={result.frontmatter?.tags?.filter(isNonNullable)!}
               />
             </li>
           )

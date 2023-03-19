@@ -1,39 +1,39 @@
-.searchResultImageWrapper {
+.imageWrapper {
   height: var(--thumbnail-size);
   position: relative;
 }
 
-.searchResultImageWrapper img {
+.imageWrapper img {
   width: 100%;
   border-radius: 1rem;
   transition: opacity 0.5s;
 }
 
-.searchResultItem a {
+.card {
   display: flex;
-  text-decoration: none;
   transition: opacity 0.2s;
+  cursor: pointer;
 }
 
-.searchResultItem section {
+.card section {
   display: flex;
   flex-direction: column;
   margin-left: var(--spacing-4);
 }
 
-.searchResultItem time {
+.card time {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: var(--color-text-light);
 }
 
-.searchResultItemTitle {
+.title {
   margin-top: var(--spacing-0);
   margin-bottom: auto;
   font-size: var(--fontSize-2);
 }
 
-.searchResultTagList {
+.tags {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -42,28 +42,30 @@
   color: var(--color-text-light);
 }
 
-.searchResultTagList li {
+.tags li {
   margin: 0;
+  text-decoration: underline;
 }
 
-.searchResultTagList li:not(:first-of-type)::before {
+.tags li:not(:first-of-type)::before {
   content: "/";
   padding: 0 0.5rem;
+  display: inline-block;
 }
 
 @media (max-width: 37.5em) {
-  .searchResultItemTitle {
+  .title {
     font-size: var(--fontSize-1);
   }
 
-  .searchResultItem time,
-  .searchResultTagList {
+  .card time,
+  .tags {
     font-size: 0.8rem;
   }
 }
 
 @media (hover: hover) {
-  .searchResultItem a:hover {
+  .card:hover {
     opacity: 0.5;
   }
 }
