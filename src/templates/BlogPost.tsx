@@ -32,7 +32,7 @@ const BlogPostTemplate = ({ data, location }: PageProps<Queries.Query>) => {
             {post?.frontmatter?.tags?.map(tag => {
               return (
                 <li key={tag}>
-                  <Link to={`/archive?tag=${tag}`}>{tag}</Link>
+                  <Link to={`/archive/?tag=${tag}`}>{tag}</Link>
                 </li>
               )
             }) || ""}

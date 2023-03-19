@@ -88,7 +88,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              to="/works"
+              to="/works/"
               onClick={() => {
                 setIsActive(false)
               }}
@@ -98,7 +98,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              to="/archive"
+              to="/archive/"
               onClick={() => {
                 setIsActive(false)
               }}
@@ -108,7 +108,7 @@ const Menu = () => {
           </li>
           <li>
             <Link
-              to="/about"
+              to="/about/"
               onClick={() => {
                 setIsActive(false)
               }}
