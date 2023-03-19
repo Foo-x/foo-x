@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import * as styles from "~/styles/components/ThumbnailVectorArchive.module.css"
 
 export type Props = {
@@ -7,6 +7,10 @@ export type Props = {
 
 const ThumbnailVectorArchive = ({ img }: Props) => {
   const [isHidden, setIsHidden] = useState(true)
+
+  useEffect(() => {
+    setIsHidden(false)
+  }, [])
 
   const className = styles.thumbnailVectorArchive
   const classNames = isHidden ? [className, "is-hidden"] : [className]
@@ -18,7 +22,7 @@ const ThumbnailVectorArchive = ({ img }: Props) => {
         className={classNames.join(" ")}
         alt="thumbnail"
         itemProp="image"
-        onLoad={() => setIsHidden(false)}
+        loading="lazy"
       />
     </div>
   )
