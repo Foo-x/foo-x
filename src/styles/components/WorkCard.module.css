@@ -2,7 +2,6 @@
   display: block;
   text-decoration: none;
   text-align: center;
-  transition: opacity .2s;
 }
 
 .workCardTitle {
@@ -19,13 +18,13 @@
   list-style: none;
   padding: 0;
   margin-bottom: var(--spacing-1);
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
 }
 
 .workCardTagList li:not(:first-of-type)::before {
   content: "/";
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .workCardTag {
@@ -34,12 +33,6 @@
 
 @media (max-width: 37.5em) {
   .workCardTagList {
-    font-size: .8rem;
-  }
-}
-
-@media (hover: hover) {
-  .workCard:hover {
-    opacity: .5;
+    font-size: 0.8rem;
   }
 }

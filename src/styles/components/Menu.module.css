@@ -86,7 +86,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-align: center;
   pointer-events: initial;
   background: #fff;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .menuNav ul {
@@ -97,15 +97,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 .menuNav li {
   margin-bottom: var(--spacing-8);
-  transition: opacity .2s;
 }
 
 .menuNav img {
   height: 3rem;
-}
-
-@media (hover: hover) {
-  .menuNav li:hover {
-    opacity: .5;
-  }
 }

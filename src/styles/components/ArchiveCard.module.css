@@ -11,7 +11,6 @@
 
 .card {
   display: flex;
-  transition: opacity 0.2s;
   cursor: pointer;
 }
 
@@ -61,11 +60,5 @@
   .card time,
   .tags {
     font-size: 0.8rem;
-  }
-}
-
-@media (hover: hover) {
-  .card:hover {
-    opacity: 0.5;
   }
 }
