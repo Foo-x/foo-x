@@ -15,7 +15,7 @@ export type Props = PropsWithChildren<{
 
 const Seo = ({
   description = '',
-  lang,
+  lang = 'ja',
   title,
   url,
   imageURL,
