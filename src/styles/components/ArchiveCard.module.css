@@ -23,7 +23,7 @@
 .card time {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--color-text-light);
+  color: #999;
 }
 
 .title {
@@ -38,18 +38,22 @@
   list-style: none;
   padding: 0;
   font-size: 0.9rem;
-  color: var(--color-text-light);
+  color: #999;
 }
 
 .tags li {
   margin: 0;
-  text-decoration: underline;
 }
 
 .tags li:not(:first-of-type)::before {
   content: "/";
   padding: 0 0.5rem;
-  display: inline-block;
+}
+
+.tagLink {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
 @media (max-width: 37.5em) {
@@ -60,5 +64,11 @@
   .card time,
   .tags {
     font-size: 0.8rem;
+  }
+}
+
+@media (hover: hover) {
+  .tagLink:hover {
+    color: var(--color-text);
   }
 }

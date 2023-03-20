@@ -13,7 +13,9 @@ const ArchiveCard = ({ slug, title, thumbnail, date, tags }: Props) => {
   const tagElements = tags.map(tag => {
     return (
       <li key={tag}>
-        <Link to={`/archive/?tag=${tag}`}>{tag}</Link>
+        <Link to={`/archive/?tag=${tag}`} className={styles.tagLink}>
+          {tag}
+        </Link>
       </li>
     )
   })
