@@ -1,31 +1,31 @@
-import { useEffect, useState } from "react"
-import * as styles from "~/styles/components/ThumbnailVectorArchive.module.css"
+import { useEffect, useState } from 'react';
+import * as styles from '~/styles/components/ThumbnailVectorArchive.module.css';
 
 export type Props = {
-  img: string
-}
+  img: string;
+};
 
 const ThumbnailVectorArchive = ({ img }: Props) => {
-  const [isHidden, setIsHidden] = useState(true)
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
-    setIsHidden(false)
-  }, [])
+    setIsHidden(false);
+  }, []);
 
-  const className = styles.thumbnailVectorArchive
-  const classNames = isHidden ? [className, "is-hidden"] : [className]
+  const className = styles.thumbnailVectorArchive;
+  const classNames = isHidden ? [className, 'is-hidden'] : [className];
 
   return (
     <div className={styles.thumbnailVectorArchiveSpace}>
       <img
         src={img}
-        className={classNames.join(" ")}
-        alt="thumbnail"
-        itemProp="image"
-        loading="lazy"
+        className={classNames.join(' ')}
+        alt='thumbnail'
+        itemProp='image'
+        loading='lazy'
       />
     </div>
-  )
-}
+  );
+};
 
-export default ThumbnailVectorArchive
+export default ThumbnailVectorArchive;

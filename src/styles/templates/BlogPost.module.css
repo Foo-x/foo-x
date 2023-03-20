@@ -71,7 +71,7 @@
 }
 
 .blogPost nav section > ul > li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0px;
   top: 0.6rem;
@@ -90,7 +90,7 @@
 }
 
 .blogPost nav section > ul > li > ul > li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: -1.36rem;
   top: 0.8rem;
@@ -114,7 +114,7 @@
 }
 
 .blogPostTagList li:not(:first-of-type)::before {
-  content: "/";
+  content: '/';
   padding: 0 0.5rem;
 }
 

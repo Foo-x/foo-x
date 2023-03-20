@@ -17,7 +17,7 @@
   z-index: 1;
   width: calc(100vw - var(--scrollBarWidth));
   pointer-events: none;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .globalMainTop {

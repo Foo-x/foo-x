@@ -1,30 +1,33 @@
-import { graphql, HeadProps, PageProps } from "gatsby"
-import { SocialIcon } from "react-social-icons"
-import * as styles from "~/styles/pages/about.module.css"
-import LayoutCommon from "../components/LayoutCommon"
-import Seo from "../components/Seo"
+import { graphql, HeadProps, PageProps } from 'gatsby';
+import { SocialIcon } from 'react-social-icons';
+import * as styles from '~/styles/pages/about.module.css';
+import LayoutCommon from '../components/LayoutCommon';
+import Seo from '../components/Seo';
 
-const iconSize = 40
+const iconSize = 40;
 
 const About = ({ data }: PageProps<Queries.AboutPageQuery>) => {
   return (
-    <LayoutCommon titleSvg={data.file?.publicURL!} mainClassName="global-main">
+    <LayoutCommon
+      titleSvg={data.file?.publicURL ?? ''}
+      mainClassName='global-main'
+    >
       <article className={styles.aboutPage}>
         <ul className={styles.aboutPageSocials}>
           <li>
             <SocialIcon
-              url="https://github.com/Foo-x"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
+              url='https://github.com/Foo-x'
+              target='_blank'
+              rel='nofollow noopener noreferrer'
               style={{ width: iconSize, height: iconSize }}
             />
           </li>
           <li>
             <SocialIcon
-              url="/rss.xml"
-              network="rss"
-              target="_blank"
-              rel="nofollow noopener noreferrer"
+              url='/rss.xml'
+              network='rss'
+              target='_blank'
+              rel='nofollow noopener noreferrer'
               style={{ width: iconSize, height: iconSize }}
             />
           </li>
@@ -39,17 +42,17 @@ const About = ({ data }: PageProps<Queries.AboutPageQuery>) => {
         <p>
           この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認いただけると幸いです。詳細は
           <a
-            href="https://marketingplatform.google.com/about/analytics/terms/jp/"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
+            href='https://marketingplatform.google.com/about/analytics/terms/jp/'
+            target='_blank'
+            rel='nofollow noopener noreferrer'
           >
             Googleアナリティクスサービス利用規約
           </a>
           や
           <a
-            href="https://policies.google.com/technologies/ads?hl=ja"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
+            href='https://policies.google.com/technologies/ads?hl=ja'
+            target='_blank'
+            rel='nofollow noopener noreferrer'
           >
             Googleポリシーと規約
           </a>
@@ -57,10 +60,10 @@ const About = ({ data }: PageProps<Queries.AboutPageQuery>) => {
         </p>
       </article>
     </LayoutCommon>
-  )
-}
+  );
+};
 
-export default About
+export default About;
 
 export const pageQuery = graphql`
   query AboutPage {
@@ -71,8 +74,8 @@ export const pageQuery = graphql`
       publicURL
     }
   }
-`
+`;
 
 export const Head = ({ location }: HeadProps) => {
-  return <Seo title="about" location={location} url="/about" />
-}
+  return <Seo title='about' location={location} url='/about' />;
+};

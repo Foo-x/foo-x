@@ -1,30 +1,34 @@
-import { graphql, HeadProps, Link, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import * as styles from "~/styles/pages/404.module.css"
-import LayoutCommon from "../components/LayoutCommon"
-import Seo from "../components/Seo"
+import { graphql, HeadProps, Link, PageProps } from 'gatsby';
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import * as styles from '~/styles/pages/404.module.css';
+import LayoutCommon from '../components/LayoutCommon';
+import Seo from '../components/Seo';
 
 const NotFoundPage = ({ data }: PageProps<Queries.NotFoundPageQuery>) => {
   return (
-    <LayoutCommon titleSvg={data.notFound?.publicURL ?? ""}>
+    <LayoutCommon titleSvg={data.notFound?.publicURL ?? ''}>
       <article
         className={styles.notFoundPage}
         itemScope
-        itemType="http://schema.org/Article"
+        itemType='http://schema.org/Article'
       >
         <GatsbyImage
-          image={data.sleepingCat?.childImageSharp?.gatsbyImageData!}
-          alt="sleeping-cat"
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion, @typescript-eslint/no-non-null-asserted-optional-chain
+          image={
+            data.sleepingCat?.childImageSharp?.gatsbyImageData ??
+            ({} as IGatsbyImageData)
+          }
+          alt='sleeping-cat'
         />
-        <section itemProp="articleBody">
-          <Link to="/">トップへ</Link>
+        <section itemProp='articleBody'>
+          <Link to='/'>トップへ</Link>
         </section>
       </article>
     </LayoutCommon>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
 
 export const pageQuery = graphql`
   query NotFoundPage {
@@ -43,8 +47,8 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
 export const Head = ({ location }: HeadProps) => {
-  return <Seo title="404" location={location} url="/" />
-}
+  return <Seo title='404' location={location} url='/' />;
+};

@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from 'gatsby';
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -6,16 +6,16 @@ import {
   HatenaShareButton,
   TwitterIcon,
   TwitterShareButton,
-} from "react-share"
-import * as styles from "~/styles/components/ShareFooter.module.css"
+} from 'react-share';
+import * as styles from '~/styles/components/ShareFooter.module.css';
 
 export type Props = {
-  url: string
-  title: string
-}
+  url: string;
+  title: string;
+};
 
 const ShareFooter = ({ url, title }: Props) => {
-  const { site } = useStaticQuery(
+  const { site } = useStaticQuery<Queries.ShareFooterQuery>(
     graphql`
       query ShareFooter {
         site {
@@ -25,10 +25,10 @@ const ShareFooter = ({ url, title }: Props) => {
         }
       }
     `
-  )
+  );
 
-  const pageTitle = `${title} | ${site.siteMetadata.title}`
-  const size = 32
+  const pageTitle = `${title} | ${site?.siteMetadata?.title ?? ''}`;
+  const size = 32;
 
   return (
     <footer className={styles.shareFooter}>
@@ -42,7 +42,7 @@ const ShareFooter = ({ url, title }: Props) => {
         <HatenaIcon size={size} />
       </HatenaShareButton>
     </footer>
-  )
-}
+  );
+};
 
-export default ShareFooter
+export default ShareFooter;

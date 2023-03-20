@@ -5,74 +5,74 @@ import {
   useEffect,
   useRef,
   useState,
-} from "react"
-import { IsMenuActiveStateContext } from "~/contexts/IsMenuActiveContext"
-import * as styles from "~/styles/components/Layout.module.css"
-import Nav from "./Nav"
+} from 'react';
+import { IsMenuActiveStateContext } from '~/contexts/IsMenuActiveContext';
+import * as styles from '~/styles/components/Layout.module.css';
+import Nav from './Nav';
 
 export type Props = PropsWithChildren<{
-  location: Window["location"]
-  header: ReactNode
-}>
+  location: Window['location'];
+  header: ReactNode;
+}>;
 
 const Layout = ({ location, children, header }: Props) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
-  const mainClassName = isRootPath ? styles.globalMainTop : "global-main"
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const isRootPath = location.pathname === rootPath;
+  const mainClassName = isRootPath ? styles.globalMainTop : 'global-main';
   const navClassName = isRootPath
     ? styles.globalNavWrapperTop
-    : "global-nav-wrapper"
+    : 'global-nav-wrapper';
 
-  const target = useRef<HTMLElement>(null)
-  const [isHidden, setIsHidden] = useState(true)
+  const target = useRef<HTMLElement>(null);
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     if (target.current == null) {
-      return
+      return () => undefined;
     }
-    const callback: IntersectionObserverCallback = entries => {
-      entries.forEach(entry => {
+    const callback: IntersectionObserverCallback = (entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setIsHidden(false)
+          setIsHidden(false);
         } else {
-          setIsHidden(true)
+          setIsHidden(true);
         }
-      })
-    }
+      });
+    };
     const options = {
       root: null,
-      rootMargin: "0px 0px -100%",
+      rootMargin: '0px 0px -100%',
       threshold: 0,
-    }
-    const observer = new IntersectionObserver(callback, options)
-    observer.observe(target.current)
+    };
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(target.current);
 
     return () => {
-      observer.disconnect()
-    }
-  }, [])
+      observer.disconnect();
+    };
+  }, []);
 
-  const isMenuActive = useContext(IsMenuActiveStateContext)
+  const isMenuActive = useContext(IsMenuActiveStateContext);
   useEffect(() => {
     if (target.current == null) {
-      return
+      return;
     }
     if (isMenuActive) {
-      target.current.setAttribute("inert", "")
+      target.current.setAttribute('inert', '');
     } else {
-      target.current.removeAttribute("inert")
+      target.current.removeAttribute('inert');
     }
-  }, [isMenuActive])
+  }, [isMenuActive]);
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div className='global-wrapper' data-is-root-path={isRootPath}>
       <header className={styles.globalHeader}>{header}</header>
       <Nav isHidden={isHidden} className={navClassName} />
       <main ref={target} className={mainClassName}>
         {children}
       </main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -1,8 +1,8 @@
-import { GatsbyConfig } from "gatsby"
+import { GatsbyConfig } from 'gatsby';
 
 type FeedsQuery = {
-  query: Queries.Query
-}
+  query: Queries.Query;
+};
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -73,20 +73,23 @@ const config: GatsbyConfig = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }: FeedsQuery) => {
-              return allMarkdownRemark.edges.map(edge => {
-                return Object.assign({}, edge.node.frontmatter, {
+              return allMarkdownRemark.edges.map((edge) => {
+                const url = site?.siteMetadata?.siteUrl ?? '';
+                const slug = edge.node.fields?.slug ?? '';
+                const imageSrc =
+                  edge.node.frontmatter?.header?.childImageSharp
+                    ?.gatsbyImageData?.images?.fallback?.src ?? '';
+                return {
+                  ...edge.node.frontmatter,
                   description: edge.node.excerpt,
-                  url: site?.siteMetadata?.siteUrl! + edge.node.fields?.slug,
-                  guid: site?.siteMetadata?.siteUrl! + edge.node.fields?.slug,
+                  url: url + slug,
+                  guid: url + slug,
                   enclosure: {
-                    url:
-                      site?.siteMetadata?.siteUrl! +
-                      edge.node.frontmatter?.header?.childImageSharp
-                        ?.gatsbyImageData?.images?.fallback?.src,
+                    url: url + imageSrc,
                   },
                   header: undefined,
-                })
-              })
+                };
+              });
             },
             query: `
               query Feeds {
@@ -115,8 +118,8 @@ const config: GatsbyConfig = {
                 }
               }
             `,
-            title: "foo-x",
-            output: "/rss.xml",
+            title: 'foo-x',
+            output: '/rss.xml',
           },
         ],
       },
@@ -147,6 +150,6 @@ const config: GatsbyConfig = {
     },
   ],
   graphqlTypegen: true,
-}
+};
 
-export default config
+export default config;

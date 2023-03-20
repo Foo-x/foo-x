@@ -1,15 +1,15 @@
-import { graphql, navigate, useStaticQuery } from "gatsby"
-import { ChangeEventHandler, useEffect, useState } from "react"
-import { useDebouncedCallback } from "use-debounce"
-import * as styles from "~/styles/components/Search.module.css"
-import { isNonNullable } from "~/utils/core"
-import ArchiveCard from "./ArchiveCard"
-import ThumbnailRaster from "./ThumbnailRaster"
-import ThumbnailVectorArchive from "./ThumbnailVectorArchive"
+import { graphql, navigate, useStaticQuery } from 'gatsby';
+import { ChangeEventHandler, useEffect, useState } from 'react';
+import { useDebouncedCallback } from 'use-debounce';
+import * as styles from '~/styles/components/Search.module.css';
+import { isNonNullable } from '~/utils/core';
+import ArchiveCard from './ArchiveCard';
+import ThumbnailRaster from './ThumbnailRaster';
+import ThumbnailVectorArchive from './ThumbnailVectorArchive';
 
 export type Props = {
-  query: URLSearchParams
-}
+  query: URLSearchParams;
+};
 
 const Search = ({ query }: Props) => {
   const data = useStaticQuery<Queries.SearchQuery>(
@@ -45,53 +45,53 @@ const Search = ({ query }: Props) => {
         }
       }
     `
-  )
+  );
 
-  const queryTag = query.get("tag") ?? ""
-  const [tag, setTag] = useState(queryTag)
+  const queryTag = query.get('tag') ?? '';
+  const [tag, setTag] = useState(queryTag);
   useEffect(() => {
-    setTag(queryTag)
-  }, [queryTag])
-  const tagPattern = new RegExp(tag, "i")
+    setTag(queryTag);
+  }, [queryTag]);
+  const tagPattern = new RegExp(tag, 'i');
 
-  const results = data.allMarkdownRemark.nodes.filter(node => {
-    const nodeTags =
-      node.frontmatter?.tags?.filter((tag): tag is string => tag != null) ?? []
-    if (tag && nodeTags.every(nodeTag => !tagPattern.test(nodeTag))) {
-      return false
+  const results = data.allMarkdownRemark.nodes.filter((node) => {
+    const nodeTags = node.frontmatter?.tags?.filter(isNonNullable) ?? [];
+    if (tag && nodeTags.every((nodeTag) => !tagPattern.test(nodeTag))) {
+      return false;
     }
 
-    return true
-  })
+    return true;
+  });
 
   const onChangeInput = useDebouncedCallback<
     ChangeEventHandler<HTMLInputElement>
-  >(event => {
-    if (event.target.value === "") {
-      navigate(`/archive/`)
-      return
+  >((event) => {
+    if (event.target.value === '') {
+      void navigate(`/archive/`);
+      return;
     }
-    navigate(`/archive/?tag=${event.target.value}`)
-  }, 500)
+    void navigate(`/archive/?tag=${event.target.value}`);
+  }, 500);
 
   return (
     <div>
       <section className={styles.searchArea}>
-        <label>
+        <label htmlFor='search-input'>
           <h2 className={styles.searchAreaLabelTag}>タグ</h2>
           <div className={styles.searchAreaInput}>
             <input
-              type="text"
+              type='text'
               value={tag}
-              onChange={event => {
-                setTag(event.target.value)
-                onChangeInput(event)
+              id='search-input'
+              onChange={(event) => {
+                setTag(event.target.value);
+                onChangeInput(event);
               }}
             />
             <img
               className={styles.searchButton}
               src={data.file?.publicURL ?? undefined}
-              alt="search"
+              alt='search'
             />
           </div>
         </label>
@@ -100,31 +100,31 @@ const Search = ({ query }: Props) => {
         className={styles.searchResultList}
         style={{ listStyle: `none`, padding: 0 }}
       >
-        {results.map(result => {
-          const title = result.frontmatter?.title || result.fields?.slug
+        {results.map((result) => {
+          const title = result.frontmatter?.title || result.fields?.slug || '';
           const imgSrc =
-            result.frontmatter?.header?.childImageSharp?.gatsbyImageData
+            result.frontmatter?.header?.childImageSharp?.gatsbyImageData;
           const thumbnail = imgSrc ? (
             <ThumbnailRaster img={imgSrc} />
           ) : (
-            <ThumbnailVectorArchive img={"/favicon.svg"} />
-          )
+            <ThumbnailVectorArchive img='/favicon.svg' />
+          );
 
           return (
             <li key={result.fields?.slug}>
               <ArchiveCard
-                slug={result.fields?.slug!}
-                title={title!}
+                slug={result.fields?.slug ?? ''}
+                title={title}
                 thumbnail={thumbnail}
-                date={result.frontmatter?.date!}
-                tags={result.frontmatter?.tags?.filter(isNonNullable)!}
+                date={result.frontmatter?.date ?? ''}
+                tags={result.frontmatter?.tags?.filter(isNonNullable) ?? []}
               />
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

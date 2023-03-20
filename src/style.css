@@ -1,33 +1,33 @@
 /* CSS Custom Properties Definitions */
 
 @font-face {
-  font-family: "Original Yu Gothic";
-  src: local("Yu Gothic Medium");
+  font-family: 'Original Yu Gothic';
+  src: local('Yu Gothic Medium');
   font-weight: 100;
 }
 @font-face {
-  font-family: "Original Yu Gothic";
-  src: local("Yu Gothic Medium");
+  font-family: 'Original Yu Gothic';
+  src: local('Yu Gothic Medium');
   font-weight: 200;
 }
 @font-face {
-  font-family: "Original Yu Gothic";
-  src: local("Yu Gothic Medium");
+  font-family: 'Original Yu Gothic';
+  src: local('Yu Gothic Medium');
   font-weight: 300;
 }
 @font-face {
-  font-family: "Original Yu Gothic";
-  src: local("Yu Gothic Medium");
+  font-family: 'Original Yu Gothic';
+  src: local('Yu Gothic Medium');
   font-weight: 400;
 }
 @font-face {
-  font-family: "Original Yu Gothic";
-  src: local("Yu Gothic Bold");
+  font-family: 'Original Yu Gothic';
+  src: local('Yu Gothic Bold');
   font-weight: bold;
 }
 
 :root {
-  --maxWidth-none: "none";
+  --maxWidth-none: 'none';
   --maxWidth-xs: 20rem;
   --maxWidth-sm: 24rem;
   --maxWidth-md: 28rem;
@@ -37,9 +37,9 @@
   --maxWidth-3xl: 48rem;
   --maxWidth-4xl: 56rem;
   --maxWidth-archive: 68rem;
-  --maxWidth-full: "100%";
+  --maxWidth-full: '100%';
   --maxWidth-wrapper: var(--maxWidth-2xl);
-  --spacing-px: "1px";
+  --spacing-px: '1px';
   --spacing-0: 0;
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -54,10 +54,10 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --font-base: "Roboto", "Noto Sans JP", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Hiragino Sans", "Noto Sans CJK JP", "Original Yu Gothic",
-    "Yu Gothic", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Sans Emoji";
+  --font-base: 'Roboto', 'Noto Sans JP', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Hiragino Sans', 'Noto Sans CJK JP', 'Original Yu Gothic',
+    'Yu Gothic', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Sans Emoji';
   --fontWeight-normal: 400;
   --fontWeight-medium: 500;
   --fontWeight-semibold: 600;
@@ -246,7 +246,7 @@ table thead tr th {
 
 code {
   font-size: 0.9em !important;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", Meiryo, monospace !important;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', Meiryo, monospace !important;
   word-wrap: break-word !important;
 }
 

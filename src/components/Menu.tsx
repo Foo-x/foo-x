@@ -1,25 +1,25 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
-import { useContext, useEffect, useRef } from "react"
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import { useContext, useEffect, useRef } from 'react';
 import {
   IsMenuActiveDispatchContext,
   IsMenuActiveStateContext,
-} from "~/contexts/IsMenuActiveContext"
-import * as styles from "~/styles/components/Menu.module.css"
+} from '~/contexts/IsMenuActiveContext';
+import * as styles from '~/styles/components/Menu.module.css';
 
-const touchmoveListener = (event: HTMLElementEventMap["touchmove"]) => {
-  event.preventDefault()
-}
-const wheelListener = (event: HTMLElementEventMap["wheel"]) => {
-  event.preventDefault()
-}
-const keydownListener = (event: HTMLElementEventMap["keydown"]) => {
-  if (["ArrowUp", "ArrowDown"].includes(event.key)) {
-    event.preventDefault()
+const touchmoveListener = (event: HTMLElementEventMap['touchmove']) => {
+  event.preventDefault();
+};
+const wheelListener = (event: HTMLElementEventMap['wheel']) => {
+  event.preventDefault();
+};
+const keydownListener = (event: HTMLElementEventMap['keydown']) => {
+  if (['ArrowUp', 'ArrowDown'].includes(event.key)) {
+    event.preventDefault();
   }
-}
+};
 
 const Menu = () => {
-  const data = useStaticQuery(
+  const data = useStaticQuery<Queries.MenuQuery>(
     graphql`
       query Menu {
         home: file(
@@ -48,78 +48,78 @@ const Menu = () => {
         }
       }
     `
-  )
+  );
 
-  const isMenuActive = useContext(IsMenuActiveStateContext)
-  const setIsMenuActive = useContext(IsMenuActiveDispatchContext)
+  const isMenuActive = useContext(IsMenuActiveStateContext);
+  const setIsMenuActive = useContext(IsMenuActiveDispatchContext);
 
   const hamburgerClassName = isMenuActive
     ? styles.hamburgerActive
-    : styles.hamburger
+    : styles.hamburger;
   const navClassNames = isMenuActive
     ? [styles.menuNav]
-    : [styles.menuNav, "is-hidden"]
+    : [styles.menuNav, 'is-hidden'];
 
-  const target = useRef<HTMLElement>(null)
+  const target = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (isMenuActive) {
-      target.current?.addEventListener("touchmove", touchmoveListener, {
+      target.current?.addEventListener('touchmove', touchmoveListener, {
         passive: false,
-      })
-      target.current?.addEventListener("wheel", wheelListener, {
+      });
+      target.current?.addEventListener('wheel', wheelListener, {
         passive: false,
-      })
-      document.addEventListener("keydown", keydownListener)
+      });
+      document.addEventListener('keydown', keydownListener);
     } else {
-      target.current?.removeEventListener("touchmove", touchmoveListener)
-      target.current?.removeEventListener("wheel", wheelListener)
-      document.removeEventListener("keydown", keydownListener)
+      target.current?.removeEventListener('touchmove', touchmoveListener);
+      target.current?.removeEventListener('wheel', wheelListener);
+      document.removeEventListener('keydown', keydownListener);
     }
-  }, [isMenuActive])
+  }, [isMenuActive]);
 
   return (
-    <div className="menu-wrapper">
-      <nav className={navClassNames.join(" ")} ref={target}>
+    <div className='menu-wrapper'>
+      <nav className={navClassNames.join(' ')} ref={target}>
         <ul>
           <li>
             <Link
-              to="/"
+              to='/'
               onClick={() => {
-                setIsMenuActive(false)
+                setIsMenuActive(false);
               }}
             >
-              <img src={data.home.publicURL} alt="home" />
+              <img src={data?.home?.publicURL ?? ''} alt='home' />
             </Link>
           </li>
           <li>
             <Link
-              to="/works/"
+              to='/works/'
               onClick={() => {
-                setIsMenuActive(false)
+                setIsMenuActive(false);
               }}
             >
-              <img src={data.works.publicURL} alt="works" />
+              <img src={data?.works?.publicURL ?? ''} alt='works' />
             </Link>
           </li>
           <li>
             <Link
-              to="/archive/"
+              to='/archive/'
               onClick={() => {
-                setIsMenuActive(false)
+                setIsMenuActive(false);
               }}
             >
-              <img src={data.archive.publicURL} alt="archive" />
+              <img src={data?.archive?.publicURL ?? ''} alt='archive' />
             </Link>
           </li>
           <li>
             <Link
-              to="/about/"
+              to='/about/'
               onClick={() => {
-                setIsMenuActive(false)
+                setIsMenuActive(false);
               }}
             >
-              <img src={data.about.publicURL} alt="about" />
+              <img src={data?.about?.publicURL ?? ''} alt='about' />
             </Link>
           </li>
         </ul>
@@ -135,24 +135,24 @@ const Menu = () => {
       */}
       <svg
         className={hamburgerClassName}
-        viewBox="0 0 100 100"
-        width="32"
+        viewBox='0 0 100 100'
+        width='32'
         onClick={() => {
-          setIsMenuActive(!isMenuActive)
+          setIsMenuActive(!isMenuActive);
         }}
       >
         <path
           className={`${styles.line} ${styles.top}`}
-          d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+          d='m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20'
         />
-        <path className={`${styles.line} ${styles.middle}`} d="m 30,50 h 40" />
+        <path className={`${styles.line} ${styles.middle}`} d='m 30,50 h 40' />
         <path
           className={`${styles.line} ${styles.bottom}`}
-          d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+          d='m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20'
         />
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

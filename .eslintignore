@@ -1,2 +1,4 @@
 /content/
 /public/
+gatsby-types.d.ts
+/bin/

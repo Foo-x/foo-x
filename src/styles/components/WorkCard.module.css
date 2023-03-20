@@ -23,7 +23,7 @@
 }
 
 .workCardTagList li:not(:first-of-type)::before {
-  content: "/";
+  content: '/';
   padding: 0 0.5rem;
 }
 
