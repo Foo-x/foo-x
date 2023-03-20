@@ -25,6 +25,18 @@ const Layout = ({ location, children, header }: Props) => {
 
   const target = useRef<HTMLElement>(null);
   const [isHidden, setIsHidden] = useState(true);
+  const isMenuActive = useContext(IsMenuActiveStateContext);
+
+  useEffect(() => {
+    if (target.current == null) {
+      return;
+    }
+    if (isMenuActive) {
+      target.current.setAttribute('inert', '');
+    } else {
+      target.current.removeAttribute('inert');
+    }
+  }, [isMenuActive]);
 
   useEffect(() => {
     if (target.current == null) {
@@ -32,7 +44,7 @@ const Layout = ({ location, children, header }: Props) => {
     }
     const callback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || isMenuActive) {
           setIsHidden(false);
         } else {
           setIsHidden(true);
@@ -50,18 +62,6 @@ const Layout = ({ location, children, header }: Props) => {
     return () => {
       observer.disconnect();
     };
-  }, []);
-
-  const isMenuActive = useContext(IsMenuActiveStateContext);
-  useEffect(() => {
-    if (target.current == null) {
-      return;
-    }
-    if (isMenuActive) {
-      target.current.setAttribute('inert', '');
-    } else {
-      target.current.removeAttribute('inert');
-    }
   }, [isMenuActive]);
 
   return (
