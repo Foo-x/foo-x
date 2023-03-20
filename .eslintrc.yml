@@ -14,7 +14,7 @@ extends:
   - prettier
 parser: '@typescript-eslint/parser'
 parserOptions:
-  project: './__tests__/tsconfig.json'
+  project: './tsconfig.json'
   ecmaFeatures:
     jsx: true
   ecmaVersion: latest
