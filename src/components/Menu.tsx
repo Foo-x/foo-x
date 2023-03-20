@@ -1,5 +1,9 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef } from "react"
+import {
+  IsMenuActiveDispatchContext,
+  IsMenuActiveStateContext,
+} from "~/contexts/IsMenuActiveContext"
 import * as styles from "~/styles/components/Menu.module.css"
 
 const touchmoveListener = (event: HTMLElementEventMap["touchmove"]) => {
@@ -46,18 +50,20 @@ const Menu = () => {
     `
   )
 
-  const [isActive, setIsActive] = useState(false)
-  const hamburgerClassName = isActive
+  const isMenuActive = useContext(IsMenuActiveStateContext)
+  const setIsMenuActive = useContext(IsMenuActiveDispatchContext)
+
+  const hamburgerClassName = isMenuActive
     ? styles.hamburgerActive
     : styles.hamburger
-  const navClassNames = isActive
+  const navClassNames = isMenuActive
     ? [styles.menuNav]
     : [styles.menuNav, "is-hidden"]
 
   const target = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    if (isActive) {
+    if (isMenuActive) {
       target.current?.addEventListener("touchmove", touchmoveListener, {
         passive: false,
       })
@@ -70,7 +76,7 @@ const Menu = () => {
       target.current?.removeEventListener("wheel", wheelListener)
       document.removeEventListener("keydown", keydownListener)
     }
-  }, [isActive])
+  }, [isMenuActive])
 
   return (
     <div className="menu-wrapper">
@@ -80,7 +86,7 @@ const Menu = () => {
             <Link
               to="/"
               onClick={() => {
-                setIsActive(false)
+                setIsMenuActive(false)
               }}
             >
               <img src={data.home.publicURL} alt="home" />
@@ -90,7 +96,7 @@ const Menu = () => {
             <Link
               to="/works/"
               onClick={() => {
-                setIsActive(false)
+                setIsMenuActive(false)
               }}
             >
               <img src={data.works.publicURL} alt="works" />
@@ -100,7 +106,7 @@ const Menu = () => {
             <Link
               to="/archive/"
               onClick={() => {
-                setIsActive(false)
+                setIsMenuActive(false)
               }}
             >
               <img src={data.archive.publicURL} alt="archive" />
@@ -110,7 +116,7 @@ const Menu = () => {
             <Link
               to="/about/"
               onClick={() => {
-                setIsActive(false)
+                setIsMenuActive(false)
               }}
             >
               <img src={data.about.publicURL} alt="about" />
@@ -132,7 +138,7 @@ const Menu = () => {
         viewBox="0 0 100 100"
         width="32"
         onClick={() => {
-          setIsActive(!isActive)
+          setIsMenuActive(!isMenuActive)
         }}
       >
         <path

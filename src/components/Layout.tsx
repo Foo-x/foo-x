@@ -1,10 +1,12 @@
 import {
   PropsWithChildren,
   ReactNode,
+  useContext,
   useEffect,
   useRef,
   useState,
 } from "react"
+import { IsMenuActiveStateContext } from "~/contexts/IsMenuActiveContext"
 import * as styles from "~/styles/components/Layout.module.css"
 import Nav from "./Nav"
 
@@ -49,6 +51,19 @@ const Layout = ({ location, children, header }: Props) => {
       observer.disconnect()
     }
   }, [])
+
+  const isMenuActive = useContext(IsMenuActiveStateContext)
+  useEffect(() => {
+    if (target.current == null) {
+      return
+    }
+    if (isMenuActive) {
+      target.current.setAttribute("inert", "")
+    } else {
+      target.current.removeAttribute("inert")
+    }
+  }, [isMenuActive])
+
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className={styles.globalHeader}>{header}</header>
