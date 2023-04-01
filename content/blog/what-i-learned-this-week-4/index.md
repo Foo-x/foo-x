@@ -6,7 +6,7 @@ header: header.jpg
 ogp: ogp.jpg
 tags:
     - テスト
-    - Microsoft Teams
+    - MicrosoftTeams
     - UI
     - MySQL
     - Docker
@@ -77,7 +77,7 @@ Hotspot、McCabe数、WMC (Weighted Methods per Class)、キーワード駆動�
 [16 little UI design rules that make a big impact - Adham Dannaway](https://www.adhamdannaway.com/blog/ui-design/16-ui-design-rules)
 
 UIを実際に悪い例から良い例に直す手順を1つずつ説明している。
-基本はデザインの4原則である「近接」「整列」「強弱」」「反復」に沿った内容。
+基本はデザインの4原則である「近接」「整列」「強弱」「反復」に沿った内容。
 今まで英数字のフォントは感覚的に選んでいたが、英小文字が高いと読みやすいという知見を得られた。
 
 
