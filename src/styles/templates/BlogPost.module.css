@@ -42,7 +42,6 @@
   display: block;
   color: var(--color-brand);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .blogPost nav section {
@@ -130,9 +129,5 @@
 @media (hover: hover) {
   .blogPostTagList a:hover {
     color: var(--color-text);
-  }
-
-  .blogPost nav a:hover {
-    color: var(--color-brand-transparent);
   }
 }
