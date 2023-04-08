@@ -1,10 +1,11 @@
 import { graphql, HeadProps, PageProps } from 'gatsby';
+import { ComponentProps } from 'react';
 import * as styles from '~/styles/pages/works.module.css';
 import LayoutCommon from '../components/LayoutCommon';
 import Seo from '../components/Seo';
 import WorkCard from '../components/WorkCard';
 
-const items = [
+const items: ComponentProps<typeof WorkCard>[] = [
   {
     title: 'react-tea',
     tags: ['TypeScript', 'React', 'TEA'],
@@ -64,6 +65,12 @@ const items = [
     tags: ['SCSS', 'デザイン'],
     description: '表色系ライブラリ',
     link: 'https://github.com/Foo-x/color-system',
+  },
+  {
+    title: 'hotspots',
+    tags: ['Python', 'バグ予測'],
+    description: 'バグ予測ツール',
+    link: 'https://github.com/Foo-x/hotspots',
   },
   {
     title: 'dotfiles',
