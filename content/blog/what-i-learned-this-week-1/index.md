@@ -1,5 +1,5 @@
 ---
-title: "今週学んだこと #1"
+title: "今週学んだこと TOC/vimで連番生成/他 #1"
 date: "2023-03-12"
 thumbnail: ../../assets/thumb/school.svg
 header: header.jpg

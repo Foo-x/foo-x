@@ -1,5 +1,5 @@
 ---
-title: "今週学んだこと #3"
+title: "今週学んだこと HTTPキャッシュまとめ/他 #3"
 date: "2023-03-26"
 thumbnail: ../../assets/thumb/school.svg
 header: header.jpg
