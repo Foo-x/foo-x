@@ -1,5 +1,5 @@
 ---
-title: "今週学んだこと 不要な機能の割合/UIの直し方/他 #4"
+title: "今週学んだこと 不要な機能の割合/UIの直し方 他 #4"
 date: "2023-04-02"
 thumbnail: ../../assets/thumb/school.svg
 header: header.jpg

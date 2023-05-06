@@ -1,5 +1,5 @@
 ---
-title: "今週学んだこと vimまとめ/VSCodeデバッグまとめ/他 #5"
+title: "今週学んだこと vimまとめ/VSCodeデバッグまとめ 他 #5"
 date: "2023-04-23"
 thumbnail: ../../assets/thumb/school.svg
 header: header.jpg

@@ -1,5 +1,5 @@
 ---
-title: "今週学んだこと 推薦システムのアーキテクチャ/他 #2"
+title: "今週学んだこと 推薦システムのアーキテクチャ 他 #2"
 date: "2023-03-19"
 thumbnail: ../../assets/thumb/school.svg
 header: header.jpg
