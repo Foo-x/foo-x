@@ -19,12 +19,6 @@ const items: ComponentProps<typeof WorkCard>[] = [
     link: 'https://github.com/Foo-x/react-container',
   },
   {
-    title: 'あにいも名場面集',
-    tags: ['TypeScript', 'React', 'Gatsby'],
-    description: '兄妹 YouTuber の名場面集',
-    link: 'https://ani-imo-scenes.com',
-  },
-  {
     title: 'コーディングの指針',
     tags: ['Vuepress', 'プログラミング'],
     description: '良いコードを書くための指針',
