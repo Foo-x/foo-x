@@ -1,4 +1,5 @@
 import { GatsbyConfig } from 'gatsby';
+import { executablePath } from 'puppeteer';
 
 type FeedsQuery = {
   query: Queries.Query;
@@ -43,6 +44,14 @@ const config: GatsbyConfig = {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-mermaid`,
+            options: {
+              launchOptions: {
+                executablePath: executablePath(),
+              },
             },
           },
           `gatsby-remark-autolink-headers`,
