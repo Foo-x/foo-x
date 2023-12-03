@@ -64,6 +64,7 @@
     "clean": "gatsby clean",
     "deploy": "gatsby clean && gatsby build && gh-pages -d public",
     "preload-fonts": "gatsby-preload-fonts && node bin/removeBase64.js",
+    "preload-fonts:nosandbox": "gatsby-preload-fonts --no-sandbox && node bin/removeBase64.js",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:prettier": "prettier . --check",
