@@ -37,13 +37,15 @@ const BlogPostTemplate = ({ data, location }: PageProps<Queries.Query>) => {
               );
             }) || ''}
           </ul>
-          <nav>
-            <header>目次</header>
-            <hr />
-            {/* eslint-disable-next-line react/no-danger */}
-            <section dangerouslySetInnerHTML={{ __html: toc ?? '' }} />
-            <hr />
-          </nav>
+          {toc && (
+            <nav>
+              <header>目次</header>
+              <hr />
+              {/* eslint-disable-next-line react/no-danger */}
+              <section dangerouslySetInnerHTML={{ __html: toc }} />
+              <hr />
+            </nav>
+          )}
         </header>
         <section
           className={styles.blogPostBody}
