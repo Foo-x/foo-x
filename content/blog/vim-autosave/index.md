@@ -95,7 +95,3 @@ set statusline=%{%MyStatusline()%}
 ```
 
 `...` の部分は他の情報が入る。
-
-文字化けしている部分は Nerd Fonts の `nf-md-sync` で、下の画像の右端のアイコン。
-
-![screenshot](screenshot.png)
