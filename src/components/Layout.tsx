@@ -26,7 +26,10 @@ const Layout = ({ location, children, header }: Props) => {
   const target = useRef<HTMLElement>(null);
   const [isHidden, setIsHidden] = useState(true);
   const isMenuActive = useContext(IsMenuActiveStateContext);
-  const navHeight = useRef(window.innerHeight / 2);
+  const [navHeight, setNavHeight] = useState(0);
+  useEffect(() => {
+    setNavHeight(window.innerHeight / 2);
+  }, []);
 
   useEffect(() => {
     if (target.current == null) {
@@ -67,10 +70,7 @@ const Layout = ({ location, children, header }: Props) => {
 
   return (
     <div className='global-wrapper' data-is-root-path={isRootPath}>
-      <header
-        className={styles.globalHeader}
-        style={{ height: navHeight.current }}
-      >
+      <header className={styles.globalHeader} style={{ height: navHeight }}>
         {header}
       </header>
       <Nav isHidden={isHidden} className={navClassName} />
