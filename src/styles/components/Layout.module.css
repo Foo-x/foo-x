@@ -3,6 +3,7 @@
   z-index: -1;
   top: 0;
   width: calc(100vw - var(--scrollBarWidth));
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;

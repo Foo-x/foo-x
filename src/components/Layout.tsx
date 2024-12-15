@@ -26,7 +26,7 @@ const Layout = ({ location, children, header }: Props) => {
   const target = useRef<HTMLElement>(null);
   const [isHidden, setIsHidden] = useState(true);
   const isMenuActive = useContext(IsMenuActiveStateContext);
-  const [navHeight, setNavHeight] = useState(0);
+  const [navHeight, setNavHeight] = useState(-1);
   useEffect(() => {
     setNavHeight(window.innerHeight / 2);
   }, []);
