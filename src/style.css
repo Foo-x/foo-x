@@ -246,7 +246,7 @@ table thead tr th {
 
 code {
   font-size: 0.9em !important;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', Meiryo, monospace !important;
+  font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', Meiryo, monospace !important;
   word-wrap: break-word !important;
 }
 

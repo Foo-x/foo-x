@@ -6,6 +6,7 @@
   "dependencies": {
     "@fontsource/noto-sans-jp": "^4.5.12",
     "@fontsource/roboto": "^4.5.8",
+    "@fontsource/roboto-mono": "^5.1.1",
     "gatsby": "^5.7.0",
     "gatsby-plugin-feed": "^5.7.0",
     "gatsby-plugin-google-gtag": "^5.7.0",

@@ -1,6 +1,8 @@
 // custom typefaces
 import '@fontsource/noto-sans-jp';
 import '@fontsource/noto-sans-jp/700.css';
+import '@fontsource/roboto-mono';
+import '@fontsource/roboto-mono/700.css';
 import '@fontsource/roboto';
 import '@fontsource/roboto/700.css';
 // normalize CSS across browsers
