@@ -4,7 +4,6 @@ import {
   FacebookShareButton,
   HatenaIcon,
   HatenaShareButton,
-  TwitterIcon,
   TwitterShareButton,
   XIcon,
 } from 'react-share';
