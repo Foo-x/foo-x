@@ -27,7 +27,7 @@ Gitでは直前のコミットであれば `git commit --amend` で修正でき�
     - 注意しないとコミットを削除してしまう可能性がある
 - `git commit --fixup X` や `git commit --squash X` でコミットを作成後、`git rebase --autosquash X^` する
 
-jujutsuでは直前のコミットは `jj squash`、それ以前のコミットは `jj squash -r X` です。
+jujutsuでは直前のコミットは `jj squash`、それ以前のは `jj squash -r X` です。
 圧倒的に簡単です。
 
 
