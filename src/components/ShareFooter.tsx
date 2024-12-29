@@ -6,6 +6,7 @@ import {
   HatenaShareButton,
   TwitterIcon,
   TwitterShareButton,
+  XIcon,
 } from 'react-share';
 import * as styles from '~/styles/components/ShareFooter.module.css';
 
@@ -33,9 +34,9 @@ const ShareFooter = ({ url, title }: Props) => {
   return (
     <footer className={styles.shareFooter}>
       <TwitterShareButton url={url} title={pageTitle}>
-        <TwitterIcon size={size} />
+        <XIcon size={size} />
       </TwitterShareButton>
-      <FacebookShareButton url={url} quote={pageTitle}>
+      <FacebookShareButton url={url}>
         <FacebookIcon size={size} />
       </FacebookShareButton>
       <HatenaShareButton url={url} title={pageTitle}>
