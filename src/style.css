@@ -303,6 +303,17 @@ a:focus {
     pointer-events: initial;
     background-color: #fff;
   }
+
+  /* not to be hidden with header */
+  h2 {
+    padding-top: calc(32px + 0.4rem + 4px);
+    margin-top: calc(32px + 0.4rem + 4px);
+  }
+
+  h3 {
+    padding-top: calc(32px + 0.4rem + 4px);
+    margin-top: calc(32px + 0.4rem + 4px);
+  }
 }
 
 @media (max-width: 37.5em) {
